@@ -1,0 +1,53 @@
+{
+  "name": "3197_spa-catalog",
+  "version": "1.0.0",
+  "description": "Fashion Catalog",
+  "private": true,
+  "scripts": {
+    "build:dev": "cross-env ROOT_ROUTE=/ webpack --mode development",
+    "build:testing": "cross-env ROOT_ROUTE=/test/catalog/ webpack --mode production",
+    "build:prod": "cross-env ROOT_ROUTE=/catalog/ webpack --mode production",
+    "start": "cross-env ROOT_ROUTE=/ webpack-dev-server"
+  },
+  "author": "Dmitry Orlov",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "15.7.2",
+    "react": "17.0.1",
+    "react-collapse": "^5.1.0",
+    "react-dom": "17.0.1",
+    "react-router-dom": "5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.8",
+    "@babel/preset-env": "7.12.7",
+    "@babel/preset-react": "7.12.7",
+    "@types/react": "17.0.0",
+    "autoprefixer": "9.5.1",
+    "babel-loader": "8.2.1",
+    "browser-sync": "2.26.13",
+    "cross-env": "7.0.3",
+    "del": "6.0.0",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "4.0.0",
+    "gulp": "4.0.2",
+    "gulp-csso": "4.0.1",
+    "gulp-imagemin": "6.1.0",
+    "gulp-less": "4.0.1",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "8.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-replace": "1.0.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-webp": "4.0.1",
+    "html-webpack-plugin": "4.5.0",
+    "webpack": "4.41.5",
+    "webpack-bundle-analyzer": "4.4.0",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.10.2"
+  }
+}

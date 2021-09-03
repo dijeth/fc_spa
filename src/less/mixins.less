@@ -1,0 +1,81 @@
+.ul-reset() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.button-reset () {
+  display: inline-block;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.arrow(@_, @width: 30px, @weight: 2px, @color: #000, @round-cap: 0) {
+
+  &::before,
+  &::after {
+    content: "";
+    border-radius: @round-cap;
+    position: absolute;
+    left: 50%;
+    width: @width;
+    top: 50%;
+    height: @weight;
+    background-color: @color;
+  }
+
+  &:focus::before,
+  &:focus::after,
+  &:hover::before,
+  &:hover::after {
+    background-color: lighten(@color, 40%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: lighten(@color, 20%);
+  }
+}
+
+.arrow(left, @width: 30px, @weight: 2px, @color: #000, @round-cap: 0) {
+  &::after {
+    transform: translateY(0.33*@width) translateY(-50%) translateX(-50%) rotate(45deg);
+  }
+
+  &::before {
+    transform: translateY(-0.33*@width) translateY(-50%) translateX(-50%) rotate(-45deg);
+  }
+}
+
+.arrow(right, @width: 30px, @weight: 2px, @color: #000, @round-cap: 0) {
+  &::after {
+    transform: translateY(-0.33*@width) translateY(-50%) translateX(-50%) rotate(45deg);
+  }
+
+  &::before {
+    transform: translateY(0.33*@width) translateY(-50%) translateX(-50%) rotate(-45deg);
+  }
+}
+
+.cross(@width: 30px, @weight: 2px, @color: #ffffff) {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: @width;
+    height: @weight;
+    background-color: @color;
+    left: 50%;
+    top: 50%;
+  }
+
+  &::before {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  }
+}

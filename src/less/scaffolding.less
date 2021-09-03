@@ -1,0 +1,94 @@
+@font-face {
+  font-weight : normal;
+  font-family : "circe";
+  font-style  : normal;
+  font-display: swap;
+  src         : url("/_fonts/crc55.woff2") format("woff2"),
+    url("/_fonts/crc55.woff") format("woff");
+}
+
+@font-face {
+  font-weight : bold;
+  font-family : "circe";
+  font-style  : normal;
+  font-display: swap;
+  src         : url("/_fonts/crc65.woff2") format("woff2"),
+    url("/_fonts/crc65.woff") format("woff");
+}
+
+html {
+  box-sizing : border-box;
+  font-size  : 14px;
+  line-height: 1.4;
+
+  // @media screen and (min-width: @tablet) {
+  //   font-size  : 17px;
+  //   line-height: 1.6;
+  // }
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+img {
+  width    : 100%;
+  max-width: 100%;
+}
+
+picture {
+
+  source,
+  img {
+    display: block;
+  }
+}
+
+body {
+  min-width: 320px;
+  padding  : 0;
+  margin   : 0;
+
+  font-family: "circe", "Arial", sans-serif;
+  color      : #000000;
+  font-style : normal;
+}
+
+.visually-hidden[type=radio],
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width  : 1px;
+  height : 1px;
+  margin : -1px;
+  border : 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip     : rect(0 0 0 0);
+  overflow : hidden;
+}
+
+.wrapper {
+  width        : 100%;
+  // max-width    : 600px;
+  padding-left : 30px;
+  padding-right: 30px;
+  margin-left  : auto;
+  margin-right : auto;
+
+  @media screen and (min-width: @tablet) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media screen and (min-width: @desktop) {
+    max-width    : @desktop;
+    padding-left : 90px;
+    padding-right: 90px;
+  }
+}
