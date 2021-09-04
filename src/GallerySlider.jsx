@@ -52,7 +52,7 @@ const GallerySlider = ({ to, children, showenSlidesCount, name }) => {
     const element = refSlider.current;
     // getComputedStyle(element).left;
     if (!reBound) {
-      console.log(name + ': ' + getComputedStyle(element).left);
+      // console.log(name + ': ' + getComputedStyle(element).left);
       element.classList.add(animationClassName);
       element.style.left = trackLeftStyle;
     }
