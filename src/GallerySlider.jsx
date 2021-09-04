@@ -24,7 +24,7 @@ const getViewBounds = (showenSlidesCount, centerSlideIndex, slidesCount) => {
 
 const getSlides = (slideElements, bounds) => slideElements.filter((it, i) => i >= bounds.min && i <= bounds.max);
 
-const Slider = ({ to, children, showenSlidesCount, name }) => {
+const GallerySlider = ({ to, children, showenSlidesCount, name }) => {
   const slideWidth = 200;
   const slideHeight = 300;
   const loadSlidesCount = Math.max(2 * showenSlidesCount - 1, 3);
@@ -69,10 +69,10 @@ const Slider = ({ to, children, showenSlidesCount, name }) => {
   );
 };
 
-Slider.propTypes = {
+GallerySlider.propTypes = {
   to: PropTypes.number.isRequired,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
   showenSlidesCount: PropTypes.number.isRequired,
 };
 
-export default Slider;
+export default GallerySlider;
