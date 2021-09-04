@@ -24,43 +24,47 @@ const getViewBounds = (showenSlidesCount, centerSlideIndex, slidesCount) => {
 
 const getSlides = (slideElements, bounds) => slideElements.filter((it, i) => i >= bounds.min && i <= bounds.max);
 
-const getSliderBounds = (sliderBounds, viewBounds) => {
-  const distance = Math.max(viewBounds.min - sliderBounds.max, sliderBounds.min - viewBounds.max);
-
-  return false// distance > (viewBounds.max - viewBounds.min + 1)
-    ? viewBounds
-    : {
-      min: Math.min(sliderBounds.min, viewBounds.min),
-      max: Math.max(sliderBounds.max, viewBounds.max),
-    };
-};
-
-const Slider = ({ to, children, showenSlidesCount }) => {
+const Slider = ({ to, children, showenSlidesCount, name }) => {
   const slideWidth = 200;
   const slideHeight = 300;
+  const loadSlidesCount = Math.max(2 * showenSlidesCount - 1, 3);
+  const animationClassName = 'slider__track--animation';
 
   const refSlider = React.useRef();
+  const [bounds, setBounds] = React.useState(getViewBounds(loadSlidesCount, to, children.length));
+  const [reBound, setReBound] = React.useState(false);
 
-  const [bounds, setBounds] = React.useState({
-    min: Number.POSITIVE_INFINITY,
-    max: Number.NEGATIVE_INFINITY,
-  });
+  const trackLeftStyle = `${-1 * (to - bounds.min - getSideSlides(showenSlidesCount).left) * slideWidth}px`;
 
-  const viewBounds = getViewBounds(showenSlidesCount, to, children.length);
-  const sliderBounds = getSliderBounds(bounds, viewBounds);
-
-  if (sliderBounds.min < bounds.min || sliderBounds.max > bounds.max) {
-    setBounds(sliderBounds);
+  if (reBound) {
+    setBounds(getViewBounds(loadSlidesCount, to, children.length));
+    setReBound(false);
   }
+
+  React.useEffect(() => {
+    refSlider.current.addEventListener('transitionend', () => {
+      refSlider.current.classList.remove(animationClassName);
+      setReBound(true);
+    });
+  }, [1]);
+
+  React.useEffect(() => {
+    const element = refSlider.current;
+    // getComputedStyle(element).left;
+    if (!reBound) {
+      console.log(name + ': ' + getComputedStyle(element).left);
+      element.classList.add(animationClassName);
+      element.style.left = trackLeftStyle;
+    }
+  });
 
   return (
     <>
       <div className="slider" style={{ width: `${showenSlidesCount * slideWidth}px`, height: `${slideHeight}px` }}>
-        <div className="slider__track" style={{ left: `${-1 * (to - bounds.min - getSideSlides(showenSlidesCount).left) * slideWidth}px` }} ref={refSlider}>
+        <div className="slider__track" style={{ left: trackLeftStyle }} ref={refSlider}>
           {getSlides(children, bounds)}
         </div>
       </div>
-      <button type="button" onClick={() => setBounds({ min: bounds.min - 2, max: bounds.max })}>bounds</button>
     </>
   );
 };
