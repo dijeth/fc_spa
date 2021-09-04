@@ -21,15 +21,15 @@ const App = ({ data }) => {
 
   return (
     <>
-      <GallerySlider to={position} showenSlidesCount={1} name="111">
+      <GallerySlider to={position} showenSlidesCount={1}>
         {slides}
       </GallerySlider>
 
-      <GallerySlider to={position} showenSlidesCount={1} name="222">
+      <GallerySlider to={position} showenSlidesCount={1}>
         {data.map((it) => <p style={{ width: '200px', textAlign: 'center' }} key={it.alt}>{it.alt}</p>)}
       </GallerySlider>
 
-      <GallerySlider to={position} showenSlidesCount={5} name="333">
+      <GallerySlider to={position} showenSlidesCount={5}>
         {slides}
       </GallerySlider>
 

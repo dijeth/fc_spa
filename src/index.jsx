@@ -4,6 +4,7 @@ import App from './App';
 import { getPath } from './utils';
 
 const data = [
+  { src: getPath('img/000.jpg'), alt: '000000000' },
   { src: getPath('img/001.jpg'), alt: '001001001' },
   { src: getPath('img/002.jpg'), alt: '002002002' },
   { src: getPath('img/003.jpg'), alt: '003003003' },
@@ -127,7 +128,6 @@ const data = [
   { src: getPath('img/121.jpg'), alt: '121121121' },
   { src: getPath('img/122.jpg'), alt: '122122122' },
   { src: getPath('img/123.jpg'), alt: '123123123' },
-  { src: getPath('img/124.jpg'), alt: '124124124' },
 ];
 
 ReactDOM.render(

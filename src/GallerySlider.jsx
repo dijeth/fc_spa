@@ -6,15 +6,15 @@ const correctBounds = (bounds, slidesCount) => ({
   max: bounds.max > slidesCount - 1 ? slidesCount - 1 : bounds.max,
 });
 
-const getSideSlides = (showenSlidesCount) => {
-  const left = Math.floor((showenSlidesCount - 1) / 2);
-  const right = showenSlidesCount - 1 - left;
+const getSideSlides = (slidesCount) => {
+  const left = Math.floor((slidesCount - 1) / 2);
+  const right = slidesCount - 1 - left;
 
   return { left, right };
 };
 
-const getViewBounds = (showenSlidesCount, centerSlideIndex, slidesCount) => {
-  const sideSlides = getSideSlides(showenSlidesCount);
+const getViewBounds = (boundsSlidesCount, centerSlideIndex, slidesCount) => {
+  const sideSlides = getSideSlides(boundsSlidesCount);
 
   const min = centerSlideIndex - sideSlides.left;
   const max = centerSlideIndex + sideSlides.right;
@@ -24,44 +24,46 @@ const getViewBounds = (showenSlidesCount, centerSlideIndex, slidesCount) => {
 
 const getSlides = (slideElements, bounds) => slideElements.filter((it, i) => i >= bounds.min && i <= bounds.max);
 
-const GallerySlider = ({ to, children, showenSlidesCount, name }) => {
+const GallerySlider = ({ to, children, showenSlidesCount }) => {
   const slideWidth = 200;
   const slideHeight = 300;
   const loadSlidesCount = Math.max(2 * showenSlidesCount - 1, 3);
   const animationClassName = 'slider__track--animation';
 
   const refSlider = React.useRef();
-  const [bounds, setBounds] = React.useState(getViewBounds(loadSlidesCount, to, children.length));
-  const [reBound, setReBound] = React.useState(false);
+  const [position, setPosition] = React.useState(to);
 
-  const trackLeftStyle = `${-1 * (to - bounds.min - getSideSlides(showenSlidesCount).left) * slideWidth}px`;
+  const bounds = getViewBounds(loadSlidesCount, position, children.length);
 
-  if (reBound) {
-    setBounds(getViewBounds(loadSlidesCount, to, children.length));
-    setReBound(false);
-  }
+  const positionPx = -1 * (getSideSlides(loadSlidesCount).left - getSideSlides(showenSlidesCount).left) * slideWidth;
+  const toPx = -1 * (getSideSlides(loadSlidesCount).left - getSideSlides(showenSlidesCount).left + to - position) * slideWidth;
 
   React.useEffect(() => {
-    refSlider.current.addEventListener('transitionend', () => {
+    const transitionendHandler = () => {
       refSlider.current.classList.remove(animationClassName);
-      setReBound(true);
-    });
-  }, [1]);
+      setPosition(to);
+    };
 
-  React.useEffect(() => {
+    refSlider.current.addEventListener('transitionend', transitionendHandler);
+
+    return () => {
+      refSlider.current.removeEventListener('transitionend', transitionendHandler);
+    };
+  });
+
+  React.useLayoutEffect(() => {
     const element = refSlider.current;
-    // getComputedStyle(element).left;
-    if (!reBound) {
-      // console.log(name + ': ' + getComputedStyle(element).left);
+
+    element.style.left = `${toPx}px`;
+    if (position !== to) {
       element.classList.add(animationClassName);
-      element.style.left = trackLeftStyle;
     }
   });
 
   return (
     <>
       <div className="slider" style={{ width: `${showenSlidesCount * slideWidth}px`, height: `${slideHeight}px` }}>
-        <div className="slider__track" style={{ left: trackLeftStyle }} ref={refSlider}>
+        <div className="slider__track" style={{ left: `${positionPx}px` }} ref={refSlider}>
           {getSlides(children, bounds)}
         </div>
       </div>
