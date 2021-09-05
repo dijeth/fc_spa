@@ -1,9 +1,11 @@
 import React from 'react';
 import GallerySlider from './GallerySlider';
 import { SliderItem } from './SliderItem';
+import { SliderEmptyItem } from './SliderEmptyItem';
+import TouchTry from './TouchTry';
 
 const App = ({ data }) => {
-  const [position, setPosition] = React.useState(20);
+  const [position, setPosition] = React.useState(0);
 
   const prevButtonClickHandler = (step = 1) => () => {
     if (position - step >= 0) {
@@ -21,15 +23,16 @@ const App = ({ data }) => {
 
   return (
     <>
-      <GallerySlider to={position} showenSlidesCount={1}>
+      {/* <TouchTry /> */}
+      <GallerySlider to={position} showenSlidesCount={1} preloadedSideSlidesCount={4}>
         {slides}
       </GallerySlider>
 
-      <GallerySlider to={position} showenSlidesCount={1}>
+      <GallerySlider to={position} showenSlidesCount={1} preloadedSideSlidesCount={1}>
         {data.map((it) => <p style={{ width: '200px', textAlign: 'center' }} key={it.alt}>{it.alt}</p>)}
       </GallerySlider>
 
-      <GallerySlider to={position} showenSlidesCount={5}>
+      <GallerySlider to={position} showenSlidesCount={5} preloadedSideSlidesCount={2} OutBoundComponent={SliderEmptyItem} onSlideClick={(index) => { setPosition(index); }}>
         {slides}
       </GallerySlider>
 
