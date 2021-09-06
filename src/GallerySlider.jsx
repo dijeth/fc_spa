@@ -79,18 +79,22 @@ const GallerySlider = ({
     setTouchStart({ track: positionInPixels, touch: evt.touches[0].clientX });
   };
 
-  const touchMoveHandler = (evt) => {
-    setPositionInPixels(touchStart.track + evt.touches[0].clientX - touchStart.touch);
-  };
-
   const touchEndHandler = (evt) => {
     const direction = (touchStart.touch > evt.changedTouches[0].clientX) ? 1 : -1;
 
     setPositionInPixels(startPositionInPixels);
 
+    if (position + direction !== correctSlideIndex(position + direction, children.length)) {
+      return;
+    }
+
     if (onSlideChange) {
       onSlideChange(position + direction);
     }
+  };
+
+  const touchMoveHandler = (evt) => {
+    setPositionInPixels(touchStart.track + evt.touches[0].clientX - touchStart.touch);
   };
 
   React.useEffect(() => {
