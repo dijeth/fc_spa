@@ -23,16 +23,15 @@ const App = ({ data }) => {
 
   return (
     <>
-      {/* <TouchTry /> */}
-      <GallerySlider to={position} showenSlidesCount={1} preloadedSideSlidesCount={4}>
+      {/* <GallerySlider targetPosition={position} showenSlidesCount={1} preloadedSideSlidesCount={4} onSlideChange={(index) => { setPosition(index); }}>
         {slides}
       </GallerySlider>
 
-      <GallerySlider to={position} showenSlidesCount={1} preloadedSideSlidesCount={1}>
+      <GallerySlider targetPosition={position} showenSlidesCount={1} preloadedSideSlidesCount={1}>
         {data.map((it) => <p style={{ width: '200px', textAlign: 'center' }} key={it.alt}>{it.alt}</p>)}
-      </GallerySlider>
+      </GallerySlider> */}
 
-      <GallerySlider to={position} showenSlidesCount={5} preloadedSideSlidesCount={2} OutBoundComponent={SliderEmptyItem} onSlideClick={(index) => { setPosition(index); }}>
+      <GallerySlider targetPosition={position} showenSlidesCount={5} preloadedSideSlidesCount={2} OutBoundComponent={SliderEmptyItem} onSlideClick={(index) => { setPosition(index); }} onSlideChange={(index) => { setPosition(index); }}>
         {slides}
       </GallerySlider>
 

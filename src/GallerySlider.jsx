@@ -52,20 +52,22 @@ const getSlideIndex = (coordX, bounds, boundsPx, slideWidth, slideCount) => {
 };
 
 const GallerySlider = ({
-  to, children, showenSlidesCount, preloadedSideSlidesCount, OutBoundComponent, onSlideClick,
+  targetPosition, showenSlidesCount, preloadedSideSlidesCount, OutBoundComponent, onSlideClick, onSlideChange, children,
 }) => {
   const slideWidth = 200;
   const slideHeight = 300;
   const loadedSlidesCount = showenSlidesCount + 2 * preloadedSideSlidesCount;
   const animationClassName = 'slider__track--animation';
+  const startPositionInPixels = -1 * (getSideSlides(loadedSlidesCount).left - getSideSlides(showenSlidesCount).left) * slideWidth;
 
   const refTrack = React.useRef();
-  const [position, setPosition] = React.useState(to);
+  const [position, setPosition] = React.useState(targetPosition);
+  const [positionInPixels, setPositionInPixels] = React.useState(startPositionInPixels);
+  const [touchStart, setTouchStart] = React.useState();
 
   const bounds = getViewBounds(loadedSlidesCount, position);
 
-  const positionPx = -1 * (getSideSlides(loadedSlidesCount).left - getSideSlides(showenSlidesCount).left) * slideWidth;
-  const toPx = positionPx - (to - position) * slideWidth;
+  const targetPositionInPixels = positionInPixels - (targetPosition - position) * slideWidth;
 
   const clickHandler = (evt) => {
     const { left, right } = refTrack.current.getBoundingClientRect();
@@ -73,12 +75,30 @@ const GallerySlider = ({
     onSlideClick(slideIndex);
   };
 
+  const touchStartHandler = (evt) => {
+    setTouchStart({ track: positionInPixels, touch: evt.touches[0].clientX });
+  };
+
+  const touchMoveHandler = (evt) => {
+    setPositionInPixels(touchStart.track + evt.touches[0].clientX - touchStart.touch);
+  };
+
+  const touchEndHandler = (evt) => {
+    const direction = (touchStart.touch > evt.changedTouches[0].clientX) ? 1 : -1;
+
+    setPositionInPixels(startPositionInPixels);
+
+    if (onSlideChange) {
+      onSlideChange(position + direction);
+    }
+  };
+
   React.useEffect(() => {
     const element = refTrack.current;
 
     const transitionendHandler = () => {
       element.classList.remove(animationClassName);
-      setPosition(to);
+      setPosition(targetPosition);
     };
 
     element.addEventListener('transitionend', transitionendHandler);
@@ -91,16 +111,24 @@ const GallerySlider = ({
   React.useLayoutEffect(() => {
     const element = refTrack.current;
 
-    if (position !== to) {
+    if (position !== targetPosition) {
       element.classList.add(animationClassName);
     }
 
-    element.style.left = `${toPx}px`;
+    element.style.left = `${targetPositionInPixels}px`;
   });
 
   return (
     <div className="slider" style={{ width: `${showenSlidesCount * slideWidth}px`, height: `${slideHeight}px` }}>
-      <div className="slider__track" onClick={onSlideClick ? clickHandler : null} ref={refTrack}>
+      <div
+        className="slider__track"
+        onClick={onSlideClick ? clickHandler : null}
+        onTouchStart={touchStartHandler}
+        onTouchMove={touchMoveHandler}
+        onTouchEnd={touchEndHandler}
+        aria-hidden="true"
+        ref={refTrack}
+      >
         {getSlides(children, bounds, OutBoundComponent)}
       </div>
     </div>
@@ -108,18 +136,20 @@ const GallerySlider = ({
 };
 
 GallerySlider.propTypes = {
-  to: PropTypes.number.isRequired,
+  targetPosition: PropTypes.number.isRequired,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
   showenSlidesCount: PropTypes.number.isRequired,
   preloadedSideSlidesCount: PropTypes.number,
   OutBoundComponent: PropTypes.func,
   onSlideClick: PropTypes.func,
+  onSlideChange: PropTypes.func,
 };
 
 GallerySlider.defaultProps = {
   preloadedSideSlidesCount: 0,
   OutBoundComponent: null,
   onSlideClick: null,
+  onSlideChange: null,
 };
 
 export default GallerySlider;
