@@ -57,7 +57,7 @@ const GallerySlider = ({
   const slideWidth = 200;
   const slideHeight = 300;
   const loadedSlidesCount = showenSlidesCount + 2 * preloadedSideSlidesCount;
-  const animationClassName = 'slider__track--animation';
+  const animationClassName = 'gallery-slider__track--animation';
   const startPositionInPixels = -1 * (getSideSlides(loadedSlidesCount).left - getSideSlides(showenSlidesCount).left) * slideWidth;
 
   const refTrack = React.useRef();
@@ -123,9 +123,9 @@ const GallerySlider = ({
   });
 
   return (
-    <div className="slider" style={{ width: `${showenSlidesCount * slideWidth}px`, height: `${slideHeight}px` }}>
+    <div className="gallery-slider" style={{ width: `${showenSlidesCount * slideWidth}px`, height: `${slideHeight}px` }}>
       <div
-        className="slider__track"
+        className="gallery-slider__track"
         onClick={onSlideClick ? clickHandler : null}
         onTouchStart={touchStartHandler}
         onTouchMove={touchMoveHandler}
