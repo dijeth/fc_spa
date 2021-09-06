@@ -1,5 +1,5 @@
 import React from 'react';
-import GallerySlider from './GallerySlider';
+import GallerySlider from './sliders/GallerySlider';
 import { SliderItem } from './SliderItem';
 import { SliderEmptyItem } from './SliderEmptyItem';
 
