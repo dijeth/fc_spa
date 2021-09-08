@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const getSlides = (slideIndex, slides, preloadedSideSlidesCount) => {
-  const min = slideIndex - preloadedSideSlidesCount >= 0 ? slideIndex - preloadedSideSlidesCount : 0;
-  const max = slideIndex + preloadedSideSlidesCount < slides.length ? slideIndex + preloadedSideSlidesCount : slides.length - 1;
+const correctSlideIndex = (slideIndex, slidesCount) => {
+  if (slideIndex < 0) {
+    return 0;
+  }
 
-  return {
-    leftSlides: slides.slice(min, slideIndex),
-    currentSlide: slides[slideIndex],
-    rightSlides: slides.slice(slideIndex + 1, max),
-  };
+  if (slideIndex > slidesCount - 1) {
+    return slidesCount - 1;
+  }
+
+  return slideIndex;
 };
 
 const StackSlider = ({
@@ -18,32 +19,78 @@ const StackSlider = ({
   className,
   children,
 }) => {
-  const [current, setCurrent] = React.useState(slideIndex);
-  const refCurrent = React.useRef();
+  const nextSlideIndex = correctSlideIndex(slideIndex);
 
-  const { leftSlides, currentSlide, rightSlides } = getSlides(current, children, preloadedSideSlidesCount);
+  const [current, setCurrent] = React.useState(nextSlideIndex);
+  const refCurrent = React.useRef();
+  const refNext = React.useRef();
+
+  const keyCurrent = children[current].key;
+  const keyNext = children[slideIndex].key;
+
+  const min = correctSlideIndex(current - preloadedSideSlidesCount, children.length);
+  const max = correctSlideIndex(current + preloadedSideSlidesCount, children.length);
+
+  const shouldChange = current !== nextSlideIndex;
+
+  const renderChangeable = () => {
+    const slides = children.slice(min, max + 1).map((it) => {
+      switch (it.key) {
+        case keyCurrent:
+          return <div key={it.key} ref={refCurrent} style={{ opacity: 1 }}>{ it }</div>;
+
+        case keyNext:
+          return <div key={it.key} ref={refNext} style={{ opacity: 0 }}>{ it }</div>;
+
+        default:
+          return <div key={it.key} style={{ opacity: 0 }}>{ it }</div>;
+      }
+    });
+
+    if (nextSlideIndex < min || nextSlideIndex > max) {
+      const nextSlide = children[nextSlideIndex];
+      slides.push(<div key={nextSlide.key} data-img={nextSlide.key} ref={refNext} style={{ opacity: 0 }}>{ nextSlide }</div>);
+    }
+
+    return slides;
+  };
+
+  const renderChanged = () => {
+    const slides = children.slice(min, max + 1).map((it) => {
+      switch (it.key) {
+        case keyCurrent:
+          return <div key={it.key} data-img={it.key} ref={refCurrent} style={{ opacity: 1 }}>{ it }</div>;
+
+        default:
+          return <div key={it.key} data-img={it.key} style={{ opacity: 0 }}>{ it }</div>;
+      }
+    });
+
+    return slides;
+  };
 
   React.useEffect(() => {
-    const opacityChangeHandler = (evt) => {
-      evt.currentTarget.removeEventListener('transitionend', opacityChangeHandler);
-      setCurrent(slideIndex);
-    };
+    if (shouldChange) {
+      const opacityChangeHandler = (evt) => {
+        evt.currentTarget.removeEventListener('transitionend', opacityChangeHandler);
+        setCurrent(nextSlideIndex);
+      };
 
-    if (current !== slideIndex) {
       refCurrent.current.addEventListener('transitionend', opacityChangeHandler);
     }
   });
 
   React.useEffect(() => {
-    refCurrent.current.style.opacity = current !== slideIndex ? 0 : 1;
+    if (shouldChange) {
+      refCurrent.current.style.opacity = 0;
+      refNext.current.style.opacity = 1;
+    }
   });
 
   return (
     <div className={`stack-slider ${className || ''}`}>
       <div className="stack-slider__track">
-        {leftSlides.map((it) => <div key={it.key} style={{ opacity: 0 }}>{it}</div>)}
-        <div key={currentSlide.key} style={{ opacity: 0 }} ref={refCurrent}>{currentSlide}</div>
-        {rightSlides.map((it) => <div key={it.key} style={{ opacity: 0 }}>{it}</div>)}
+        {shouldChange ? renderChangeable() : renderChanged()}
       </div>
     </div>
   );

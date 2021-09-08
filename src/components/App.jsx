@@ -5,7 +5,7 @@ import { SliderItem } from './SliderItem';
 import { SliderEmptyItem } from './SliderEmptyItem';
 
 const App = ({ data }) => {
-  const [position, setPosition] = React.useState(15);
+  const [position, setPosition] = React.useState(0);
 
   const prevButtonClickHandler = (step = 1) => () => {
     if (position - step >= 0) {
@@ -23,15 +23,15 @@ const App = ({ data }) => {
 
   return (
     <>
-      {/* <GallerySlider targetPosition={position} showenSlidesCount={1} preloadedSideSlidesCount={4} onSlideChange={(index) => { setPosition(index); }} OutBoundComponent={SliderEmptyItem}>
+      <GallerySlider targetPosition={position} showenSlidesCount={1} preloadedSideSlidesCount={4} onSlideChange={(index) => { setPosition(index); }} OutBoundComponent={SliderEmptyItem} className="main-photo">
         {slides}
       </GallerySlider>
 
-      <GallerySlider targetPosition={position} showenSlidesCount={1} preloadedSideSlidesCount={1}>
+      <StackSlider slideIndex={position} preloadedSideSlidesCount={4} className="main-photo">
         {data.map((it) => <p style={{ width: '200px', textAlign: 'center' }} key={it.alt}>{it.alt}</p>)}
-      </GallerySlider> */}
+      </StackSlider>
 
-      {/* <GallerySlider
+      <GallerySlider
         targetPosition={position}
         showenSlidesCount={5}
         preloadedSideSlidesCount={2}
@@ -41,11 +41,7 @@ const App = ({ data }) => {
         className="nav-slider"
       >
         {slides}
-      </GallerySlider> */}
-
-      <StackSlider slideIndex={position} preloadedSideSlidesCount={4} className="main-photo">
-        {slides}
-      </StackSlider>
+      </GallerySlider>
 
       <button type="button" onClick={prevButtonClickHandler(20)}>Prev 20</button>
       <button type="button" onClick={prevButtonClickHandler(1)}>Prev</button>
