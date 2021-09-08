@@ -79,7 +79,11 @@ const GallerySlider = ({
 
   const clickHandler = (evt) => {
     const { left, right } = refTrack.current.getBoundingClientRect();
-    const slideIndex = getSlideIndex(evt.clientX, bounds, { min: left, max: right }, slideWidth, children.length);
+    const { width } = refTrack.current.parentNode.getBoundingClientRect();
+
+    const slideWidthPx = (width / 100) * slideWidth;
+    const slideIndex = getSlideIndex(evt.clientX, bounds, { min: left, max: right }, slideWidthPx, children.length);
+
     onSlideClick(slideIndex);
   };
 
