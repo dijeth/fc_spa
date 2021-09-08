@@ -1,10 +1,11 @@
 import React from 'react';
 import GallerySlider from './sliders/GallerySlider';
+import StackSlider from './sliders/StackSlider';
 import { SliderItem } from './SliderItem';
 import { SliderEmptyItem } from './SliderEmptyItem';
 
 const App = ({ data }) => {
-  const [position, setPosition] = React.useState(0);
+  const [position, setPosition] = React.useState(15);
 
   const prevButtonClickHandler = (step = 1) => () => {
     if (position - step >= 0) {
@@ -30,7 +31,7 @@ const App = ({ data }) => {
         {data.map((it) => <p style={{ width: '200px', textAlign: 'center' }} key={it.alt}>{it.alt}</p>)}
       </GallerySlider> */}
 
-      <GallerySlider
+      {/* <GallerySlider
         targetPosition={position}
         showenSlidesCount={5}
         preloadedSideSlidesCount={2}
@@ -40,7 +41,11 @@ const App = ({ data }) => {
         className="nav-slider"
       >
         {slides}
-      </GallerySlider>
+      </GallerySlider> */}
+
+      <StackSlider slideIndex={position} preloadedSideSlidesCount={4} className="main-photo">
+        {slides}
+      </StackSlider>
 
       <button type="button" onClick={prevButtonClickHandler(20)}>Prev 20</button>
       <button type="button" onClick={prevButtonClickHandler(1)}>Prev</button>

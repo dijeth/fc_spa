@@ -1,0 +1,17 @@
+.stack-slider {
+  &__track {
+    position: relative;
+
+    & > * {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition-property: 'opacity';
+      transition-duration: 300ms;
+    }
+  }
+
+  &__track--animation {
+  }
+}
