@@ -6,7 +6,7 @@ import { BASE_ROUTE } from './const';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename={BASE_ROUTE}>
+    <BrowserRouter basename={BASE_ROUTE} forceRefresh={false}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useRouteMatch } from 'react-router-dom';
 import { CatalogService } from '../../data-services/catalog-service';
 import Page404 from './Page404';
-import Catalog from '../Catalog';
+import Catalog from '../catalog/Catalog';
 
 const catalogService = new CatalogService();
 
@@ -27,7 +27,7 @@ const parseRouteParams = (sections) => {
       }
       : {
         section: 0,
-        look: parseInt(param1, 10) || 0,
+        look: parseInt(param1, 10) - 1 || 0,
       };
   }
 
@@ -35,11 +35,11 @@ const parseRouteParams = (sections) => {
 
   return {
     section: section === -1 ? 0 : section,
-    look: parseInt(param2, 10) || 0,
+    look: parseInt(param2, 10) - 1 || 0,
   };
 };
 
-const PageCatalog = ({ category, catalog }) => {
+const PageCatalog = ({ category, catalog, onChangeLocation }) => {
   const [data, setData] = React.useState({ sections: [] });
   const [isLoading, setIsLoading] = React.useState(true);
   const [error, setError] = React.useState('');
@@ -74,14 +74,18 @@ const PageCatalog = ({ category, catalog }) => {
   if (!data || !data.sections.length) {
     return <Page404 />;
   }
-  return <Catalog data={data} activeSection={section} activeLook={look} />;
+
+  return <Catalog data={data} activeSection={section} activeLook={look} onChangeLocation={onChangeLocation} />;
 };
 
 PageCatalog.propTypes = {
   category: PropTypes.string.isRequired,
   catalog: PropTypes.string.isRequired,
+  onChangeLocation: PropTypes.func,
 };
 
-PageCatalog.defaultProps = {};
+PageCatalog.defaultProps = {
+  onChangeLocation: null,
+};
 
 export default PageCatalog;

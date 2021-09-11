@@ -2,15 +2,19 @@
   position: relative;
   overflow: hidden;
 
-  &__track {
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
   &__track--animation {
     transition-property: 'left';
     transition-duration: 1000ms;
+  }
+}
+
+.gallery-slider__track {
+  display : flex;
+  position: absolute;
+  left    : 0;
+  top     : 0;
+
+  & > * {
+    flex-shrink: 0;
   }
 }

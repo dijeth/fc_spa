@@ -24,6 +24,7 @@ const StackSlider = ({
   const [current, setCurrent] = React.useState(nextSlideIndex);
   const refCurrent = React.useRef();
   const refNext = React.useRef();
+  const refSlider = React.useRef();
 
   const keyCurrent = children[current].key;
   const keyNext = children[slideIndex].key;
@@ -59,10 +60,10 @@ const StackSlider = ({
     const slides = children.slice(min, max + 1).map((it) => {
       switch (it.key) {
         case keyCurrent:
-          return <div key={it.key} data-img={it.key} ref={refCurrent} style={{ opacity: 1 }}>{ it }</div>;
+          return <div key={it.key} data-img={it.key} ref={refCurrent} style={{ opacity: 1, zIndex: 10 }}>{ it }</div>;
 
         default:
-          return <div key={it.key} data-img={it.key} style={{ opacity: 0 }}>{ it }</div>;
+          return <div key={it.key} data-img={it.key} style={{ opacity: 0, zIndex: 1 }}>{ it }</div>;
       }
     });
 
@@ -87,8 +88,26 @@ const StackSlider = ({
     }
   });
 
+  React.useLayoutEffect(() => {
+    const sliderElement = refSlider.current;
+    const currentElement = refCurrent.current;
+
+    const sliderRect = sliderElement.getBoundingClientRect();
+    const currentRect = currentElement.getBoundingClientRect();
+
+    currentElement.style.height = `${Math.round(sliderRect.height - (currentRect.top - sliderRect.top))}px`;
+    currentElement.style.overflow = 'auto';
+
+    if (shouldChange) {
+      const nextElement = refNext.current;
+      const nextRect = nextElement.getBoundingClientRect();
+      nextElement.style.height = `${Math.round(sliderRect.height - (nextRect.top - sliderRect.top))}px`;
+      nextElement.style.overflow = 'auto';
+    }
+  });
+
   return (
-    <div className={`stack-slider ${className || ''}`}>
+    <div className={`stack-slider ${className || ''}`} ref={refSlider}>
       <div className="stack-slider__track">
         {shouldChange ? renderChangeable() : renderChanged()}
       </div>

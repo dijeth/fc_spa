@@ -9,10 +9,11 @@ const App = () => (
     <Route path="/new" component={PageNewCollections} />
     <Route
       path="/:category/:catalog"
-      render={({ match }) => {
+      render={({ match, history }) => {
         const { category, catalog } = match.params;
+        const changeLocationHandler = (url) => { history.push(url); };
 
-        return <PageCatalog category={category} catalog={catalog} />;
+        return <PageCatalog category={category} catalog={catalog} history={history} onChangeLocation={changeLocationHandler} />;
       }}
     />
     <Route path="*" component={Page404} />

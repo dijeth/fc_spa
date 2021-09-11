@@ -1,0 +1,1 @@
+export const PRELOADED_SLIDES_COUNT = 5;

@@ -1,0 +1,41 @@
+.slider-nav {
+  display        : flex;
+  justify-content: space-between;
+
+  &__list {
+    width : 70px*11+10px*2*11;
+    height: 100px;
+  }
+
+  &__slide {
+    margin-left : 10px;
+    margin-right: 10px;
+    width       : 70px;
+    height      : 100px;
+
+    img {
+      width     : 70px;
+      height    : 100px;
+      object-fit: contain;
+    }
+  }
+
+  &__slide--empty {
+    opacity: 0.3;
+  }
+}
+
+.slider-nav__button {
+  .button-reset();
+
+  position: relative;
+  width: 3rem;
+
+  &--prev {
+    .arrow(left, @weight: 2px);
+  }
+
+  &--next {
+    .arrow(right, @weight: 2px);
+  }
+}
