@@ -364,9 +364,9 @@ export const data = [
     link: 'pre-2021',
     sections: [
       {
-        id: 2,
-        section: 'Женская коллекция',
-        link: 'women',
+        id: 111,
+        section: 'Small Section',
+        link: 'small',
         items: [
           {
             id: 15,
@@ -431,8 +431,78 @@ export const data = [
                 plu: '5576599',
               }],
           },
+        ],
+      },
+      {
+        id: 2,
+        section: 'Женская коллекция',
+        link: 'women',
+        items: [
           {
             id: 18,
+            photo: '111',
+            folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
+            items: [
+              {
+                id: 53,
+                text: 'Платье из шелка',
+                plu: '5576568',
+              },
+              {
+                id: 54,
+                text: 'Босоножки',
+                plu: '5576795',
+              },
+              {
+                id: 55,
+                text: 'Серьги',
+                plu: '5577903',
+              }],
+          },
+          {
+            id: 19,
+            photo: '222',
+            folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
+            items: [
+              {
+                id: 56,
+                text: 'Платье',
+                plu: '5576572',
+              },
+              {
+                id: 57,
+                text: 'Босоножки',
+                plu: '5567560',
+              },
+              {
+                id: 58,
+                text: 'Сумка Sicily Soft',
+                plu: '5433572',
+              }],
+          },
+          {
+            id: 20,
+            photo: '333',
+            folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
+            items: [
+              {
+                id: 59,
+                text: 'Кардиган',
+                plu: '5576583',
+              },
+              {
+                id: 60,
+                text: 'Майка',
+                plu: '5406587',
+              },
+              {
+                id: 61,
+                text: 'Спортивные брюки',
+                plu: '5576599',
+              }],
+          },
+          {
+            id: 21,
             photo: '444',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -468,7 +538,7 @@ export const data = [
               }],
           },
           {
-            id: 19,
+            id: 22,
             photo: '555',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -494,7 +564,7 @@ export const data = [
               }],
           },
           {
-            id: 20,
+            id: 23,
             photo: '011',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -520,7 +590,7 @@ export const data = [
               }],
           },
           {
-            id: 21,
+            id: 24,
             photo: '022',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -561,7 +631,7 @@ export const data = [
               }],
           },
           {
-            id: 22,
+            id: 25,
             photo: '033',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -587,7 +657,7 @@ export const data = [
               }],
           },
           {
-            id: 23,
+            id: 26,
             photo: '044',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -623,7 +693,7 @@ export const data = [
               }],
           },
           {
-            id: 24,
+            id: 27,
             photo: '055',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -669,7 +739,7 @@ export const data = [
               }],
           },
           {
-            id: 25,
+            id: 28,
             photo: '066',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -710,7 +780,7 @@ export const data = [
               }],
           },
           {
-            id: 26,
+            id: 29,
             photo: '06_1',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -721,7 +791,7 @@ export const data = [
               }],
           },
           {
-            id: 27,
+            id: 30,
             photo: '077',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -762,7 +832,7 @@ export const data = [
               }],
           },
           {
-            id: 28,
+            id: 31,
             photo: '088',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -788,7 +858,7 @@ export const data = [
               }],
           },
           {
-            id: 29,
+            id: 32,
             photo: '099',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -799,7 +869,7 @@ export const data = [
               }],
           },
           {
-            id: 30,
+            id: 33,
             photo: '1010',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -923,7 +993,7 @@ export const data = [
               }],
           },
           {
-            id: 31,
+            id: 34,
             photo: '1111',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -964,7 +1034,7 @@ export const data = [
               }],
           },
           {
-            id: 32,
+            id: 35,
             photo: '1212',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -995,7 +1065,7 @@ export const data = [
               }],
           },
           {
-            id: 33,
+            id: 36,
             photo: '1313',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -1026,7 +1096,7 @@ export const data = [
               }],
           },
           {
-            id: 34,
+            id: 37,
             photo: '1414',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -1062,7 +1132,7 @@ export const data = [
               }],
           },
           {
-            id: 35,
+            id: 38,
             photo: '1515',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция',
             items: [
@@ -1094,7 +1164,7 @@ export const data = [
         link: 'men',
         items: [
           {
-            id: 36,
+            id: 39,
             photo: '01',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1125,7 +1195,7 @@ export const data = [
               }],
           },
           {
-            id: 37,
+            id: 40,
             photo: '02',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1151,7 +1221,7 @@ export const data = [
               }],
           },
           {
-            id: 38,
+            id: 41,
             photo: '03',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1181,7 +1251,7 @@ export const data = [
               }],
           },
           {
-            id: 39,
+            id: 42,
             photo: '04',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1206,7 +1276,7 @@ export const data = [
               }],
           },
           {
-            id: 40,
+            id: 43,
             photo: '05',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1236,7 +1306,7 @@ export const data = [
               }],
           },
           {
-            id: 41,
+            id: 44,
             photo: '06',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1271,7 +1341,7 @@ export const data = [
               }],
           },
           {
-            id: 42,
+            id: 45,
             photo: '07',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1301,7 +1371,7 @@ export const data = [
               }],
           },
           {
-            id: 43,
+            id: 46,
             photo: '08',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1336,7 +1406,7 @@ export const data = [
               }],
           },
           {
-            id: 44,
+            id: 47,
             photo: '09',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1366,7 +1436,7 @@ export const data = [
               }],
           },
           {
-            id: 45,
+            id: 48,
             photo: '10',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1406,7 +1476,7 @@ export const data = [
               }],
           },
           {
-            id: 46,
+            id: 49,
             photo: '11',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1431,7 +1501,7 @@ export const data = [
               }],
           },
           {
-            id: 47,
+            id: 50,
             photo: '12',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1466,7 +1536,7 @@ export const data = [
               }],
           },
           {
-            id: 48,
+            id: 51,
             photo: '13',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1491,7 +1561,7 @@ export const data = [
               }],
           },
           {
-            id: 49,
+            id: 52,
             photo: '14',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1526,7 +1596,7 @@ export const data = [
               }],
           },
           {
-            id: 50,
+            id: 53,
             photo: '15',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1556,7 +1626,7 @@ export const data = [
               }],
           },
           {
-            id: 51,
+            id: 54,
             photo: '16',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1597,7 +1667,7 @@ export const data = [
               }],
           },
           {
-            id: 52,
+            id: 55,
             photo: '17',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1627,7 +1697,7 @@ export const data = [
               }],
           },
           {
-            id: 53,
+            id: 56,
             photo: '18',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1663,7 +1733,7 @@ export const data = [
               }],
           },
           {
-            id: 54,
+            id: 57,
             photo: '19',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1694,7 +1764,7 @@ export const data = [
               }],
           },
           {
-            id: 55,
+            id: 58,
             photo: '20',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1725,7 +1795,7 @@ export const data = [
               }],
           },
           {
-            id: 56,
+            id: 59,
             photo: '21',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1756,7 +1826,7 @@ export const data = [
               }],
           },
           {
-            id: 57,
+            id: 60,
             photo: '22',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [
@@ -1792,7 +1862,7 @@ export const data = [
               }],
           },
           {
-            id: 58,
+            id: 61,
             photo: '23',
             folder: 'C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция',
             items: [

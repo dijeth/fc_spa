@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import SimpleSlider from '../sliders/SimpleSlider';
 import { ThrumbnailEmpty } from './thrumbnail-empty';
 
+const MAX_SHOWEN_SLIDES_COUNT = 11;
+
 const Thrumbnails = ({
   slideIndex, images, onSlideClick, onSlideChange,
 }) => {
   const prevIndex = slideIndex - 1 >= 0 ? slideIndex - 1 : null;
   const nextIndex = slideIndex + 1 <= images.length - 1 ? slideIndex + 1 : null;
+  const showenSlidesCount = Math.min((images.length * 2) - 1, MAX_SHOWEN_SLIDES_COUNT);
 
   return (
     <>
@@ -21,7 +24,7 @@ const Thrumbnails = ({
 
       <SimpleSlider
         targetPosition={slideIndex}
-        showenSlidesCount={11}
+        showenSlidesCount={showenSlidesCount}
         onSlideClick={onSlideClick}
         className="slider-nav__list"
         OutBoundComponent={ThrumbnailEmpty}

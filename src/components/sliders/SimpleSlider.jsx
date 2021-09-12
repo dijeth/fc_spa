@@ -27,9 +27,15 @@ const getSlides = (slideElements, bounds, OutBoundComponent) => Array(bounds.max
     const correctedItemIndex = correctSlideIndex(itemIndex, slideElements.length);
     const slide = slideElements[correctedItemIndex];
 
-    if (itemIndex !== correctedItemIndex) {
+    if (itemIndex < 0) {
       return OutBoundComponent
-        ? <OutBoundComponent key={`out-${slide.key}`}>{slide}</OutBoundComponent>
+        ? <OutBoundComponent key={`left-${slide.key}`}>{slide}</OutBoundComponent>
+        : slide;
+    }
+
+    if (itemIndex > slideElements.length - 1) {
+      return OutBoundComponent
+        ? <OutBoundComponent key={`right-${slide.key}`}>{slide}</OutBoundComponent>
         : slide;
     }
 
@@ -65,6 +71,16 @@ const SimpleSlider = ({
 
     onSlideClick(slideIndex);
   };
+
+  React.useLayoutEffect(() => {
+    const trackElement = refTrack.current;
+    const sliderElement = trackElement.parentElement;
+
+    const trackSlidesCount = children.length + leftSlidesCount + rightSlidesCount;
+    const trackWidth = trackSlidesCount * (sliderElement.getBoundingClientRect().width / showenSlidesCount);
+
+    trackElement.style.width = `${trackWidth}px`;
+  }, [children.length]);
 
   return (
     <div className={`gallery-slider ${className || ''}`}>

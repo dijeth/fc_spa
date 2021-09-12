@@ -10,7 +10,7 @@ const SectionList = ({
       <li className="section-list__item" key={it.id}>
         <button
           type="button"
-          onClick={() => { onSectionChange(getUrl(category, catalog, it.link, 0)); }}
+          onClick={() => { onSectionChange(getUrl(category, catalog, it.link, 1)); }}
           className={activeSection === it.link ? 'active' : ''}
         >
           {it.name}
