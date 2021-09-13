@@ -2149,5 +2149,4 @@ export const data = JSON.parse(`
       }
     ]
   }
-]
-`);
+]`);

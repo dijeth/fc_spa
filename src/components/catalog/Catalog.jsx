@@ -6,38 +6,28 @@ import SectionList from './section-list';
 import AddressList from './address-list';
 import Thrumbnails from './thrumbnails';
 import MainPhoto from './main-photo';
+import { ImageFolder } from '../../const';
 
 const Catalog = ({
   data, activeSection, activeLook, onSlideChange, onSectionChange,
 }) => {
-  const category = data.brandLink;
-  const catalog = data.link;
-
   const section = data.sections[activeSection] || data.sections[0];
   const lookIndex = section.items[activeLook] ? activeLook : 0;
   const nextLookIndex = lookIndex + 1 <= section.items.length - 1 ? lookIndex + 1 : 0;
   const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : section.items.length - 1;
 
-  const getImageUrl = (catalogSection, lookImage) => (data.sections.length > 1
-    ? getUrl('img', category, catalog, catalogSection, lookImage)
-    : getUrl('img', category, catalog, lookImage));
-
-  const getThrumbnailUrl = (catalogSection, lookImage) => (data.sections.length > 1
-    ? getUrl('img', 'thrumbnails', category, catalog, catalogSection, lookImage)
-    : getUrl('img', 'thrumbnails', category, catalog, lookImage));
-
   const texts = section.items.map(({ items, id }) => ({ items, id }));
   const sections = data.sections.map(({ id, section: name, link }) => ({ id, name, link }));
 
-  const photos = section.items.map(({ photo, id }, i) => ({
+  const photos = section.items.map(({ look, id }, i) => ({
     id,
-    src: getImageUrl(section.link, `${photo}.jpg`),
+    src: getUrl('img', ImageFolder.LOOK, look),
     alt: `Look ${i + 1}`,
   }));
 
-  const thrumbnails = section.items.map(({ photo, id }, i) => ({
+  const thrumbnails = section.items.map(({ thrumbnail, id }, i) => ({
     id,
-    src: getThrumbnailUrl(section.link, `${photo}.jpg`),
+    src: getUrl('img', ImageFolder.THRUMBNAIL, thrumbnail),
     alt: `Look ${i + 1}`,
   }));
 
