@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect, useHistory, useRouteMatch } from 'react-router-dom';
 import { CatalogService } from '../../data-services/catalog-service';
-import Page404 from './Page404';
-import Catalog from '../catalog/Catalog';
+import Page404 from './page-404';
+import Catalog from '../catalog/catalog';
 import { getUrl } from '../../utils/common-utils';
 
 const catalogService = new CatalogService();

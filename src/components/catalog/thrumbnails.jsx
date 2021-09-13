@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SimpleSlider from '../sliders/SimpleSlider';
+import SimpleSlider from '../sliders/simple-slider';
 import { ThrumbnailEmpty } from './thrumbnail-empty';
 
 const MAX_SHOWEN_SLIDES_COUNT = 11;

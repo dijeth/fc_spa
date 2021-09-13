@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { PRELOADED_SLIDES_COUNT } from '../../const/catalog-const';
 import { lookInfoPropTypes } from '../../prop-types';
 import { formatCost } from '../../utils/catalog-utils';
-import StackSlider from '../sliders/StackSlider';
+import StackSlider from '../sliders/stack-slider';
 
 const renderItemText = (itemData) => itemData.map((it) => <p key={it.id}>{`${it.text} ${formatCost(it.cost)}`}</p>);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StackSlider from '../sliders/StackSlider';
+import StackSlider from '../sliders/stack-slider';
 import { PRELOADED_SLIDES_COUNT } from '../../const';
 
 const MainPhoto = ({ slideIndex, images }) => (

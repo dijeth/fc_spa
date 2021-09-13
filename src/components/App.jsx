@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import PageNewCollections from './pages/PageNewCollections';
-import PageCatalog from './pages/PageCatalog';
-import Page404 from './pages/Page404';
+import PageNewCollections from './pages/page-new-collections';
+import PageCatalog from './pages/page-catalog';
+import Page404 from './pages/page-404';
 
 const App = () => (
   <Switch>
