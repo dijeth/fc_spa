@@ -19,7 +19,7 @@ const Catalog = ({
   const texts = section.items.map(({ items, id }) => ({ items, id }));
   const sections = data.sections.map(({ id, section: name, link }) => ({ id, name, link }));
 
-  const photos = section.items.map(({ look, id }, i) => ({
+  const photos = section.items.map(({ id, look }, i) => ({
     id,
     src: getUrl('img', ImageFolder.LOOK, look),
     alt: `Look ${i + 1}`,
@@ -56,7 +56,7 @@ const Catalog = ({
             <AddressList />
           </div>
           <div className="catalog__look look">
-            <MainPhoto slideIndex={lookIndex} images={photos} />
+            <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={getUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)} />
             <div className="look__info">
               {prevLookButton}
               <span className="look__current">
