@@ -8,7 +8,7 @@ import Thrumbnails from './thrumbnails';
 import MainPhoto from './main-photo';
 
 const Catalog = ({
-  data, activeSection, activeLook, onChangeLocation,
+  data, activeSection, activeLook, onSlideChange, onSectionChange,
 }) => {
   const category = data.brandLink;
   const catalog = data.link;
@@ -17,10 +17,6 @@ const Catalog = ({
   const lookIndex = section.items[activeLook] ? activeLook : 0;
   const nextLookIndex = lookIndex + 1 <= section.items.length - 1 ? lookIndex + 1 : 0;
   const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : section.items.length - 1;
-
-  const getRedirectUrl = (redirectSection, redirectLook) => (data.sections.length > 1
-    ? getUrl(category, catalog, redirectSection, redirectLook + 1)
-    : getUrl(category, catalog, redirectLook + 1));
 
   const getImageUrl = (catalogSection, lookImage) => (data.sections.length > 1
     ? getUrl('img', category, catalog, catalogSection, lookImage)
@@ -47,7 +43,7 @@ const Catalog = ({
 
   const prevLookButton = prevLookIndex !== null
     ? (
-      <button type="button" className="look__nav look__nav--prev" onClick={() => { onChangeLocation(getRedirectUrl(section.link, prevLookIndex)); }}>
+      <button type="button" className="look__nav look__nav--prev" onClick={() => { onSlideChange(prevLookIndex); }}>
         {prevLookIndex + 1}
       </button>
     )
@@ -55,7 +51,7 @@ const Catalog = ({
 
   const nextLookButton = nextLookIndex !== null
     ? (
-      <button type="button" className="look__nav look__nav--next" onClick={() => { onChangeLocation(getRedirectUrl(section.link, nextLookIndex)); }}>
+      <button type="button" className="look__nav look__nav--next" onClick={() => { onSlideChange(nextLookIndex); }}>
         {nextLookIndex + 1}
       </button>
     )
@@ -82,7 +78,12 @@ const Catalog = ({
             </div>
           </div>
           <div className="catalog__side side">
-            <SectionList activeSection={section.link} sections={sections} category={category} catalog={catalog} onSectionChange={onChangeLocation} />
+            <SectionList
+              activeSection={section.link}
+              sections={sections}
+              onSectionChange={onSectionChange}
+            />
+
             <LookInfo data={texts} slideIndex={lookIndex} />
           </div>
         </section>
@@ -90,8 +91,8 @@ const Catalog = ({
           <Thrumbnails
             images={thrumbnails}
             slideIndex={lookIndex}
-            onSlideClick={(index) => { onChangeLocation(getRedirectUrl(section.link, index)); }}
-            onSlideChange={(index) => { onChangeLocation(getRedirectUrl(section.link, index)); }}
+            onSlideClick={onSlideChange}
+            onSlideChange={onSlideChange}
           />
         </section>
         <footer className="catalog__footer">
@@ -106,13 +107,13 @@ Catalog.propTypes = {
   data: PropTypes.object.isRequired,
   activeSection: PropTypes.number,
   activeLook: PropTypes.number,
-  onChangeLocation: PropTypes.func,
+  onSlideChange: PropTypes.func.isRequired,
+  onSectionChange: PropTypes.func.isRequired,
 };
 
 Catalog.defaultProps = {
   activeSection: 0,
   activeLook: 0,
-  onChangeLocation: null,
 };
 
 export default Catalog;
