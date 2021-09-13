@@ -24,18 +24,6 @@
     height: @weight;
     background-color: @color;
   }
-
-  &:focus::before,
-  &:focus::after,
-  &:hover::before,
-  &:hover::after {
-    background-color: lighten(@color, 40%);
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: lighten(@color, 20%);
-  }
 }
 
 .arrow(left, @width: 30px, @weight: 2px, @color: #000, @round-cap: 0) {

@@ -11,6 +11,7 @@
     width     : 70px;
     height    : 100px;
     object-fit: contain;
+    cursor: pointer;
   }
 
   &__slide--empty {
@@ -23,6 +24,19 @@
 
   position: relative;
   width   : 3rem;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: auto;
+    opacity: 0.3;
+  }
+
+  &:not(:disabled):focus::before,
+  &:not(:disabled):focus::after,
+  &:not(:disabled):hover::before,
+  &:not(:disabled):hover::after {
+    background-color: lighten(#000, 40%);
+  }
 
   &--prev {
     .arrow(left, @weight: 2px);
