@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const ZOOM_WIDTH = 1000;
+import { ZOOM_WIDTH } from '../../const';
 
 const getImageSize = async (src) => new Promise((resolve) => {
   const image = new Image();
