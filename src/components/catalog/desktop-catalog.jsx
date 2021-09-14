@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getUrl } from '../../utils/common-utils';
+import { getStaticUrl } from '../../utils/common-utils';
 import LookInfo from './look-info';
 import SectionList from './section-list';
 import AddressList from './address-list';
@@ -8,7 +8,7 @@ import Thrumbnails from './thrumbnails';
 import MainPhoto from './main-photo';
 import { ImageFolder } from '../../const';
 
-const Catalog = ({
+const DesktopCatalog = ({
   data, activeSection, activeLook, onSlideChange, onSectionChange,
 }) => {
   const section = data.sections[activeSection] || data.sections[0];
@@ -21,13 +21,13 @@ const Catalog = ({
 
   const photos = section.items.map(({ id, look }, i) => ({
     id,
-    src: getUrl('img', ImageFolder.LOOK, look),
+    src: getStaticUrl('img', ImageFolder.LOOK, look),
     alt: `Look ${i + 1}`,
   }));
 
   const thrumbnails = section.items.map(({ thrumbnail, id }, i) => ({
     id,
-    src: getUrl('img', ImageFolder.THRUMBNAIL, thrumbnail),
+    src: getStaticUrl('img', ImageFolder.THRUMBNAIL, thrumbnail),
     alt: `Look ${i + 1}`,
   }));
 
@@ -56,7 +56,7 @@ const Catalog = ({
             <AddressList />
           </div>
           <div className="catalog__look look">
-            <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={getUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)} />
+            <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={getStaticUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)} />
             <div className="look__info">
               {prevLookButton}
               <span className="look__current">
@@ -93,7 +93,7 @@ const Catalog = ({
   );
 };
 
-Catalog.propTypes = {
+DesktopCatalog.propTypes = {
   data: PropTypes.object.isRequired,
   activeSection: PropTypes.number,
   activeLook: PropTypes.number,
@@ -101,9 +101,9 @@ Catalog.propTypes = {
   onSectionChange: PropTypes.func.isRequired,
 };
 
-Catalog.defaultProps = {
+DesktopCatalog.defaultProps = {
   activeSection: 0,
   activeLook: 0,
 };
 
-export default Catalog;
+export default DesktopCatalog;

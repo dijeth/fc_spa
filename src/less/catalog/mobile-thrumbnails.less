@@ -1,0 +1,27 @@
+.mobile-thrumbnails {
+  overflow: auto;
+  margin-bottom: 15px;
+
+  &__close {
+    position : fixed;
+    bottom   : 10px;
+    left     : 50%;
+    transform: translateX(-50%);
+  }
+
+  &__inner {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+  }
+}
+
+.mobile-thrumbnails__image {
+  width : 70px;
+  height: auto;
+  margin: 10px;
+
+  &--active {
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  }
+}

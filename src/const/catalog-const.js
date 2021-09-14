@@ -1,4 +1,4 @@
-export const PRELOADED_SLIDES_COUNT = 5;
+export const PRELOADED_SLIDES_COUNT = 8;
 
 export const ImageFolder = {
   THRUMBNAIL: 'thrumbnails',

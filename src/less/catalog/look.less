@@ -1,48 +1,109 @@
 .look {
-  &__photo {
-    margin-bottom: 1rem;
-    height: 70vh;
-
-    img {
-      display: block;
-      object-fit: contain;
-      height: 70vh;
-    }
-  }
-
   &__info {
-    display: flex;
-    justify-content: space-between;
+    display        : flex;
+    justify-content: center;
+
+    @media screen and (min-width: @tablet) {
+      justify-content: space-between;
+    }
   }
 
   &__current {
     font-size: 1.35rem;
   }
+
+  &>* {
+    margin-bottom: 1rem;
+  }
+}
+
+.look__mobile-nav {
+  .button-reset();
+
+  position: absolute;
+  top     : 0;
+  bottom  : 0;
+  width   : 30px;
+
+  background-color   : #fff;
+  background-size    : contain;
+  background-position: center;
+  background-repeat  : no-repeat;
+
+  &--prev {
+    left            : -30px;
+    background-image: url("../img/icons/arrow-left.svg");
+  }
+
+  &--next {
+    right           : -30px;
+    background-image: url("../img/icons/arrow-right.svg");
+  }
 }
 
 .look__nav {
-    .button-reset();
+  .button-reset();
 
-    position: relative;
-    outline: none;
-    cursor: pointer;
-    padding: 0.5rem 1.5rem;
+  position: relative;
+  cursor  : pointer;
+  padding : 0.5rem 1.5rem;
 
-    &::before {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-58%);
-      bottom: 0;
-      width: 1rem;
-    }
+  &::before {
+    position : absolute;
+    top      : 50%;
+    transform: translateY(-58%);
+    width    : 1rem;
+  }
 
-    &--prev::before {
-      content: "←";
-      left: 0;
-    }
+  &--prev::before {
+    content: "←";
+    left   : 0;
+  }
 
-    &--next::before {
-      content: "→";
-      right: 0;
+  &--next::before {
+    content: "→";
+    right  : 0;
+  }
+
+  &--prev {
+    background-image: none;
+  }
+
+  &--next {
+    background-image: none;
+  }
+}
+
+.look__photo {
+  margin-bottom: 1rem;
+  height       : 100%;
+
+  img {
+    display   : block;
+    object-fit: contain;
+  }
+
+  @media screen and (min-width: @tablet) {
+    height: 70vh;
+
+    img {
+      height: 70vh;
     }
   }
+}
+
+.look__action {
+  .button-reset();
+
+  padding      : 0.5rem 1rem;
+  color        : #777;
+  border-bottom: 1px dashed #777;
+}
+
+.look__controls {
+  text-align: center;
+}
+
+.look__photo-container {
+  position: relative;
+}

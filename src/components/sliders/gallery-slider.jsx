@@ -36,10 +36,16 @@ const getSlides = (slideElements, bounds, OutBoundComponent) => Array(bounds.max
     const correctedItemIndex = correctSlideIndex(itemIndex, slideElements.length);
     const slide = slideElements[correctedItemIndex];
 
-    if (itemIndex !== correctedItemIndex) {
+    if (itemIndex < 0) {
       return OutBoundComponent
-        ? <OutBoundComponent key={slide.key}>{slide}</OutBoundComponent>
-        : slide;
+        ? <OutBoundComponent key={`left-${slide.key}`}>{slide}</OutBoundComponent>
+        : <div key={`left-${slide.key}`}>{slide}</div>;
+    }
+
+    if (itemIndex > slideElements.length - 1) {
+      return OutBoundComponent
+        ? <OutBoundComponent key={`right-${slide.key}`}>{slide}</OutBoundComponent>
+        : <div key={`left-${slide.key}`}>{slide}</div>;
     }
 
     return slide;

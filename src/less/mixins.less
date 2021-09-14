@@ -5,10 +5,11 @@
 }
 
 .button-reset () {
-  display: inline-block;
+  // display: inline-block;
   padding: 0;
   background-color: transparent;
   border: 0;
+  outline: none;
 }
 
 .arrow(@_, @width: 30px, @weight: 2px, @color: #000, @round-cap: 0) {
@@ -66,4 +67,34 @@
   &::after {
     transform: translateX(-50%) translateY(-50%) rotate(-45deg);
   }
+}
+
+.hamburger(@width: 30px, @weight: 2px, @color: #000) {
+  position: relative;
+
+  & span,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: @width;
+    height: @weight;
+    background-color: @color;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before {
+    top: 7px;
+  }
+
+  &::after {
+    bottom: 7px;
+  }
+
 }

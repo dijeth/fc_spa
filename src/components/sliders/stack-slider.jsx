@@ -17,6 +17,7 @@ const StackSlider = ({
   slideIndex,
   preloadedSideSlidesCount,
   className,
+  flexHeight,
   children,
 }) => {
   const nextSlideIndex = correctSlideIndex(slideIndex);
@@ -89,20 +90,14 @@ const StackSlider = ({
   });
 
   React.useLayoutEffect(() => {
-    const sliderElement = refSlider.current;
-    const currentElement = refCurrent.current;
+    if (flexHeight) {
+      const currentHeight = Math.round(refCurrent.current.getBoundingClientRect().height);
 
-    const sliderRect = sliderElement.getBoundingClientRect();
-    const currentRect = currentElement.getBoundingClientRect();
+      const height = shouldChange
+        ? Math.max(currentHeight, Math.round(refNext.current.getBoundingClientRect().height))
+        : currentHeight;
 
-    currentElement.style.height = `${Math.round(sliderRect.height - (currentRect.top - sliderRect.top))}px`;
-    currentElement.style.overflow = 'auto';
-
-    if (shouldChange) {
-      const nextElement = refNext.current;
-      const nextRect = nextElement.getBoundingClientRect();
-      nextElement.style.height = `${Math.round(sliderRect.height - (nextRect.top - sliderRect.top))}px`;
-      nextElement.style.overflow = 'auto';
+      refSlider.current.style.height = `${height}px`;
     }
   });
 
@@ -120,10 +115,12 @@ StackSlider.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
   preloadedSideSlidesCount: PropTypes.number,
   className: PropTypes.string,
+  flexHeight: PropTypes.bool,
 };
 
 StackSlider.defaultProps = {
   preloadedSideSlidesCount: 0,
+  flexHeight: true,
   className: null,
 };
 

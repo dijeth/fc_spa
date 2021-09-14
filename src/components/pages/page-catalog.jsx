@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import { Redirect, useHistory, useRouteMatch } from 'react-router-dom';
 import { CatalogService } from '../../data-services/catalog-service';
 import Page404 from './page-404';
-import Catalog from '../catalog/catalog';
+import DesktopCatalog from '../catalog/desktop-catalog';
+import MobileCatalog from '../catalog/mobile-catalog';
+import Media from '../media';
 import { getUrl } from '../../utils/common-utils';
+import { DESKTOP_MIN_WIDTH } from '../../const';
 
 const catalogService = new CatalogService();
 
@@ -103,13 +106,26 @@ const PageCatalog = ({ category, catalog }) => {
   }
 
   return (
-    <Catalog
-      data={data}
-      activeSection={section}
-      activeLook={look}
-      onSlideChange={changeLookHandler}
-      onSectionChange={changeSectionHandler}
-    />
+    <>
+      <Media query={`(max-width: ${DESKTOP_MIN_WIDTH - 1}px)`}>
+        <MobileCatalog
+          data={data}
+          activeSection={section}
+          activeLook={look}
+          onSlideChange={changeLookHandler}
+          onSectionChange={changeSectionHandler}
+        />
+      </Media>
+      <Media query={`(min-width: ${DESKTOP_MIN_WIDTH}px)`}>
+        <DesktopCatalog
+          data={data}
+          activeSection={section}
+          activeLook={look}
+          onSlideChange={changeLookHandler}
+          onSectionChange={changeSectionHandler}
+        />
+      </Media>
+    </>
   );
 };
 

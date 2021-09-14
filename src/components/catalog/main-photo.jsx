@@ -6,7 +6,7 @@ import ZoomImage from './zoom-image';
 
 const MainPhoto = ({ slideIndex, images, zoomImageSrc }) => (
   <ZoomImage src={zoomImageSrc}>
-    <StackSlider slideIndex={slideIndex} preloadedSideSlidesCount={PRELOADED_SLIDES_COUNT} className="look__photo">
+    <StackSlider slideIndex={slideIndex} preloadedSideSlidesCount={PRELOADED_SLIDES_COUNT} className="look__photo" flexHeight={false}>
       {images.map((it) => <img key={it.id} src={it.src} alt={it.alt} />)}
     </StackSlider>
   </ZoomImage>

@@ -1,26 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ZOOM_WIDTH } from '../../const';
-
-const getImageSize = async (src) => new Promise((resolve) => {
-  const image = new Image();
-
-  image.addEventListener('load', () => {
-    resolve({
-      height: image.naturalHeight,
-      width: image.naturalWidth,
-    });
-  });
-
-  image.addEventListener('load', () => {
-    resolve({
-      height: image.naturalHeight,
-      width: image.naturalWidth,
-    });
-  });
-
-  image.src = src;
-});
+import { getImageSize } from '../../utils/common-utils';
 
 const getBackgroundPosition = (clientX, clientY, containerRect, imageW, imageH) => {
   const kContainer = containerRect.width / containerRect.height;
