@@ -8,6 +8,7 @@ import { ImageFolder } from '../../const';
 import MobileLook from './mobile-look';
 import MobileThrumbnails from './mobile-thrumbnails';
 import SimpleZoom from './simple-zoom';
+import Modal from '../modal';
 
 const MobileCatalog = ({
   data, activeSection, activeLook, onSlideChange, onSectionChange,
@@ -38,36 +39,35 @@ const MobileCatalog = ({
   return (
     <div className="wrapper">
       <div className="catalog">
-        <SimpleZoom
-          src={getStaticUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)}
-          alt={`Look ${lookIndex + 1}`}
-          isShowen={zoom}
-          onClose={() => { setZoom(false); }}
-        />
+        <Modal isShowen={zoom} onClose={() => { setZoom(false); }}>
+          <SimpleZoom
+            src={getStaticUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)}
+            alt={`Look ${lookIndex + 1}`}
+          />
+        </Modal>
 
-        <AddressList
-          onClose={() => { setAddressShowen(false); }}
-          isShowen={addressShowen}
-        />
+        <Modal onClose={() => { setAddressShowen(false); }} isShowen={addressShowen}>
+          <AddressList />
+        </Modal>
 
-        <SectionList
-          activeSection={section.link}
-          sections={sections}
-          onSectionChange={onSectionChange}
-          onClose={() => { setSectionsShowen(false); }}
-          isShowen={sectionsShowen}
-        />
+        <Modal onClose={() => { setSectionsShowen(false); }} isShowen={sectionsShowen}>
+          <SectionList
+            activeSection={section.link}
+            sections={sections}
+            onSectionChange={onSectionChange}
+          />
+        </Modal>
 
-        <MobileThrumbnails
-          images={thrumbnails}
-          activeImage={lookIndex}
-          isShowen={navShowen}
-          onClose={() => { setNavShowen(false); }}
-          onActiveImageChange={(index) => {
-            onSlideChange(index);
-            setNavShowen(false);
-          }}
-        />
+        <Modal isShowen={navShowen} onClose={() => { setNavShowen(false); }}>
+          <MobileThrumbnails
+            images={thrumbnails}
+            activeImage={lookIndex}
+            onActiveImageChange={(index) => {
+              onSlideChange(index);
+              setNavShowen(false);
+            }}
+          />
+        </Modal>
 
         <button className="catalog__control catalog__control--menu" type="button" onClick={() => { setSectionsShowen(true); }} aria-label="Меню" />
         <button className="catalog__control catalog__control--nav" type="button" onClick={() => { setNavShowen(true); }} aria-label="Показать миниатюры" />

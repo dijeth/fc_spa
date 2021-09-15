@@ -35,7 +35,7 @@ const MobileLook = ({ lookIndex, images, onSlideChange }) => {
     });
   }, []);
 
-  const lookStyle = imageSize ? { height: `${imageSize.height}px` } : {};
+  const lookStyle = imageSize ? { height: `${imageSize.height}px` } : { height: '70vw' };
   const imageStyle = imageSize ? { width: `${imageSize.width}px`, height: `${imageSize.height}px` } : {};
 
   return (

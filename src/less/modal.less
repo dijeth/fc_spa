@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 
   position: fixed;
   left    : 0;
@@ -21,6 +21,10 @@
   box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
 
   z-index: 1000;
+
+  &__inner {
+    overflow: auto;
+  }
 
   &--showen {
     transform: translateX(0);
