@@ -102,17 +102,13 @@ const GallerySlider = ({
 
     setPositionInPercent(startPositionInPercent);
 
-    if (position + direction !== correctSlideIndex(position + direction, children.length)) {
-      return;
-    }
-
     if (onSlideChange) {
-      onSlideChange(position + direction);
+      onSlideChange(correctSlideIndex(position + direction, children.length));
     }
   };
 
   const touchMoveHandler = (evt) => {
-    setPositionInPercent(touchStart.track + getTouchPositionInPercent(evt) - touchStart.touch);
+    refTrack.current.style.left = `${touchStart.track + getTouchPositionInPercent(evt) - touchStart.touch}%`;
   };
 
   React.useEffect(() => {
