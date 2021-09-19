@@ -6,6 +6,8 @@ import {
 import Catalog from './catalog';
 import Page404 from '../pages/page-404';
 import Media from '../media';
+import Modal from '../modal';
+import SectionList from './section-list';
 import { DESKTOP_MIN_WIDTH } from '../../const';
 import { getUrl } from '../../utils';
 
@@ -74,9 +76,13 @@ const CatalogInnerRouter = ({
               ? (
                 <>
                   <Media query={`(max-width: ${DESKTOP_MIN_WIDTH - 1}px)`}>
-                    <p>
-                      выбор секции
-                    </p>
+                    <Modal isShowen>
+                      <SectionList
+                        activeSection={section.link}
+                        sections={sectionList}
+                        onSectionChange={changeSectionHandler}
+                      />
+                    </Modal>
                   </Media>
 
                   <Media query={`(min-width: ${DESKTOP_MIN_WIDTH}px)`}>

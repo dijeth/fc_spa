@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { CatalogService } from '../../data-services/catalog-service';
 import Page404 from './page-404';
 import CatalogInnerRouter from '../catalog/catalog-inner-router';
+import PagePreloader from './page-preloader';
 
 const catalogService = new CatalogService();
 
@@ -37,7 +38,7 @@ const PageCatalog = ({ category, catalog }) => {
   }, [redirect]);
 
   if (isLoading) {
-    return <div>Loading.......</div>;
+    return <PagePreloader />;
   }
 
   if (error) {
