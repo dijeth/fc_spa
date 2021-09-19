@@ -32,7 +32,7 @@ const ZoomImage = ({ src, children }) => {
   const [image, setImage] = React.useState();
 
   React.useEffect(() => {
-    refContainer.current.addEventListener('mouseenter', () => {
+    refContainer.current.addEventListener('mousedown', () => {
       getImageSize(src).then(({ width, height }) => {
         setImage({ width, height });
       });
@@ -56,17 +56,18 @@ const ZoomImage = ({ src, children }) => {
         element.style.backgroundColor = '#fff';
         element.style.backgroundPositionX = `${x}px`;
         element.style.backgroundPositionY = `${y}px`;
-        // element.style.backgroundSize = `${ZOOM_WIDTH}px ${ZOOM_WIDTH / (image.width / image.height)}px`;
       };
 
       const mouseLeaveHandler = () => {
-        element.removeEventListener('mouseleave', mouseMoveHandler);
+        element.removeEventListener('mousemove', mouseMoveHandler);
         element.removeEventListener('mouseleave', mouseLeaveHandler);
+        element.removeEventListener('mouseup', mouseLeaveHandler);
         setImage(null);
       };
 
       element.addEventListener('mousemove', mouseMoveHandler);
       element.addEventListener('mouseleave', mouseLeaveHandler);
+      element.addEventListener('mouseup', mouseLeaveHandler);
     }
   }, [image]);
 
