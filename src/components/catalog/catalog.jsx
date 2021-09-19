@@ -11,31 +11,28 @@ const Catalog = ({
   sectionList,
   onSlideChange,
   onSectionChange,
-}) => {
-  console.log(111);
-  return (
-    <>
-      <Media query={`(max-width: ${DESKTOP_MIN_WIDTH - 1}px)`}>
-        <MobileCatalog
-          activeSection={activeSection}
-          activeLook={activeLook}
-          sectionList={sectionList}
-          onSlideChange={onSlideChange}
-          onSectionChange={onSectionChange}
-        />
-      </Media>
-      <Media query={`(min-width: ${DESKTOP_MIN_WIDTH}px)`}>
-        <DesktopCatalog
-          activeSection={activeSection}
-          activeLook={activeLook}
-          sectionList={sectionList}
-          onSlideChange={onSlideChange}
-          onSectionChange={onSectionChange}
-        />
-      </Media>
-    </>
-  );
-};
+}) => (
+  <>
+    <Media query={`(max-width: ${DESKTOP_MIN_WIDTH - 1}px)`}>
+      <MobileCatalog
+        activeSection={activeSection}
+        activeLook={activeLook}
+        sectionList={sectionList}
+        onSlideChange={onSlideChange}
+        onSectionChange={onSectionChange}
+      />
+    </Media>
+    <Media query={`(min-width: ${DESKTOP_MIN_WIDTH}px)`}>
+      <DesktopCatalog
+        activeSection={activeSection}
+        activeLook={activeLook}
+        sectionList={sectionList}
+        onSlideChange={onSlideChange}
+        onSectionChange={onSectionChange}
+      />
+    </Media>
+  </>
+);
 
 Catalog.propTypes = catalogPropTypes;
 
