@@ -7,3 +7,17 @@ export const lookInfoPropTypes = PropTypes.arrayOf(
     cost: PropTypes.number,
   }),
 );
+
+export const catalogPropTypes = {
+  activeSection: PropTypes.object.isRequired,
+  activeLook: PropTypes.number,
+  sectionList: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      link: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  onSlideChange: PropTypes.func.isRequired,
+  onSectionChange: PropTypes.func.isRequired,
+};

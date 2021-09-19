@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { getStaticUrl } from '../../utils/common-utils';
 import LookInfo from './look-info';
 import SectionList from './section-list';
@@ -7,17 +6,17 @@ import AddressList from './address-list';
 import Thrumbnails from './thrumbnails';
 import MainPhoto from './main-photo';
 import { ImageFolder } from '../../const';
+import { catalogPropTypes } from '../../prop-types';
 
 const DesktopCatalog = ({
-  data, activeSection, activeLook, onSlideChange, onSectionChange,
+  activeSection, activeLook, sectionList, onSlideChange, onSectionChange,
 }) => {
-  const section = data.sections[activeSection] || data.sections[0];
+  const section = activeSection;
   const lookIndex = section.items[activeLook] ? activeLook : 0;
   const nextLookIndex = lookIndex + 1 <= section.items.length - 1 ? lookIndex + 1 : 0;
   const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : section.items.length - 1;
 
   const texts = section.items.map(({ items, id }) => ({ items, id }));
-  const sections = data.sections.map(({ id, section: name, link }) => ({ id, name, link }));
 
   const photos = section.items.map(({ id, look }, i) => ({
     id,
@@ -70,7 +69,7 @@ const DesktopCatalog = ({
           <div className="catalog__side side">
             <SectionList
               activeSection={section.link}
-              sections={sections}
+              sections={sectionList}
               onSectionChange={onSectionChange}
             />
 
@@ -93,16 +92,9 @@ const DesktopCatalog = ({
   );
 };
 
-DesktopCatalog.propTypes = {
-  data: PropTypes.object.isRequired,
-  activeSection: PropTypes.number,
-  activeLook: PropTypes.number,
-  onSlideChange: PropTypes.func.isRequired,
-  onSectionChange: PropTypes.func.isRequired,
-};
+DesktopCatalog.propTypes = catalogPropTypes;
 
 DesktopCatalog.defaultProps = {
-  activeSection: 0,
   activeLook: 0,
 };
 
