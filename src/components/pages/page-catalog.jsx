@@ -5,6 +5,7 @@ import { CatalogService } from '../../data-services/catalog-service';
 import Page404 from './page-404';
 import CatalogInnerRouter from '../catalog/catalog-inner-router';
 import PagePreloader from './page-preloader';
+import Transition from './transition';
 
 const catalogService = new CatalogService();
 
@@ -54,12 +55,14 @@ const PageCatalog = ({ category, catalog }) => {
   }
 
   return (
-    <CatalogInnerRouter
-      data={data}
-      category={category}
-      catalog={catalog}
-      onRedirect={redirectHandler}
-    />
+    <Transition>
+      <CatalogInnerRouter
+        data={data}
+        category={category}
+        catalog={catalog}
+        onRedirect={redirectHandler}
+      />
+    </Transition>
   );
 };
 
