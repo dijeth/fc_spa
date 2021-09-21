@@ -8,6 +8,14 @@ export const lookInfoPropTypes = PropTypes.arrayOf(
   }),
 );
 
+export const addressListPropTypes = {
+  logotype: PropTypes.string,
+  addressList: PropTypes.arrayOf(PropTypes.shape({
+    address: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+  })).isRequired,
+};
+
 export const catalogPropTypes = {
   activeSection: PropTypes.object.isRequired,
   activeLook: PropTypes.number,
@@ -20,4 +28,6 @@ export const catalogPropTypes = {
   ).isRequired,
   onSlideChange: PropTypes.func.isRequired,
   onSectionChange: PropTypes.func.isRequired,
+  validTime: PropTypes.string,
+  ...addressListPropTypes,
 };

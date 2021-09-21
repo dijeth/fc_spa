@@ -9,7 +9,7 @@ import { ImageFolder } from '../../const';
 import { catalogPropTypes } from '../../prop-types';
 
 const DesktopCatalog = ({
-  activeSection, activeLook, sectionList, onSlideChange, onSectionChange,
+  activeSection, activeLook, sectionList, addressList, logotype, validTime, onSlideChange, onSectionChange,
 }) => {
   const section = activeSection;
   const lookIndex = section.items[activeLook] ? activeLook : 0;
@@ -51,8 +51,7 @@ const DesktopCatalog = ({
       <div className="catalog">
         <section className="catalog__main">
           <div className="catalog__side">
-            <img src="/img/blv.svg" alt="Логотип" className="catalog__logo" />
-            <AddressList />
+            <AddressList logotype={logotype} addressList={addressList} />
           </div>
           <div className="catalog__look look">
             <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={getStaticUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)} />
@@ -85,7 +84,7 @@ const DesktopCatalog = ({
           />
         </section>
         <footer className="catalog__footer">
-          <p>Цены действительны до 01.01.2021</p>
+          <p>{validTime}</p>
         </footer>
       </div>
     </div>
@@ -96,6 +95,7 @@ DesktopCatalog.propTypes = catalogPropTypes;
 
 DesktopCatalog.defaultProps = {
   activeLook: 0,
+  validTime: '',
 };
 
 export default DesktopCatalog;

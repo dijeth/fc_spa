@@ -47,6 +47,9 @@ const CatalogInnerRouter = ({
                   activeSection={section}
                   activeLook={lookIndex}
                   sectionList={sectionList}
+                  logotype={data.logotype}
+                  addressList={data.addressList}
+                  validTime={data.validTime}
                   onSlideChange={changeLookHandlerFactory(section)}
                   onSectionChange={changeSectionHandler}
                 />
@@ -80,6 +83,7 @@ const CatalogInnerRouter = ({
                       <SectionList
                         activeSection={section.link}
                         sections={sectionList}
+                        logotype={data.logotype}
                         onSectionChange={changeSectionHandler}
                       />
                     </Modal>
@@ -112,6 +116,9 @@ const CatalogInnerRouter = ({
                 activeSection={section}
                 activeLook={lookIndex}
                 sectionList={sectionList}
+                logotype={data.logotype}
+                addressList={data.addressList}
+                validTime={data.validTime}
                 onSlideChange={changeLookHandlerFactory(data.sections[0].link)}
                 onSectionChange={changeSectionHandler}
               />

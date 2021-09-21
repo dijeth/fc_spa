@@ -12,7 +12,9 @@ class CatalogService {
       if (category === 'please-set-error') {
         setTimeout(() => { rej(new Error('some server error')); }, Math.random() * MOCK_TIMEOUT);
       } else {
-        setTimeout(() => { res(this.data.find((it) => it.brandLink === category && it.link.toLowerCase() === catalogName)); }, Math.random() * MOCK_TIMEOUT);
+        setTimeout(() => {
+          res(this.data.find((it) => it.brandLink === category && it.link.toLowerCase() === catalogName));
+        }, Math.random() * MOCK_TIMEOUT);
       }
     });
   }

@@ -1,27 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { getStaticUrl } from '../../utils/common-utils';
+import { addressListPropTypes } from '../../prop-types';
 
-const AddressList = () => (
-  <ul className="catalog__address address-list">
-    <li className="address-list__item">
-      <a className="address-list__phone" href="+74959333382">+7 (495) 933 3382</a>
-      <span className="address-list__base">Третьяковский проезд</span>
-    </li>
-    <li className="address-list__item">
-      <a className="address-list__phone" href="+74952258894">+7 (495) 225 8894</a>
-      <span className="address-list__base">«Барвиха Luxury Village»</span>
-    </li>
-    <li className="address-list__item">
-      <a className="address-list__phone" href="+74959333032">+7 (495) 933 3032</a>
-      <span className="address-list__base">Кутузовский проспект, 31</span>
-    </li>
-  </ul>
+const AddressList = ({ logotype, addressList }) => (
+  <>
+    {
+      logotype
+        ? <img src={getStaticUrl('img', logotype)} alt="Логотип" className="catalog__logo" />
+        : ''
+    }
+    <ul className="catalog__address address-list">
+      {
+        addressList.map((it) => (
+          <li className="address-list__item" key={it.address}>
+            <a className="address-list__phone" href={`tel:+${it.phone.replace(/\D+/, '')}`}>{it.phone}</a>
+            <span className="address-list__base">{it.address}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </>
 );
 
-AddressList.propTypes = {
-};
+AddressList.propTypes = addressListPropTypes;
 
 AddressList.defaultProps = {
+  logotype: null,
 };
 
 export default React.memo(AddressList);

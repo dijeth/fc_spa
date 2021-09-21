@@ -9,6 +9,9 @@ const Catalog = ({
   activeSection,
   activeLook,
   sectionList,
+  logotype,
+  addressList,
+  validTime,
   onSlideChange,
   onSectionChange,
 }) => (
@@ -18,6 +21,9 @@ const Catalog = ({
         activeSection={activeSection}
         activeLook={activeLook}
         sectionList={sectionList}
+        logotype={logotype}
+        addressList={addressList}
+        validTime={validTime}
         onSlideChange={onSlideChange}
         onSectionChange={onSectionChange}
       />
@@ -27,6 +33,9 @@ const Catalog = ({
         activeSection={activeSection}
         activeLook={activeLook}
         sectionList={sectionList}
+        logotype={logotype}
+        addressList={addressList}
+        validTime={validTime}
         onSlideChange={onSlideChange}
         onSectionChange={onSectionChange}
       />
@@ -38,6 +47,7 @@ Catalog.propTypes = catalogPropTypes;
 
 Catalog.defaultProps = {
   activeLook: 0,
+  validTime: '',
 };
 
 export default Catalog;

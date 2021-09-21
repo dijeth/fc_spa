@@ -11,7 +11,7 @@ import Modal from '../modal';
 import { catalogPropTypes } from '../../prop-types';
 
 const MobileCatalog = ({
-  activeSection, activeLook, sectionList, onSlideChange, onSectionChange,
+  activeSection, activeLook, sectionList, addressList, logotype, validTime, onSlideChange, onSectionChange,
 }) => {
   const [addressShowen, setAddressShowen] = React.useState(false);
   const [sectionsShowen, setSectionsShowen] = React.useState(false);
@@ -46,7 +46,7 @@ const MobileCatalog = ({
         </Modal>
 
         <Modal onClose={() => { setAddressShowen(false); }} isShowen={addressShowen}>
-          <AddressList />
+          <AddressList logotype={logotype} addressList={addressList} />
         </Modal>
 
         <Modal onClose={() => { setSectionsShowen(false); }} isShowen={sectionsShowen}>
@@ -54,6 +54,7 @@ const MobileCatalog = ({
             activeSection={section.link}
             sections={sectionList}
             onSectionChange={onSectionChange}
+            logotype="blv.svg"
           />
         </Modal>
 
@@ -92,7 +93,7 @@ const MobileCatalog = ({
           </div>
         </section>
         <footer className="catalog__footer">
-          <p>Цены действительны до 01.01.2021</p>
+          <p>{validTime}</p>
         </footer>
       </div>
     </div>
@@ -103,6 +104,7 @@ MobileCatalog.propTypes = catalogPropTypes;
 
 MobileCatalog.defaultProps = {
   activeLook: 0,
+  validTime: '',
 };
 
 export default MobileCatalog;
