@@ -29,5 +29,6 @@ export const catalogPropTypes = {
   onSlideChange: PropTypes.func.isRequired,
   onSectionChange: PropTypes.func.isRequired,
   validTime: PropTypes.string,
+  brandRegExp: PropTypes.instanceOf(RegExp).isRequired,
   ...addressListPropTypes,
 };

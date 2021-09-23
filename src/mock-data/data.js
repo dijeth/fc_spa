@@ -30,7 +30,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 2,
-                "text": "Водолазка с отделкой из кружева",
+                "text": "Водолазка с\u00A0отделкой из\u00A0кружева",
                 "cost": 191500
               },
               {
@@ -40,7 +40,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 4,
-                "text": "Сумка с тиснением под кожу крокодила",
+                "text": "Сумка с\u00A0тиснением под кожу крокодила",
                 "cost": 222000
               },
               {
@@ -50,11 +50,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 6,
-                "text": "– все Tom Ford"
+                "text": "– все Tom\u00A0Ford"
               },
               {
                 "id": 7,
-                "text": "Топ Alexander McQueen из сатина",
+                "text": "Топ Alexander\u00A0McQueen из\u00A0сатина",
                 "cost": 113500
               }
             ],
@@ -73,7 +73,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 9,
-                "text": "Водолазка с отделкой из кружева",
+                "text": "Водолазка с\u00A0отделкой из\u00A0кружева",
                 "cost": 191500
               },
               {
@@ -88,7 +88,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 12,
-                "text": "Сумка с тиснением под кожу крокодила",
+                "text": "Сумка с\u00A0тиснением под кожу крокодила",
                 "cost": 222000
               },
               {
@@ -98,11 +98,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 14,
-                "text": "– все Tom Ford"
+                "text": "– все Tom\u00A0Ford"
               },
               {
                 "id": 15,
-                "text": "Топ Alexander McQueen из сатина",
+                "text": "Топ Alexander\u00A0McQueen из\u00A0сатина",
                 "cost": 113500
               }
             ],
@@ -121,7 +121,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 17,
-                "text": "Свитер из кашемира и мохеровой пряжи",
+                "text": "Свитер из\u00A0кашемира и\u00A0мохеровой пряжи",
                 "cost": 120000
               },
               {
@@ -151,11 +151,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 23,
-                "text": "– все Tom Ford"
+                "text": "– все Tom\u00A0Ford"
               },
               {
                 "id": 24,
-                "text": "Эксклюзивно для Москвы: водолазка Dolce & Gabbana из кашемира и шелка",
+                "text": "Эксклюзивно для Москвы: водолазка Dolce & Gabbana из\u00A0кашемира и\u00A0шелка",
                 "cost": 69950
               }
             ],
@@ -174,12 +174,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 26,
-                "text": "Мюли с отделкой из стразов",
+                "text": "Мюли с\u00A0отделкой из\u00A0стразов",
                 "cost": 137000
               },
               {
                 "id": 27,
-                "text": "Сумка Beak с отделкой из перьев страуса",
+                "text": "Сумка Beak с\u00A0отделкой из\u00A0перьев страуса",
                 "cost": 308500
               },
               {
@@ -194,7 +194,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 30,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "e06c05afe2eb30bf4aaffed8ad7c678c.jpg",
@@ -207,22 +207,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 31,
-                "text": "Пальто из шерсти",
+                "text": "Пальто из\u00A0шерсти",
                 "cost": 248000
               },
               {
                 "id": 32,
-                "text": "Жилет из бархата",
+                "text": "Жилет из\u00A0бархата",
                 "cost": 85150
               },
               {
                 "id": 33,
-                "text": "Блуза из бархата",
+                "text": "Блуза из\u00A0бархата",
                 "cost": 478500
               },
               {
                 "id": 34,
-                "text": "Шорты из бархата",
+                "text": "Шорты из\u00A0бархата",
                 "cost": 62450
               },
               {
@@ -237,12 +237,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 37,
-                "text": "Чокер из перьев страуса",
+                "text": "Чокер из\u00A0перьев страуса",
                 "cost": 66750
               },
               {
                 "id": 38,
-                "text": "– все Saint Laurent"
+                "text": "– все Saint\u00A0Laurent"
               }
             ],
             "look": "315f8304c8bf16e1b49c000f04910547.jpg",
@@ -255,22 +255,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 39,
-                "text": "Пальто из шерсти",
+                "text": "Пальто из\u00A0шерсти",
                 "cost": 248000
               },
               {
                 "id": 40,
-                "text": "Жилет из бархата",
+                "text": "Жилет из\u00A0бархата",
                 "cost": 85150
               },
               {
                 "id": 41,
-                "text": "Блуза из бархата",
+                "text": "Блуза из\u00A0бархата",
                 "cost": 478500
               },
               {
                 "id": 42,
-                "text": "Шорты из бархата",
+                "text": "Шорты из\u00A0бархата",
                 "cost": 62450
               },
               {
@@ -280,12 +280,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 44,
-                "text": "Чокер из перьев страуса",
+                "text": "Чокер из\u00A0перьев страуса",
                 "cost": 66750
               },
               {
                 "id": 45,
-                "text": "– все Saint Laurent"
+                "text": "– все Saint\u00A0Laurent"
               }
             ],
             "look": "f7bc4990a6c60ae2b7dd8948d752662d.jpg",
@@ -423,12 +423,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 66,
-                "text": "Жакет из бархата",
+                "text": "Жакет из\u00A0бархата",
                 "cost": 188500
               },
               {
                 "id": 67,
-                "text": "Блуза из шелка",
+                "text": "Блуза из\u00A0шелка",
                 "cost": 429500
               },
               {
@@ -443,7 +443,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 70,
-                "text": "Сумка с отделкой из пайеток",
+                "text": "Сумка с\u00A0отделкой из\u00A0пайеток",
                 "cost": 99500
               },
               {
@@ -453,7 +453,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 72,
-                "text": "– все Tom Ford"
+                "text": "– все Tom\u00A0Ford"
               }
             ],
             "look": "da08bdb2e159de89776bfecf2e517503.jpg",
@@ -466,12 +466,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 73,
-                "text": "Жакет из бархата",
+                "text": "Жакет из\u00A0бархата",
                 "cost": 188500
               },
               {
                 "id": 74,
-                "text": "Блуза из шелка",
+                "text": "Блуза из\u00A0шелка",
                 "cost": 429500
               },
               {
@@ -481,7 +481,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 76,
-                "text": "Сумка с отделкой из пайеток",
+                "text": "Сумка с\u00A0отделкой из\u00A0пайеток",
                 "cost": 99500
               },
               {
@@ -491,7 +491,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 78,
-                "text": "– все Tom Ford"
+                "text": "– все Tom\u00A0Ford"
               }
             ],
             "look": "e072ef99f0b11163f00607781344bffe.jpg",
@@ -504,12 +504,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 79,
-                "text": "Пальто из кашемира",
+                "text": "Пальто из\u00A0кашемира",
                 "cost": 899500
               },
               {
                 "id": 80,
-                "text": "Свитер из кашемира",
+                "text": "Свитер из\u00A0кашемира",
                 "cost": 193500
               },
               {
@@ -534,7 +534,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 85,
-                "text": "– все Loro Piana"
+                "text": "– все Loro\u00A0Piana"
               },
               {
                 "id": 86,
@@ -561,12 +561,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 89,
-                "text": "Платье из шелка",
+                "text": "Платье из\u00A0шелка",
                 "cost": 345000
               },
               {
                 "id": 90,
-                "text": "Водолазка из кашемира",
+                "text": "Водолазка из\u00A0кашемира",
                 "cost": 89950
               },
               {
@@ -586,7 +586,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 94,
-                "text": "– все Loro Piana"
+                "text": "– все Loro\u00A0Piana"
               }
             ],
             "look": "d88f7f9a6ea8cea3c0f48615dee527bd.jpg",
@@ -604,12 +604,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 96,
-                "text": "Платье из шелка",
+                "text": "Платье из\u00A0шелка",
                 "cost": 345000
               },
               {
                 "id": 97,
-                "text": "Водолазка из кашемира",
+                "text": "Водолазка из\u00A0кашемира",
                 "cost": 89950
               },
               {
@@ -619,7 +619,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 99,
-                "text": "– все Loro Piana"
+                "text": "– все Loro\u00A0Piana"
               }
             ],
             "look": "31cd17e7671d152baadcc6041ae24d39.jpg",
@@ -642,7 +642,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 102,
-                "text": "Юбка из шерсти",
+                "text": "Юбка из\u00A0шерсти",
                 "cost": 104500
               },
               {
@@ -662,7 +662,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 106,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "7e97c3bd2cd43b900e6c94ee2277784d.jpg",
@@ -700,7 +700,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 112,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "79c06e63371890044b477ff044ece9fd.jpg",
@@ -713,7 +713,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 113,
-                "text": "Комбинезон из шерсти",
+                "text": "Комбинезон из\u00A0шерсти",
                 "cost": 255000
               },
               {
@@ -728,7 +728,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 116,
-                "text": "Сумка RL50 из кожи аллигатора",
+                "text": "Сумка RL50 из\u00A0кожи аллигатора",
                 "cost": 2195000
               },
               {
@@ -743,7 +743,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 119,
-                "text": "– все Ralph Lauren"
+                "text": "– все Ralph\u00A0Lauren"
               }
             ],
             "look": "74f50130b16c1e2f255b639816cd124c.jpg",
@@ -756,22 +756,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 120,
-                "text": "Шуба из овчины",
+                "text": "Шуба из\u00A0овчины",
                 "cost": 1150000
               },
               {
                 "id": 121,
-                "text": "Жилет из бархата",
+                "text": "Жилет из\u00A0бархата",
                 "cost": 85150
               },
               {
                 "id": 122,
-                "text": "Блуза из шелка",
+                "text": "Блуза из\u00A0шелка",
                 "cost": 94950
               },
               {
                 "id": 123,
-                "text": "Шорты из бархата",
+                "text": "Шорты из\u00A0бархата",
                 "cost": 62450
               },
               {
@@ -781,12 +781,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 125,
-                "text": "Сумка Monogram Loulou",
+                "text": "Сумка Monogram\u00A0Loulou",
                 "cost": 173500
               },
               {
                 "id": 126,
-                "text": "Поясная сумка Kate из кожи варана",
+                "text": "Поясная сумка Kate из\u00A0кожи варана",
                 "cost": 124000
               },
               {
@@ -796,7 +796,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 128,
-                "text": "– все Saint Laurent"
+                "text": "– все Saint\u00A0Laurent"
               }
             ],
             "look": "94f1c356369dd6134e61a5166a878c44.jpg",
@@ -809,12 +809,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 129,
-                "text": "Джемпер из шерсти альпака",
+                "text": "Джемпер из\u00A0шерсти альпака",
                 "cost": 248000
               },
               {
                 "id": 130,
-                "text": "Водолазка из шерсти",
+                "text": "Водолазка из\u00A0шерсти",
                 "cost": 73950
               },
               {
@@ -829,7 +829,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 133,
-                "text": "Сумка Triangle Frame",
+                "text": "Сумка Triangle\u00A0Frame",
                 "cost": 161000
               },
               {
@@ -839,7 +839,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 135,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "67a85439b59be82e4acc4e8cf34ec68c.jpg",
@@ -852,12 +852,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 136,
-                "text": "Джемпер из шерсти альпака",
+                "text": "Джемпер из\u00A0шерсти альпака",
                 "cost": 248000
               },
               {
                 "id": 137,
-                "text": "Водолазка из шерсти",
+                "text": "Водолазка из\u00A0шерсти",
                 "cost": 73950
               },
               {
@@ -867,7 +867,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 139,
-                "text": "Сумка Triangle Frame",
+                "text": "Сумка Triangle\u00A0Frame",
                 "cost": 161000
               },
               {
@@ -877,7 +877,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 141,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "913ecaf10e1493be21b7c0b11b72e65e.jpg",
@@ -890,22 +890,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 142,
-                "text": "Накидка из кашемира",
+                "text": "Накидка из\u00A0кашемира",
                 "cost": 299500
               },
               {
                 "id": 143,
-                "text": "Свитер из кашемира",
+                "text": "Свитер из\u00A0кашемира",
                 "cost": 250500
               },
               {
                 "id": 144,
-                "text": "Блуза из шелка",
+                "text": "Блуза из\u00A0шелка",
                 "cost": 145000
               },
               {
                 "id": 145,
-                "text": "Брюки из кашемира и шелка",
+                "text": "Брюки из\u00A0кашемира и\u00A0шелка",
                 "cost": 199500
               },
               {
@@ -925,7 +925,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 149,
-                "text": "– все Loro Piana"
+                "text": "– все Loro\u00A0Piana"
               }
             ],
             "look": "39d272f36d8a2ef1b9b636a06f6f06bb.jpg",
@@ -938,17 +938,17 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 150,
-                "text": "Шуба Kiton из меха соболя",
+                "text": "Шуба Kiton из\u00A0меха соболя",
                 "cost": 6985000
               },
               {
                 "id": 151,
-                "text": "Платье Ralph Lauren с отделкой из бисера и пайеток",
+                "text": "Платье Ralph\u00A0Lauren с\u00A0отделкой из\u00A0бисера и\u00A0пайеток",
                 "cost": 472000
               },
               {
                 "id": 152,
-                "text": "Ботфорты Tom Ford",
+                "text": "Ботфорты Tom\u00A0Ford",
                 "cost": 156000
               }
             ],
@@ -962,7 +962,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 153,
-                "text": "Пальто из шерсти",
+                "text": "Пальто из\u00A0шерсти",
                 "cost": 278500
               },
               {
@@ -982,12 +982,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 157,
-                "text": "Сабо с тиснением под кожу крокодила",
+                "text": "Сабо с\u00A0тиснением под кожу крокодила",
                 "cost": 76800
               },
               {
                 "id": 158,
-                "text": "Шарф из овчины",
+                "text": "Шарф из\u00A0овчины",
                 "cost": 278500
               },
               {
@@ -997,7 +997,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 160,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "8f19e6b4ddb67e97b2aeced06fce0cdb.jpg",
@@ -1010,17 +1010,17 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 161,
-                "text": "Пальто из шерсти",
+                "text": "Пальто из\u00A0шерсти",
                 "cost": 472000
               },
               {
                 "id": 162,
-                "text": "Кардиган из шерсти",
+                "text": "Кардиган из\u00A0шерсти",
                 "cost": 199500
               },
               {
                 "id": 163,
-                "text": "Блуза из шелка",
+                "text": "Блуза из\u00A0шелка",
                 "cost": 124500
               },
               {
@@ -1030,7 +1030,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 165,
-                "text": "Бермуды из шерсти",
+                "text": "Бермуды из\u00A0шерсти",
                 "cost": 94400
               },
               {
@@ -1040,7 +1040,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 167,
-                "text": "Сумка Roman Stud",
+                "text": "Сумка Roman\u00A0Stud",
                 "cost": 199500
               },
               {
@@ -1083,7 +1083,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 174,
-                "text": "Юбка&#8209;шорты из шерсти и шелка",
+                "text": "Юбка&#8209;шорты из\u00A0шерсти и\u00A0шелка",
                 "cost": 106000
               },
               {
@@ -1098,7 +1098,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 177,
-                "text": "Сумка Roman Stud",
+                "text": "Сумка Roman\u00A0Stud",
                 "cost": 226000
               },
               {
@@ -1126,22 +1126,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 181,
-                "text": "Жакет из шерсти",
+                "text": "Жакет из\u00A0шерсти",
                 "cost": 209500
               },
               {
                 "id": 182,
-                "text": "Блуза из шелка",
+                "text": "Блуза из\u00A0шелка",
                 "cost": 79950
               },
               {
                 "id": 183,
-                "text": "Водолазка из кашемира и шерсти",
+                "text": "Водолазка из\u00A0кашемира и\u00A0шерсти",
                 "cost": 72000
               },
               {
                 "id": 184,
-                "text": "Бермуды из шерсти",
+                "text": "Бермуды из\u00A0шерсти",
                 "cost": 94950
               },
               {
@@ -1151,7 +1151,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 186,
-                "text": "Поясная сумка Kate из кожи варана",
+                "text": "Поясная сумка Kate из\u00A0кожи варана",
                 "cost": 112500
               },
               {
@@ -1171,7 +1171,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 190,
-                "text": "– все Saint Laurent"
+                "text": "– все Saint\u00A0Laurent"
               }
             ],
             "look": "0597d6420b258c4e717f154bfb9a68e9.jpg",
@@ -1184,12 +1184,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 191,
-                "text": "Тренч из шерсти и хлопка",
+                "text": "Тренч из\u00A0шерсти и\u00A0хлопка",
                 "cost": 248500
               },
               {
                 "id": 192,
-                "text": "Джемпер из кашемира",
+                "text": "Джемпер из\u00A0кашемира",
                 "cost": 152000
               },
               {
@@ -1223,7 +1223,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 199,
-                "text": "Блуза Saint Laurent из шелка",
+                "text": "Блуза Saint\u00A0Laurent из\u00A0шелка",
                 "cost": 94950
               }
             ],
@@ -1242,12 +1242,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 201,
-                "text": "Свитер из шерсти и кашемира",
+                "text": "Свитер из\u00A0шерсти и\u00A0кашемира",
                 "cost": 114000
               },
               {
                 "id": 202,
-                "text": "Юбка из шелка",
+                "text": "Юбка из\u00A0шелка",
                 "cost": 248500
               },
               {
@@ -1275,17 +1275,17 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 206,
-                "text": "Пальто из кашемира",
+                "text": "Пальто из\u00A0кашемира",
                 "cost": 637000
               },
               {
                 "id": 207,
-                "text": "Свитер из кашемира",
+                "text": "Свитер из\u00A0кашемира",
                 "cost": 172500
               },
               {
                 "id": 208,
-                "text": "Юбка из кашемира",
+                "text": "Юбка из\u00A0кашемира",
                 "cost": 282000
               },
               {
@@ -1305,7 +1305,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 212,
-                "text": "– все Loro Piana"
+                "text": "– все Loro\u00A0Piana"
               }
             ],
             "look": "c2d2f3b80d53527026ce3145d4a350b5.jpg",
@@ -1318,22 +1318,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 213,
-                "text": "Пальто из шерсти и кашемира",
+                "text": "Пальто из\u00A0шерсти и\u00A0кашемира",
                 "cost": 549000
               },
               {
                 "id": 214,
-                "text": "Куртка из замши",
+                "text": "Куртка из\u00A0замши",
                 "cost": 699500
               },
               {
                 "id": 215,
-                "text": "Водолазка из кашемира",
+                "text": "Водолазка из\u00A0кашемира",
                 "cost": 89950
               },
               {
                 "id": 216,
-                "text": "Брюки из кашемира",
+                "text": "Брюки из\u00A0кашемира",
                 "cost": 199500
               },
               {
@@ -1358,7 +1358,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 221,
-                "text": "– все Loro Piana"
+                "text": "– все Loro\u00A0Piana"
               },
               {
                 "id": 222,
@@ -1381,12 +1381,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 224,
-                "text": "Водолазка из кашемира",
+                "text": "Водолазка из\u00A0кашемира",
                 "cost": 109000
               },
               {
                 "id": 225,
-                "text": "Юбка из замши",
+                "text": "Юбка из\u00A0замши",
                 "cost": 294500
               },
               {
@@ -1396,7 +1396,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 227,
-                "text": "Сумка RL50 из кожи питона",
+                "text": "Сумка RL50 из\u00A0кожи питона",
                 "cost": 253000
               },
               {
@@ -1411,7 +1411,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 230,
-                "text": "– все Ralph Lauren"
+                "text": "– все Ralph\u00A0Lauren"
               }
             ],
             "look": "cfd9f21afec71fed3f616dcef0f84548.jpg",
@@ -1424,22 +1424,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 231,
-                "text": "Тренч из шерсти",
+                "text": "Тренч из\u00A0шерсти",
                 "cost": 358500
               },
               {
                 "id": 232,
-                "text": "Кардиган из кашемира",
+                "text": "Кардиган из\u00A0кашемира",
                 "cost": 269000
               },
               {
                 "id": 233,
-                "text": "Свитер из кашемира",
+                "text": "Свитер из\u00A0кашемира",
                 "cost": 189000
               },
               {
                 "id": 234,
-                "text": "Блуза из шелка",
+                "text": "Блуза из\u00A0шелка",
                 "cost": 139000
               },
               {
@@ -1449,11 +1449,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 236,
-                "text": "– все Ralph Lauren"
+                "text": "– все Ralph\u00A0Lauren"
               },
               {
                 "id": 237,
-                "text": "Очки Tom Ford",
+                "text": "Очки Tom\u00A0Ford",
                 "cost": 28800
               }
             ],
@@ -1472,7 +1472,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 239,
-                "text": "Платье с отделкой из пайеток",
+                "text": "Платье с\u00A0отделкой из\u00A0пайеток",
                 "cost": 186000
               },
               {
@@ -1500,12 +1500,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 243,
-                "text": "Накидка Valentino из шерсти и мохеровой пряжи",
+                "text": "Накидка Valentino из\u00A0шерсти и\u00A0мохеровой пряжи",
                 "cost": 241000
               },
               {
                 "id": 244,
-                "text": "Джемпер Valentino из шерсти",
+                "text": "Джемпер Valentino из\u00A0шерсти",
                 "cost": 173500
               },
               {
@@ -1515,17 +1515,17 @@ export const data = JSON.parse(`
               },
               {
                 "id": 246,
-                "text": "Брюки Dolce & Gabbana из шерсти",
+                "text": "Брюки Dolce & Gabbana из\u00A0шерсти",
                 "cost": 75850
               },
               {
                 "id": 247,
-                "text": "Туфли Tom Ford",
+                "text": "Туфли Tom\u00A0Ford",
                 "cost": 47300
               },
               {
                 "id": 248,
-                "text": "Клатч Valentino Alcove",
+                "text": "Клатч Valentino\u00A0Alcove",
                 "cost": 165500
               },
               {
@@ -1544,12 +1544,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 250,
-                "text": "Пальто Valentino из шерсти",
+                "text": "Пальто Valentino из\u00A0шерсти",
                 "cost": 944000
               },
               {
                 "id": 251,
-                "text": "Джемпер Valentino из шерсти с отделкой из перьев страуса",
+                "text": "Джемпер Valentino из\u00A0шерсти с\u00A0отделкой из\u00A0перьев страуса",
                 "cost": 356500
               },
               {
@@ -1564,17 +1564,17 @@ export const data = JSON.parse(`
               },
               {
                 "id": 254,
-                "text": "Туфли Tom Ford",
+                "text": "Туфли Tom\u00A0Ford",
                 "cost": 47300
               },
               {
                 "id": 255,
-                "text": "Сумка Valentino Roman Stud",
+                "text": "Сумка Valentino\u00A0Roman\u00A0Stud",
                 "cost": 269500
               },
               {
                 "id": 256,
-                "text": "Очки Saint Laurent",
+                "text": "Очки Saint\u00A0Laurent",
                 "cost": 34100
               }
             ],
@@ -1588,22 +1588,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 257,
-                "text": "Эксклюзивно для Москвы: пальто из кашемира с отделкой из меха шиншиллы",
+                "text": "Эксклюзивно для Москвы: пальто из\u00A0кашемира с\u00A0отделкой из\u00A0меха шиншиллы",
                 "cost": 2200000
               },
               {
                 "id": 258,
-                "text": "Жакет из вельвета",
+                "text": "Жакет из\u00A0вельвета",
                 "cost": 270500
               },
               {
                 "id": 259,
-                "text": "Свитер из кашемира",
+                "text": "Свитер из\u00A0кашемира",
                 "cost": 97400
               },
               {
                 "id": 260,
-                "text": "Брюки из вельвета",
+                "text": "Брюки из\u00A0вельвета",
                 "cost": 69850
               },
               {
@@ -1612,7 +1612,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 262,
-                "text": "Ботинки Alexander McQueen",
+                "text": "Ботинки Alexander\u00A0McQueen",
                 "cost": 73450
               }
             ],
@@ -1626,27 +1626,27 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 263,
-                "text": "Пуховая куртка из меха норки",
+                "text": "Пуховая куртка из\u00A0меха норки",
                 "cost": 1050000
               },
               {
                 "id": 264,
-                "text": "Кардиган из кашемира",
+                "text": "Кардиган из\u00A0кашемира",
                 "cost": 399500
               },
               {
                 "id": 265,
-                "text": "Жакет из вельвета",
+                "text": "Жакет из\u00A0вельвета",
                 "cost": 275500
               },
               {
                 "id": 266,
-                "text": "Свитер из кашемира",
+                "text": "Свитер из\u00A0кашемира",
                 "cost": 98350
               },
               {
                 "id": 267,
-                "text": "Брюки из вельвета",
+                "text": "Брюки из\u00A0вельвета",
                 "cost": 76750
               },
               {
@@ -1664,27 +1664,27 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 269,
-                "text": "Эксклюзивно для Москвы: пальто Dolce & Gabbana из кашемира с отделкой из овчины и меха норки",
+                "text": "Эксклюзивно для Москвы: пальто Dolce & Gabbana из\u00A0кашемира с\u00A0отделкой из\u00A0овчины и\u00A0меха норки",
                 "cost": 799500
               },
               {
                 "id": 270,
-                "text": "Блуза Celine из шелка",
+                "text": "Блуза Celine из\u00A0шелка",
                 "cost": 104000
               },
               {
                 "id": 271,
-                "text": "Водолазка Tom Ford из кашемира и шелка",
+                "text": "Водолазка Tom\u00A0Ford из\u00A0кашемира и\u00A0шелка",
                 "cost": 99500
               },
               {
                 "id": 272,
-                "text": "Эксклюзивно для Москвы: сапоги Loro Piana",
+                "text": "Эксклюзивно для Москвы: сапоги Loro\u00A0Piana",
                 "cost": 144000
               },
               {
                 "id": 273,
-                "text": "Сумка Valentino V&#8209;Sling из кожи аллигатора",
+                "text": "Сумка Valentino\u00A0V&#8209;Sling из\u00A0кожи аллигатора",
                 "cost": 1305000
               },
               {
@@ -1703,12 +1703,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 275,
-                "text": "Эксклюзивно для Москвы: пальто Dolce & Gabbana из кашемира с отделкой из овчины и меха норки",
+                "text": "Эксклюзивно для Москвы: пальто Dolce & Gabbana из\u00A0кашемира с\u00A0отделкой из\u00A0овчины и\u00A0меха норки",
                 "cost": 799500
               },
               {
                 "id": 276,
-                "text": "Сумка Valentino V&#8209;Sling из кожи аллигатора",
+                "text": "Сумка Valentino\u00A0V&#8209;Sling из\u00A0кожи аллигатора",
                 "cost": 1305000
               }
             ],
@@ -1727,7 +1727,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 278,
-                "text": "Свитер из шерсти",
+                "text": "Свитер из\u00A0шерсти",
                 "cost": 96850
               },
               {
@@ -1757,7 +1757,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 284,
-                "text": "– все Alexander McQueen"
+                "text": "– все Alexander\u00A0McQueen"
               },
               {
                 "id": 285,
@@ -1775,17 +1775,17 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 286,
-                "text": "Топ Alexander McQueen",
+                "text": "Топ Alexander\u00A0McQueen",
                 "cost": 142500
               },
               {
                 "id": 287,
-                "text": "Платье Alexander McQueen",
+                "text": "Платье Alexander\u00A0McQueen",
                 "cost": 380500
               },
               {
                 "id": 288,
-                "text": "Боди Alexander McQueen",
+                "text": "Боди Alexander\u00A0McQueen",
                 "cost": 56300
               },
               {
@@ -1795,7 +1795,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 290,
-                "text": "Сумка Alexander McQueen с тиснением под кожу крокодила",
+                "text": "Сумка Alexander\u00A0McQueen с\u00A0тиснением под кожу крокодила",
                 "cost": 156000
               }
             ],
@@ -1814,17 +1814,17 @@ export const data = JSON.parse(`
               },
               {
                 "id": 292,
-                "text": "Жакет из шерсти",
+                "text": "Жакет из\u00A0шерсти",
                 "cost": 161000
               },
               {
                 "id": 293,
-                "text": "Водолазка из шерсти",
+                "text": "Водолазка из\u00A0шерсти",
                 "cost": 59950
               },
               {
                 "id": 294,
-                "text": "Брюки из шерсти",
+                "text": "Брюки из\u00A0шерсти",
                 "cost": 180500
               },
               {
@@ -1849,7 +1849,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 299,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "14579082b6fcf8cb70f5538520a3ca69.jpg",
@@ -1862,12 +1862,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 300,
-                "text": "Шуба из овчины",
+                "text": "Шуба из\u00A0овчины",
                 "cost": 624500
               },
               {
                 "id": 301,
-                "text": "Жакет из шерсти",
+                "text": "Жакет из\u00A0шерсти",
                 "cost": 161000
               },
               {
@@ -1882,7 +1882,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 304,
-                "text": "Брюки из шерсти",
+                "text": "Брюки из\u00A0шерсти",
                 "cost": 82650
               },
               {
@@ -1892,7 +1892,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 306,
-                "text": "Клатч Pouch из кожи аллигатора",
+                "text": "Клатч Pouch из\u00A0кожи аллигатора",
                 "cost": 1190000
               },
               {
@@ -1912,7 +1912,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 310,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "c4adfb954949806036712820c674a23d.jpg",
@@ -1925,12 +1925,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 311,
-                "text": "Шуба из овчины",
+                "text": "Шуба из\u00A0овчины",
                 "cost": 624500
               },
               {
                 "id": 312,
-                "text": "Жакет из шерсти",
+                "text": "Жакет из\u00A0шерсти",
                 "cost": 161000
               },
               {
@@ -1940,7 +1940,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 314,
-                "text": "Клатч Pouch из кожи аллигатора",
+                "text": "Клатч Pouch из\u00A0кожи аллигатора",
                 "cost": 1190000
               },
               {
@@ -1960,7 +1960,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 318,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "f7ea645274be9ff37c5e72adee49025f.jpg",
@@ -1978,7 +1978,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 320,
-                "text": "Блуза из шелка",
+                "text": "Блуза из\u00A0шелка",
                 "cost": 376500
               },
               {
@@ -2008,7 +2008,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 326,
-                "text": "– все Giorgio Armani"
+                "text": "– все Giorgio\u00A0Armani"
               }
             ],
             "look": "a50621adfcd68044294169f334959347.jpg",
@@ -2021,32 +2021,32 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 327,
-                "text": "Куртка Giorgio Armani из бархата",
+                "text": "Куртка Giorgio\u00A0Armani из\u00A0бархата",
                 "cost": 472500
               },
               {
                 "id": 328,
-                "text": "Блуза Giorgio Armani из шелка",
+                "text": "Блуза Giorgio\u00A0Armani из\u00A0шелка",
                 "cost": 183500
               },
               {
                 "id": 329,
-                "text": "Топ Loro Piana из шерсти",
+                "text": "Топ Loro\u00A0Piana из\u00A0шерсти",
                 "cost": 177000
               },
               {
                 "id": 330,
-                "text": "Юбка Giorgio Armani из шелка и хлопка",
+                "text": "Юбка Giorgio\u00A0Armani из\u00A0шелка и\u00A0хлопка",
                 "cost": 155000
               },
               {
                 "id": 331,
-                "text": "Эксклюзивно для Москвы: серьги Giorgio Armani",
+                "text": "Эксклюзивно для Москвы: серьги Giorgio\u00A0Armani",
                 "cost": 217500
               },
               {
                 "id": 332,
-                "text": "Колье Giorgio Armani",
+                "text": "Колье Giorgio\u00A0Armani",
                 "cost": 52850
               }
             ],
@@ -2064,12 +2064,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 334,
-                "text": "Комбинезон из бархата",
+                "text": "Комбинезон из\u00A0бархата",
                 "cost": 240000
               },
               {
                 "id": 335,
-                "text": "Босоножки с отделкой из кристаллов",
+                "text": "Босоножки с\u00A0отделкой из\u00A0кристаллов",
                 "cost": 95700
               },
               {
@@ -2084,7 +2084,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 338,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "d364c1e00b5112faafc0756067006942.jpg",
@@ -2097,7 +2097,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 339,
-                "text": "Комбинезон из бархата",
+                "text": "Комбинезон из\u00A0бархата",
                 "cost": 240000
               },
               {
@@ -2112,7 +2112,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 342,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "b8c930aa97af38db5eabdf205f1ec97c.jpg",
@@ -2125,22 +2125,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 343,
-                "text": "Шуба Valentino из овчины",
+                "text": "Шуба Valentino из\u00A0овчины",
                 "cost": 1185000
               },
               {
                 "id": 344,
-                "text": "Платье Valentino из шерсти с отделкой из бисера и пайеток",
+                "text": "Платье Valentino из\u00A0шерсти с\u00A0отделкой из\u00A0бисера и\u00A0пайеток",
                 "cost": 375500
               },
               {
                 "id": 345,
-                "text": "Туфли Saint Laurent",
+                "text": "Туфли Saint\u00A0Laurent",
                 "cost": 76550
               },
               {
                 "id": 346,
-                "text": "Чокер Saint Laurent из перьев страуса",
+                "text": "Чокер Saint\u00A0Laurent из\u00A0перьев страуса",
                 "cost": 66750
               }
             ],
@@ -2154,12 +2154,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 347,
-                "text": "Шуба Valentino из овчины",
+                "text": "Шуба Valentino из\u00A0овчины",
                 "cost": 1185000
               },
               {
                 "id": 348,
-                "text": "Платье Valentino из шерсти с отделкой из бисера и пайеток",
+                "text": "Платье Valentino из\u00A0шерсти с\u00A0отделкой из\u00A0бисера и\u00A0пайеток",
                 "cost": 375500
               },
               {
@@ -2169,7 +2169,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 350,
-                "text": "Чокер Saint Laurent из перьев страуса",
+                "text": "Чокер Saint\u00A0Laurent из\u00A0перьев страуса",
                 "cost": 66750
               }
             ],
@@ -2183,7 +2183,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 351,
-                "text": "Платье Valentino из шелка с отделкой из кристаллов, стразов и пайеток",
+                "text": "Платье Valentino из\u00A0шелка с\u00A0отделкой из\u00A0кристаллов, стразов и\u00A0пайеток",
                 "cost": 529500
               },
               {
@@ -2202,7 +2202,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 353,
-                "text": "Платье из шелка",
+                "text": "Платье из\u00A0шелка",
                 "cost": 867000
               },
               {
@@ -2237,7 +2237,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 357,
-                "text": "Водолазка из шерсти",
+                "text": "Водолазка из\u00A0шерсти",
                 "cost": 66500
               },
               {
@@ -2262,7 +2262,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 362,
-                "text": "– все Tom Ford"
+                "text": "– все Tom\u00A0Ford"
               }
             ],
             "look": "63c7b4fa3212eadc0cce91c328b9e643.jpg",
@@ -2275,27 +2275,27 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 363,
-                "text": "Пальто Ermenegildo Zegna Couture из шерсти",
+                "text": "Пальто Ermenegildo\u00A0Zegna\u00A0Couture из\u00A0шерсти",
                 "cost": 278500
               },
               {
                 "id": 364,
-                "text": "Водолазка Ermenegildo Zegna из шерсти",
+                "text": "Водолазка Ermenegildo\u00A0Zegna из\u00A0шерсти",
                 "cost": 29950
               },
               {
                 "id": 365,
-                "text": "Брюки Ermenegildo Zegna из шерсти",
+                "text": "Брюки Ermenegildo\u00A0Zegna из\u00A0шерсти",
                 "cost": 54900
               },
               {
                 "id": 366,
-                "text": "Перчатки Ermenegildo Zegna",
+                "text": "Перчатки Ermenegildo\u00A0Zegna",
                 "cost": 49150
               },
               {
                 "id": 367,
-                "text": "Очки Ralph Lauren",
+                "text": "Очки Ralph\u00A0Lauren",
                 "cost": 15750
               }
             ],
@@ -2309,22 +2309,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 368,
-                "text": "Пальто Dolce & Gabbana из шерсти",
+                "text": "Пальто Dolce & Gabbana из\u00A0шерсти",
                 "cost": 334500
               },
               {
                 "id": 369,
-                "text": "Свитер Brioni из кашемира",
+                "text": "Свитер Brioni из\u00A0кашемира",
                 "cost": 177500
               },
               {
                 "id": 370,
-                "text": "Рубашка Ralph Lauren",
+                "text": "Рубашка Ralph\u00A0Lauren",
                 "cost": 39950
               },
               {
                 "id": 371,
-                "text": "Брюки Brioni из шерсти",
+                "text": "Брюки Brioni из\u00A0шерсти",
                 "cost": 69950
               },
               {
@@ -2368,7 +2368,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 378,
-                "text": "Дорожная сумка из кожи крокодила",
+                "text": "Дорожная сумка из\u00A0кожи крокодила",
                 "cost": 1965000
               },
               {
@@ -2378,11 +2378,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 380,
-                "text": "– все Ralph Lauren"
+                "text": "– все Ralph\u00A0Lauren"
               },
               {
                 "id": 381,
-                "text": "Водолазка Loro Piana из кашемира",
+                "text": "Водолазка Loro\u00A0Piana из\u00A0кашемира",
                 "cost": 120000
               }
             ],
@@ -2396,22 +2396,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 382,
-                "text": "Пальто из шерсти и хлопка",
+                "text": "Пальто из\u00A0шерсти и\u00A0хлопка",
                 "cost": 282000
               },
               {
                 "id": 383,
-                "text": "Пиджак из шерсти",
+                "text": "Пиджак из\u00A0шерсти",
                 "cost": 167000
               },
               {
                 "id": 384,
-                "text": "Жилет из шерсти",
+                "text": "Жилет из\u00A0шерсти",
                 "cost": 76000
               },
               {
                 "id": 385,
-                "text": "Брюки из шерсти и кашемира",
+                "text": "Брюки из\u00A0шерсти и\u00A0кашемира",
                 "cost": 109500
               },
               {
@@ -2459,17 +2459,17 @@ export const data = JSON.parse(`
               },
               {
                 "id": 393,
-                "text": "Свитер из шерсти",
+                "text": "Свитер из\u00A0шерсти",
                 "cost": 186500
               },
               {
                 "id": 394,
-                "text": "Водолазка из кашемира",
+                "text": "Водолазка из\u00A0кашемира",
                 "cost": 76000
               },
               {
                 "id": 395,
-                "text": "Брюки из вельвета",
+                "text": "Брюки из\u00A0вельвета",
                 "cost": 95000
               },
               {
@@ -2501,7 +2501,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 400,
-                "text": "Кожаная куртка Loro Piana с подкладкой из меха норки",
+                "text": "Кожаная куртка Loro\u00A0Piana с\u00A0подкладкой из\u00A0меха норки",
                 "cost": 2125000
               },
               {
@@ -2511,17 +2511,17 @@ export const data = JSON.parse(`
               },
               {
                 "id": 402,
-                "text": "Водолазка Loro Piana из кашемира",
+                "text": "Водолазка Loro\u00A0Piana из\u00A0кашемира",
                 "cost": 89950
               },
               {
                 "id": 403,
-                "text": "Брюки Zilli из шерсти",
+                "text": "Брюки Zilli из\u00A0шерсти",
                 "cost": 109500
               },
               {
                 "id": 404,
-                "text": "Ботинки Loro Piana",
+                "text": "Ботинки Loro\u00A0Piana",
                 "cost": 72550
               }
             ],
@@ -2535,12 +2535,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 405,
-                "text": "Пуховый жилет из замши",
+                "text": "Пуховый жилет из\u00A0замши",
                 "cost": 539500
               },
               {
                 "id": 406,
-                "text": "Свитер из кашемира и шерсти",
+                "text": "Свитер из\u00A0кашемира и\u00A0шерсти",
                 "cost": 153000
               },
               {
@@ -2560,11 +2560,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 410,
-                "text": "– все Tom Ford"
+                "text": "– все Tom\u00A0Ford"
               },
               {
                 "id": 411,
-                "text": "Очки Ermenegildo Zegna",
+                "text": "Очки Ermenegildo\u00A0Zegna",
                 "cost": 23750
               }
             ],
@@ -2578,7 +2578,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 412,
-                "text": "Кардиган из шерсти",
+                "text": "Кардиган из\u00A0шерсти",
                 "cost": 123500
               },
               {
@@ -2588,7 +2588,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 414,
-                "text": "Рубашка из шелка",
+                "text": "Рубашка из\u00A0шелка",
                 "cost": 76700
               },
               {
@@ -2613,11 +2613,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 419,
-                "text": "– все Saint Laurent"
+                "text": "– все Saint\u00A0Laurent"
               },
               {
                 "id": 420,
-                "text": "Челси Tom Ford",
+                "text": "Челси Tom\u00A0Ford",
                 "cost": 144000
               }
             ],
@@ -2631,12 +2631,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 421,
-                "text": "Пальто Ermenegildo Zegna из кашемира",
+                "text": "Пальто Ermenegildo\u00A0Zegna из\u00A0кашемира",
                 "cost": 291500
               },
               {
                 "id": 422,
-                "text": "Костюм Kiton из кашемира, шерсти и шелка",
+                "text": "Костюм Kiton из\u00A0кашемира, шерсти и\u00A0шелка",
                 "cost": 664500
               },
               {
@@ -2646,7 +2646,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 424,
-                "text": "Водолазка Dolce & Gabbana из кашемира",
+                "text": "Водолазка Dolce & Gabbana из\u00A0кашемира",
                 "cost": 76000
               },
               {
@@ -2656,7 +2656,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 426,
-                "text": "Портфель Ermenegildo Zegna",
+                "text": "Портфель Ermenegildo\u00A0Zegna",
                 "cost": 253000
               },
               {
@@ -2675,7 +2675,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 428,
-                "text": "Пальто Loro Piana из кашемира с подкладкой из меха нутрии",
+                "text": "Пальто Loro\u00A0Piana из\u00A0кашемира с\u00A0подкладкой из\u00A0меха нутрии",
                 "cost": 1345000
               },
               {
@@ -2685,12 +2685,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 430,
-                "text": "Эксклюзивно для Москвы: водолазка Loro Piana из шерсти",
+                "text": "Эксклюзивно для Москвы: водолазка Loro\u00A0Piana из\u00A0шерсти",
                 "cost": 86800
               },
               {
                 "id": 431,
-                "text": "Эксклюзивно для Москвы: брюки Loro Piana из вельвета",
+                "text": "Эксклюзивно для Москвы: брюки Loro\u00A0Piana из\u00A0вельвета",
                 "cost": 68650
               },
               {
@@ -2705,7 +2705,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 434,
-                "text": "Ремень Loro Piana из кожи каймана",
+                "text": "Ремень Loro\u00A0Piana из\u00A0кожи каймана",
                 "cost": 138500
               }
             ],
@@ -2719,27 +2719,27 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 435,
-                "text": "Эксклюзивно для Москвы: кожаная куртка Zilli с отделкой из меха ласки",
+                "text": "Эксклюзивно для Москвы: кожаная куртка Zilli с\u00A0отделкой из\u00A0меха ласки",
                 "cost": 1470000
               },
               {
                 "id": 436,
-                "text": "Пиджак Kiton из кашемира",
+                "text": "Пиджак Kiton из\u00A0кашемира",
                 "cost": 614500
               },
               {
                 "id": 437,
-                "text": "Водолазка Tom Ford из шерсти",
+                "text": "Водолазка Tom\u00A0Ford из\u00A0шерсти",
                 "cost": 64450
               },
               {
                 "id": 438,
-                "text": "Брюки Zilli из хлопка и кашемира",
+                "text": "Брюки Zilli из\u00A0хлопка и\u00A0кашемира",
                 "cost": 98650
               },
               {
                 "id": 439,
-                "text": "Челси Loro Piana",
+                "text": "Челси Loro\u00A0Piana",
                 "cost": 76950
               },
               {
@@ -2763,22 +2763,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 442,
-                "text": "Эксклюзивно для Москвы: пуховый жилет Kiton из кашемира",
+                "text": "Эксклюзивно для Москвы: пуховый жилет Kiton из\u00A0кашемира",
                 "cost": 377500
               },
               {
                 "id": 443,
-                "text": "Кардиган Kiton из кашемира с отделкой из замши",
+                "text": "Кардиган Kiton из\u00A0кашемира с\u00A0отделкой из\u00A0замши",
                 "cost": 427500
               },
               {
                 "id": 444,
-                "text": "Рубашка Kiton из шерсти",
+                "text": "Рубашка Kiton из\u00A0шерсти",
                 "cost": 95200
               },
               {
                 "id": 445,
-                "text": "Водолазка Tom Ford из шерсти",
+                "text": "Водолазка Tom\u00A0Ford из\u00A0шерсти",
                 "cost": 64450
               },
               {
@@ -2788,12 +2788,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 447,
-                "text": "Ремень Loro Piana",
+                "text": "Ремень Loro\u00A0Piana",
                 "cost": 42600
               },
               {
                 "id": 448,
-                "text": "Очки Giorgio Armani",
+                "text": "Очки Giorgio\u00A0Armani",
                 "cost": 15850
               }
             ],
@@ -2807,32 +2807,32 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 449,
-                "text": "Кардиган Ralph Lauren из кашемира с отделкой из замши",
+                "text": "Кардиган Ralph\u00A0Lauren из\u00A0кашемира с\u00A0отделкой из\u00A0замши",
                 "cost": 274500
               },
               {
                 "id": 450,
-                "text": "Джемпер Ralph Lauren из кашемира",
+                "text": "Джемпер Ralph\u00A0Lauren из\u00A0кашемира",
                 "cost": 94100
               },
               {
                 "id": 451,
-                "text": "Водолазка Tom Ford из шерсти",
+                "text": "Водолазка Tom\u00A0Ford из\u00A0шерсти",
                 "cost": 64450
               },
               {
                 "id": 452,
-                "text": "Брюки Ralph Lauren",
+                "text": "Брюки Ralph\u00A0Lauren",
                 "cost": 44450
               },
               {
                 "id": 453,
-                "text": "Кеды Ralph Lauren",
+                "text": "Кеды Ralph\u00A0Lauren",
                 "cost": 62450
               },
               {
                 "id": 454,
-                "text": "Очки Ermenegildo Zegna",
+                "text": "Очки Ermenegildo\u00A0Zegna",
                 "cost": 23750
               }
             ],
@@ -2846,17 +2846,17 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 455,
-                "text": "Пуховый жилет из кашемира",
+                "text": "Пуховый жилет из\u00A0кашемира",
                 "cost": 365500
               },
               {
                 "id": 456,
-                "text": "Джемпер из кашемира",
+                "text": "Джемпер из\u00A0кашемира",
                 "cost": 167000
               },
               {
                 "id": 457,
-                "text": "Брюки из шерсти и кашемира",
+                "text": "Брюки из\u00A0шерсти и\u00A0кашемира",
                 "cost": 78300
               },
               {
@@ -2876,11 +2876,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 461,
-                "text": "– все Loro Piana"
+                "text": "– все Loro\u00A0Piana"
               },
               {
                 "id": 462,
-                "text": "Водолазка Dolce & Gabbana из шерсти",
+                "text": "Водолазка Dolce & Gabbana из\u00A0шерсти",
                 "cost": 56750
               }
             ],
@@ -2894,7 +2894,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 463,
-                "text": "Куртка из шерсти",
+                "text": "Куртка из\u00A0шерсти",
                 "cost": 241000
               },
               {
@@ -2914,7 +2914,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 467,
-                "text": "– все Giorgio Armani"
+                "text": "– все Giorgio\u00A0Armani"
               }
             ],
             "look": "bbdcf024df5a998fda46e844375bb184.jpg",
@@ -2927,12 +2927,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 468,
-                "text": "Куртка из кашемира с отделкой из кожи",
+                "text": "Куртка из\u00A0кашемира с\u00A0отделкой из\u00A0кожи",
                 "cost": 596000
               },
               {
                 "id": 469,
-                "text": "Эксклюзивно для Москвы: свитер из кашемира",
+                "text": "Эксклюзивно для Москвы: свитер из\u00A0кашемира",
                 "cost": 209500
               },
               {
@@ -2957,11 +2957,11 @@ export const data = JSON.parse(`
               },
               {
                 "id": 474,
-                "text": "– все Loro Piana"
+                "text": "– все Loro\u00A0Piana"
               },
               {
                 "id": 475,
-                "text": "Водолазка Brioni из шерсти",
+                "text": "Водолазка Brioni из\u00A0шерсти",
                 "cost": 72050
               }
             ],
@@ -2979,7 +2979,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 477,
-                "text": "Куртка Ermenegildo Zegna из шерсти альпака",
+                "text": "Куртка Ermenegildo\u00A0Zegna из\u00A0шерсти альпака",
                 "cost": 284000
               },
               {
@@ -2989,17 +2989,17 @@ export const data = JSON.parse(`
               },
               {
                 "id": 479,
-                "text": "Джемпер Ermenegildo Zegna из шерсти и кашемира",
+                "text": "Джемпер Ermenegildo\u00A0Zegna из\u00A0шерсти и\u00A0кашемира",
                 "cost": 191500
               },
               {
                 "id": 480,
-                "text": "Брюки Ermenegildo Zegna из шерсти и кашемира",
+                "text": "Брюки Ermenegildo\u00A0Zegna из\u00A0шерсти и\u00A0кашемира",
                 "cost": 162500
               },
               {
                 "id": 481,
-                "text": "Кеды Ermenegildo Zegna Couture",
+                "text": "Кеды Ermenegildo\u00A0Zegna\u00A0Couture",
                 "cost": 76300
               }
             ],
@@ -3013,32 +3013,32 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 482,
-                "text": "Пальто Ermenegildo Zegna из кашемира и шерсти",
+                "text": "Пальто Ermenegildo\u00A0Zegna из\u00A0кашемира и\u00A0шерсти",
                 "cost": 340500
               },
               {
                 "id": 483,
-                "text": "Свитер Ermenegildo Zegna из кашемира и шерсти",
+                "text": "Свитер Ermenegildo\u00A0Zegna из\u00A0кашемира и\u00A0шерсти",
                 "cost": 120500
               },
               {
                 "id": 484,
-                "text": "Брюки Ermenegildo Zegna Couture из кашемира и шерсти",
+                "text": "Брюки Ermenegildo\u00A0Zegna\u00A0Couture из\u00A0кашемира и\u00A0шерсти",
                 "cost": 145000
               },
               {
                 "id": 485,
-                "text": "Кроссовки Ermenegildo Zegna",
+                "text": "Кроссовки Ermenegildo\u00A0Zegna",
                 "cost": 57200
               },
               {
                 "id": 486,
-                "text": "Шарф Loro Piana",
+                "text": "Шарф Loro\u00A0Piana",
                 "cost": 49950
               },
               {
                 "id": 487,
-                "text": "Очки Ermenegildo Zegna",
+                "text": "Очки Ermenegildo\u00A0Zegna",
                 "cost": 18700
               }
             ],
@@ -3052,12 +3052,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 488,
-                "text": "Плащ Zilli из шерсти",
+                "text": "Плащ Zilli из\u00A0шерсти",
                 "cost": 444500
               },
               {
                 "id": 489,
-                "text": "Джемпер Zilli из кашемира",
+                "text": "Джемпер Zilli из\u00A0кашемира",
                 "cost": 145500
               },
               {
@@ -3067,7 +3067,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 491,
-                "text": "Брюки Brioni из шерсти",
+                "text": "Брюки Brioni из\u00A0шерсти",
                 "cost": 456500
               },
               {
@@ -3077,7 +3077,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 493,
-                "text": "Очки Ermenegildo Zegna",
+                "text": "Очки Ermenegildo\u00A0Zegna",
                 "cost": 23750
               }
             ],
@@ -3091,22 +3091,22 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 494,
-                "text": "Пиджак Zilli из шерсти",
+                "text": "Пиджак Zilli из\u00A0шерсти",
                 "cost": 551000
               },
               {
                 "id": 495,
-                "text": "Свитер Ermenegildo Zegna из кашемира и хлопка",
+                "text": "Свитер Ermenegildo\u00A0Zegna из\u00A0кашемира и\u00A0хлопка",
                 "cost": 105000
               },
               {
                 "id": 496,
-                "text": "Водолазка Brioni из шерсти",
+                "text": "Водолазка Brioni из\u00A0шерсти",
                 "cost": 72050
               },
               {
                 "id": 497,
-                "text": "Брюки Zilli из шерсти",
+                "text": "Брюки Zilli из\u00A0шерсти",
                 "cost": 93950
               },
               {
@@ -3116,7 +3116,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 499,
-                "text": "Футляр для документов Brioni из кожи крокодила",
+                "text": "Футляр для документов Brioni из\u00A0кожи крокодила",
                 "cost": 788500
               },
               {
@@ -3145,12 +3145,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 503,
-                "text": "Джемпер из шерсти",
+                "text": "Джемпер из\u00A0шерсти",
                 "cost": 59950
               },
               {
                 "id": 504,
-                "text": "Толстовка из шерсти",
+                "text": "Толстовка из\u00A0шерсти",
                 "cost": 113000
               },
               {
@@ -3165,7 +3165,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 507,
-                "text": "Сумка Classic Hidrology",
+                "text": "Сумка Classic\u00A0Hidrology",
                 "cost": 330500
               },
               {
@@ -3175,7 +3175,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 509,
-                "text": "– все Bottega Veneta"
+                "text": "– все Bottega\u00A0Veneta"
               }
             ],
             "look": "96bc6ca6e56098988deff8dfe4a11b85.jpg",
@@ -3188,12 +3188,12 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 510,
-                "text": "Эксклюзивно для Москвы: утепленный плащ Kiton с отделкой из меха нутрии",
+                "text": "Эксклюзивно для Москвы: утепленный плащ Kiton с\u00A0отделкой из\u00A0меха нутрии",
                 "cost": 668500
               },
               {
                 "id": 511,
-                "text": "Пиджак Kiton из кашемира",
+                "text": "Пиджак Kiton из\u00A0кашемира",
                 "cost": 793000
               },
               {
@@ -3203,22 +3203,22 @@ export const data = JSON.parse(`
               },
               {
                 "id": 513,
-                "text": "Водолазка Kiton из кашемира и шелка",
+                "text": "Водолазка Kiton из\u00A0кашемира и\u00A0шелка",
                 "cost": 135500
               },
               {
                 "id": 514,
-                "text": "Брюки Loro Piana из хлопка и шерсти",
+                "text": "Брюки Loro\u00A0Piana из\u00A0хлопка и\u00A0шерсти",
                 "cost": 61650
               },
               {
                 "id": 515,
-                "text": "Кроссовки Kiton с отделкой из кожи аллигатора",
+                "text": "Кроссовки Kiton с\u00A0отделкой из\u00A0кожи аллигатора",
                 "cost": 99500
               },
               {
                 "id": 516,
-                "text": "Шарф Ermenegildo Zegna",
+                "text": "Шарф Ermenegildo\u00A0Zegna",
                 "cost": 20550
               }
             ],
@@ -3232,7 +3232,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 517,
-                "text": "Пиджак Brioni из шерсти",
+                "text": "Пиджак Brioni из\u00A0шерсти",
                 "cost": 231000
               },
               {
@@ -3252,12 +3252,12 @@ export const data = JSON.parse(`
               },
               {
                 "id": 521,
-                "text": "Шарф Ermenegildo Zegna",
+                "text": "Шарф Ermenegildo\u00A0Zegna",
                 "cost": 29950
               },
               {
                 "id": 522,
-                "text": "Очки Loro Piana",
+                "text": "Очки Loro\u00A0Piana",
                 "cost": 47100
               }
             ],
@@ -3275,7 +3275,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 524,
-                "text": "Пиджак Bottega Veneta из бархата",
+                "text": "Пиджак Bottega\u00A0Veneta из\u00A0бархата",
                 "cost": 161000
               },
               {
@@ -3285,22 +3285,22 @@ export const data = JSON.parse(`
               },
               {
                 "id": 526,
-                "text": "Водолазка Dolce & Gabbana из кашемира",
+                "text": "Водолазка Dolce & Gabbana из\u00A0кашемира",
                 "cost": 76000
               },
               {
                 "id": 527,
-                "text": "Брюки Bottega Veneta из шерсти",
+                "text": "Брюки Bottega\u00A0Veneta из\u00A0шерсти",
                 "cost": 68750
               },
               {
                 "id": 528,
-                "text": "Дерби Bottega Veneta",
+                "text": "Дерби Bottega\u00A0Veneta",
                 "cost": 71550
               },
               {
                 "id": 529,
-                "text": "Очки Bottega Veneta",
+                "text": "Очки Bottega\u00A0Veneta",
                 "cost": 35250
               }
             ],
@@ -3325,7 +3325,7 @@ export const data = JSON.parse(`
         "phone": "+7 (495) 933 3208"
       },
       {
-        "address": "«Барвиха Luxury Village»",
+        "address": "«Барвиха Luxury\u00A0Village»",
         "phone": "+7 (495) 225 8891"
       },
       {
@@ -3345,8 +3345,9 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 1,
-                "text": "Пиджак из шерсти",
-                "cost": 234567              },
+                "text": "Пиджак из\u00A0шерсти",
+                "cost": 234567
+              },
               {
                 "id": 2,
                 "text": "Худи"
@@ -3364,7 +3365,6 @@ export const data = JSON.parse(`
                 "text": "Кроссовки"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "18c269b87fa3c0b7bf2e1d0dfbe07e9d.jpg",
             "thrumbnail": "6dd2284e2cf84fd3e9fbd3f1df3e2802.jpg",
             "zoom": "18c269b87fa3c0b7bf2e1d0dfbe07e9d.jpg"
@@ -3375,7 +3375,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 6,
-                "text": "Пиджак из шерсти"
+                "text": "Пиджак из\u00A0шерсти"
               },
               {
                 "id": 7,
@@ -3390,7 +3390,6 @@ export const data = JSON.parse(`
                 "text": "Джинсы"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "80dd1790a05677defb560e23448d91cf.jpg",
             "thrumbnail": "3c9f07f075ee8f00dc5129ea1574472a.jpg",
             "zoom": "80dd1790a05677defb560e23448d91cf.jpg"
@@ -3401,7 +3400,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 10,
-                "text": "Пальто из шерсти"
+                "text": "Пальто из\u00A0шерсти"
               },
               {
                 "id": 11,
@@ -3420,7 +3419,6 @@ export const data = JSON.parse(`
                 "text": "Кроссовки"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "564b58bb0e0168e4095d25bb3cf9aea4.jpg",
             "thrumbnail": "39992d244141d54ddb3c331a13f8e51f.jpg",
             "zoom": "564b58bb0e0168e4095d25bb3cf9aea4.jpg"
@@ -3431,7 +3429,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 15,
-                "text": "Куртка-бомбер с отделкой из денима"
+                "text": "Куртка-бомбер с\u00A0отделкой из\u00A0денима"
               },
               {
                 "id": 16,
@@ -3450,7 +3448,6 @@ export const data = JSON.parse(`
                 "text": "Кеды"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "e06c05afe2eb30bf4aaffed8ad7c678c.jpg",
             "thrumbnail": "5a8725273b3e78c9a3a01678ea917f91.jpg",
             "zoom": "e06c05afe2eb30bf4aaffed8ad7c678c.jpg"
@@ -3461,7 +3458,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 20,
-                "text": "Куртка-бомбер с отделкой из денима"
+                "text": "Куртка-бомбер с\u00A0отделкой из\u00A0денима"
               },
               {
                 "id": 21,
@@ -3472,7 +3469,6 @@ export const data = JSON.parse(`
                 "text": "Джинсы"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "315f8304c8bf16e1b49c000f04910547.jpg",
             "thrumbnail": "c550e828b53c37a7fba3a42552b473fe.jpg",
             "zoom": "315f8304c8bf16e1b49c000f04910547.jpg"
@@ -3502,7 +3498,6 @@ export const data = JSON.parse(`
                 "text": "Поясная сумка"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "f7bc4990a6c60ae2b7dd8948d752662d.jpg",
             "thrumbnail": "847f019f8e564a383a5fd056b841e9d0.jpg",
             "zoom": "f7bc4990a6c60ae2b7dd8948d752662d.jpg"
@@ -3520,7 +3515,6 @@ export const data = JSON.parse(`
                 "text": "Джинсы"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "13ff8e0e2245810bb63608540cd825cf.jpg",
             "thrumbnail": "6d635f6db7823b6e40d61722f45d2190.jpg",
             "zoom": "13ff8e0e2245810bb63608540cd825cf.jpg"
@@ -3550,7 +3544,6 @@ export const data = JSON.parse(`
                 "text": "Панама"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "4dd67207731ec599abf844694cb184ae.jpg",
             "thrumbnail": "c16e96c935dbb9c88728f23b6cdf1e8b.jpg",
             "zoom": "4dd67207731ec599abf844694cb184ae.jpg"
@@ -3564,7 +3557,6 @@ export const data = JSON.parse(`
                 "text": "Футболка"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "838aa89c27513a993cb4184f5efef52f.jpg",
             "thrumbnail": "4395d66c0bd65cbd2a9070f79816698e.jpg",
             "zoom": "838aa89c27513a993cb4184f5efef52f.jpg"
@@ -3590,7 +3582,6 @@ export const data = JSON.parse(`
                 "text": "Джинсы"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "da08bdb2e159de89776bfecf2e517503.jpg",
             "thrumbnail": "93e19398cee10af67e78a22c44a51775.jpg",
             "zoom": "da08bdb2e159de89776bfecf2e517503.jpg"
@@ -3616,7 +3607,6 @@ export const data = JSON.parse(`
                 "text": "Кроссовки"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "e072ef99f0b11163f00607781344bffe.jpg",
             "thrumbnail": "c19f4e0ca6eee09b3149ae533aa5cc3b.jpg",
             "zoom": "e072ef99f0b11163f00607781344bffe.jpg"
@@ -3634,7 +3624,6 @@ export const data = JSON.parse(`
                 "text": "Футболка"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "f7375b41d0795335e618a3de72edc791.jpg",
             "thrumbnail": "b8d99b496dd42a98d891c3c72537627d.jpg",
             "zoom": "f7375b41d0795335e618a3de72edc791.jpg"
@@ -3645,7 +3634,7 @@ export const data = JSON.parse(`
             "items": [
               {
                 "id": 46,
-                "text": "Куртка с отделкой из шерсти"
+                "text": "Куртка с\u00A0отделкой из\u00A0шерсти"
               },
               {
                 "id": 47,
@@ -3656,7 +3645,6 @@ export const data = JSON.parse(`
                 "text": "Джинсы"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "d88f7f9a6ea8cea3c0f48615dee527bd.jpg",
             "thrumbnail": "c8db5d7551ec397b3d4479c0f14398e5.jpg",
             "zoom": "d88f7f9a6ea8cea3c0f48615dee527bd.jpg"
@@ -3682,7 +3670,6 @@ export const data = JSON.parse(`
                 "text": "Рюкзак"
               }
             ],
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Valentino-/Men/Пре-коллекция Осень 2021",
             "look": "31cd17e7671d152baadcc6041ae24d39.jpg",
             "thrumbnail": "13f5e6ff6593ac98f24a737c8a296e99.jpg",
             "zoom": "31cd17e7671d152baadcc6041ae24d39.jpg"
@@ -3701,7 +3688,7 @@ export const data = JSON.parse(`
         "phone": "+7 (495) 933 3376"
       },
       {
-        "address": "«Барвиха Luxury Village»",
+        "address": "«Барвиха Luxury\u00A0Village»",
         "phone": "+7 (495) 225 8850"
       },
       {
@@ -3714,17 +3701,16 @@ export const data = JSON.parse(`
     "sections": [
       {
         "id": 111,
-        "section": "Small Section",
+        "section": "Small\u00A0Section",
         "link": "small",
         "items": [
           {
             "id": 15,
             "photo": "111",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 53,
-                "text": "Платье из шелка"
+                "text": "Платье из\u00A0шелка"
               },
               {
                 "id": 54,
@@ -3742,7 +3728,6 @@ export const data = JSON.parse(`
           {
             "id": 16,
             "photo": "222",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 56,
@@ -3754,7 +3739,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 58,
-                "text": "Сумка Sicily Soft"
+                "text": "Сумка Sicily\u00A0Soft"
               }
             ],
             "look": "79c06e63371890044b477ff044ece9fd.jpg",
@@ -3764,7 +3749,6 @@ export const data = JSON.parse(`
           {
             "id": 17,
             "photo": "333",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 59,
@@ -3793,11 +3777,10 @@ export const data = JSON.parse(`
           {
             "id": 18,
             "photo": "111",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 53,
-                "text": "Платье из шелка"
+                "text": "Платье из\u00A0шелка"
               },
               {
                 "id": 54,
@@ -3815,7 +3798,6 @@ export const data = JSON.parse(`
           {
             "id": 19,
             "photo": "222",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 56,
@@ -3827,7 +3809,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 58,
-                "text": "Сумка Sicily Soft"
+                "text": "Сумка Sicily\u00A0Soft"
               }
             ],
             "look": "67a85439b59be82e4acc4e8cf34ec68c.jpg",
@@ -3837,7 +3819,6 @@ export const data = JSON.parse(`
           {
             "id": 20,
             "photo": "333",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 59,
@@ -3859,19 +3840,18 @@ export const data = JSON.parse(`
           {
             "id": 21,
             "photo": "444",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 62,
-                "text": "Топ из шелка"
+                "text": "Топ из\u00A0шелка"
               },
               {
                 "id": 63,
-                "text": "Шорты из шерсти"
+                "text": "Шорты из\u00A0шерсти"
               },
               {
                 "id": 64,
-                "text": "Сумка Sicily 62 из кожи страуса"
+                "text": "Сумка Sicily 62 из\u00A0кожи страуса"
               },
               {
                 "id": 65,
@@ -3893,11 +3873,10 @@ export const data = JSON.parse(`
           {
             "id": 22,
             "photo": "555",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 68,
-                "text": "Куртка из денима"
+                "text": "Куртка из\u00A0денима"
               },
               {
                 "id": 69,
@@ -3919,11 +3898,10 @@ export const data = JSON.parse(`
           {
             "id": 23,
             "photo": "011",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 72,
-                "text": "Пальто из шерсти"
+                "text": "Пальто из\u00A0шерсти"
               },
               {
                 "id": 73,
@@ -3945,11 +3923,10 @@ export const data = JSON.parse(`
           {
             "id": 24,
             "photo": "022",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 76,
-                "text": "Жакет из шелка и хлопка"
+                "text": "Жакет из\u00A0шелка и\u00A0хлопка"
               },
               {
                 "id": 77,
@@ -3957,7 +3934,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 78,
-                "text": "Брюки из шелка и хлопка"
+                "text": "Брюки из\u00A0шелка и\u00A0хлопка"
               },
               {
                 "id": 79,
@@ -3983,7 +3960,6 @@ export const data = JSON.parse(`
           {
             "id": 25,
             "photo": "033",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 83,
@@ -4009,7 +3985,6 @@ export const data = JSON.parse(`
           {
             "id": 26,
             "photo": "044",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 87,
@@ -4043,11 +4018,10 @@ export const data = JSON.parse(`
           {
             "id": 27,
             "photo": "055",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 93,
-                "text": "Анорак с отделкой из кружева"
+                "text": "Анорак с\u00A0отделкой из\u00A0кружева"
               },
               {
                 "id": 94,
@@ -4085,11 +4059,10 @@ export const data = JSON.parse(`
           {
             "id": 28,
             "photo": "066",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 101,
-                "text": "Куртка из денима"
+                "text": "Куртка из\u00A0денима"
               },
               {
                 "id": 102,
@@ -4123,7 +4096,6 @@ export const data = JSON.parse(`
           {
             "id": 29,
             "photo": "06_1",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 108,
@@ -4137,7 +4109,6 @@ export const data = JSON.parse(`
           {
             "id": 30,
             "photo": "077",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 109,
@@ -4175,7 +4146,6 @@ export const data = JSON.parse(`
           {
             "id": 31,
             "photo": "088",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 116,
@@ -4201,7 +4171,6 @@ export const data = JSON.parse(`
           {
             "id": 32,
             "photo": "099",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 120,
@@ -4215,7 +4184,6 @@ export const data = JSON.parse(`
           {
             "id": 33,
             "photo": "1010",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 121,
@@ -4321,7 +4289,6 @@ export const data = JSON.parse(`
           {
             "id": 34,
             "photo": "1111",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 137,
@@ -4359,7 +4326,6 @@ export const data = JSON.parse(`
           {
             "id": 35,
             "photo": "1212",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 144,
@@ -4389,7 +4355,6 @@ export const data = JSON.parse(`
           {
             "id": 36,
             "photo": "1313",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 149,
@@ -4419,7 +4384,6 @@ export const data = JSON.parse(`
           {
             "id": 37,
             "photo": "1414",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 154,
@@ -4453,7 +4417,6 @@ export const data = JSON.parse(`
           {
             "id": 38,
             "photo": "1515",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Женская коллекция",
             "items": [
               {
                 "id": 160,
@@ -4486,19 +4449,18 @@ export const data = JSON.parse(`
           {
             "id": 39,
             "photo": "01",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 164,
-                "text": "Свитшот из хлопка"
+                "text": "Свитшот из\u00A0хлопка"
               },
               {
                 "id": 165,
-                "text": "Водолазка из хлопка"
+                "text": "Водолазка из\u00A0хлопка"
               },
               {
                 "id": 166,
-                "text": "Шорты из хлопка"
+                "text": "Шорты из\u00A0хлопка"
               },
               {
                 "id": 167,
@@ -4516,11 +4478,10 @@ export const data = JSON.parse(`
           {
             "id": 40,
             "photo": "02",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 169,
-                "text": "Толстовка из хлопка"
+                "text": "Толстовка из\u00A0хлопка"
               },
               {
                 "id": 170,
@@ -4528,7 +4489,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 171,
-                "text": "Брюки из хлопка и шелка"
+                "text": "Брюки из\u00A0хлопка и\u00A0шелка"
               },
               {
                 "id": 172,
@@ -4542,7 +4503,6 @@ export const data = JSON.parse(`
           {
             "id": 41,
             "photo": "03",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 173,
@@ -4550,7 +4510,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 174,
-                "text": "Свитшот из хлопка"
+                "text": "Свитшот из\u00A0хлопка"
               },
               {
                 "id": 175,
@@ -4558,7 +4518,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 176,
-                "text": "Шорты из хлопка"
+                "text": "Шорты из\u00A0хлопка"
               },
               {
                 "id": 177,
@@ -4572,7 +4532,6 @@ export const data = JSON.parse(`
           {
             "id": 42,
             "photo": "04",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 178,
@@ -4580,7 +4539,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 179,
-                "text": "Свитшот из хлопка"
+                "text": "Свитшот из\u00A0хлопка"
               },
               {
                 "id": 180,
@@ -4598,7 +4557,6 @@ export const data = JSON.parse(`
           {
             "id": 43,
             "photo": "05",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 182,
@@ -4606,7 +4564,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 183,
-                "text": "Толстовка из хлопка"
+                "text": "Толстовка из\u00A0хлопка"
               },
               {
                 "id": 184,
@@ -4614,7 +4572,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 185,
-                "text": "Брюки из хлопка"
+                "text": "Брюки из\u00A0хлопка"
               },
               {
                 "id": 186,
@@ -4628,7 +4586,6 @@ export const data = JSON.parse(`
           {
             "id": 44,
             "photo": "06",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 187,
@@ -4636,19 +4593,19 @@ export const data = JSON.parse(`
               },
               {
                 "id": 188,
-                "text": "Рубашка из шерсти"
+                "text": "Рубашка из\u00A0шерсти"
               },
               {
                 "id": 189,
-                "text": "Кардиган из хлопка"
+                "text": "Кардиган из\u00A0хлопка"
               },
               {
                 "id": 190,
-                "text": "Рубашка из вельвета"
+                "text": "Рубашка из\u00A0вельвета"
               },
               {
                 "id": 191,
-                "text": "Брюки из хлопка"
+                "text": "Брюки из\u00A0хлопка"
               },
               {
                 "id": 192,
@@ -4662,7 +4619,6 @@ export const data = JSON.parse(`
           {
             "id": 45,
             "photo": "07",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 193,
@@ -4670,7 +4626,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 194,
-                "text": "Рубашка из хлопка и шерсти"
+                "text": "Рубашка из\u00A0хлопка и\u00A0шерсти"
               },
               {
                 "id": 195,
@@ -4682,7 +4638,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 197,
-                "text": "Брюки из хлопка"
+                "text": "Брюки из\u00A0хлопка"
               }
             ],
             "look": "a50621adfcd68044294169f334959347.jpg",
@@ -4692,7 +4648,6 @@ export const data = JSON.parse(`
           {
             "id": 46,
             "photo": "08",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 198,
@@ -4726,7 +4681,6 @@ export const data = JSON.parse(`
           {
             "id": 47,
             "photo": "09",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 204,
@@ -4738,7 +4692,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 206,
-                "text": "Рубашка из денима"
+                "text": "Рубашка из\u00A0денима"
               },
               {
                 "id": 207,
@@ -4746,7 +4700,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 208,
-                "text": "Брюки из шерсти и хлопка"
+                "text": "Брюки из\u00A0шерсти и\u00A0хлопка"
               }
             ],
             "look": "d364c1e00b5112faafc0756067006942.jpg",
@@ -4756,7 +4710,6 @@ export const data = JSON.parse(`
           {
             "id": 48,
             "photo": "10",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 209,
@@ -4764,7 +4717,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 210,
-                "text": "Джемпер из шерсти"
+                "text": "Джемпер из\u00A0шерсти"
               },
               {
                 "id": 211,
@@ -4772,7 +4725,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 212,
-                "text": "Брюки из хлопка"
+                "text": "Брюки из\u00A0хлопка"
               },
               {
                 "id": 213,
@@ -4794,7 +4747,6 @@ export const data = JSON.parse(`
           {
             "id": 49,
             "photo": "11",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 216,
@@ -4802,7 +4754,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 217,
-                "text": "Джемпер из шерсти"
+                "text": "Джемпер из\u00A0шерсти"
               },
               {
                 "id": 218,
@@ -4820,7 +4772,6 @@ export const data = JSON.parse(`
           {
             "id": 50,
             "photo": "12",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 220,
@@ -4828,15 +4779,15 @@ export const data = JSON.parse(`
               },
               {
                 "id": 221,
-                "text": "Куртка из денима"
+                "text": "Куртка из\u00A0денима"
               },
               {
                 "id": 222,
-                "text": "Толстовка из хлопка"
+                "text": "Толстовка из\u00A0хлопка"
               },
               {
                 "id": 223,
-                "text": "Брюки из хлопка"
+                "text": "Брюки из\u00A0хлопка"
               },
               {
                 "id": 224,
@@ -4854,7 +4805,6 @@ export const data = JSON.parse(`
           {
             "id": 51,
             "photo": "13",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 226,
@@ -4866,7 +4816,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 228,
-                "text": "Толстовка из хлопка"
+                "text": "Толстовка из\u00A0хлопка"
               },
               {
                 "id": 229,
@@ -4880,7 +4830,6 @@ export const data = JSON.parse(`
           {
             "id": 52,
             "photo": "14",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 230,
@@ -4896,7 +4845,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 233,
-                "text": "Брюки из хлопка"
+                "text": "Брюки из\u00A0хлопка"
               },
               {
                 "id": 234,
@@ -4914,7 +4863,6 @@ export const data = JSON.parse(`
           {
             "id": 53,
             "photo": "15",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 236,
@@ -4926,15 +4874,15 @@ export const data = JSON.parse(`
               },
               {
                 "id": 238,
-                "text": "Толстовка из хлопка"
+                "text": "Толстовка из\u00A0хлопка"
               },
               {
                 "id": 239,
-                "text": "Водолазка из шерсти"
+                "text": "Водолазка из\u00A0шерсти"
               },
               {
                 "id": 240,
-                "text": "Брюки из хлопка"
+                "text": "Брюки из\u00A0хлопка"
               }
             ],
             "look": "63c7b4fa3212eadc0cce91c328b9e643.jpg",
@@ -4944,7 +4892,6 @@ export const data = JSON.parse(`
           {
             "id": 54,
             "photo": "16",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 241,
@@ -4982,7 +4929,6 @@ export const data = JSON.parse(`
           {
             "id": 55,
             "photo": "17",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 248,
@@ -4994,7 +4940,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 250,
-                "text": "Брюки из шерсти и хлопка"
+                "text": "Брюки из\u00A0шерсти и\u00A0хлопка"
               },
               {
                 "id": 251,
@@ -5012,7 +4958,6 @@ export const data = JSON.parse(`
           {
             "id": 56,
             "photo": "18",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 253,
@@ -5046,7 +4991,6 @@ export const data = JSON.parse(`
           {
             "id": 57,
             "photo": "19",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 259,
@@ -5076,7 +5020,6 @@ export const data = JSON.parse(`
           {
             "id": 58,
             "photo": "20",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 264,
@@ -5096,7 +5039,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 268,
-                "text": "Поясная сумка Nero Sicilia DNA"
+                "text": "Поясная сумка Nero\u00A0Sicilia\u00A0DNA"
               }
             ],
             "look": "6b6e1177b4f3570ac51f524c546af868.jpg",
@@ -5106,7 +5049,6 @@ export const data = JSON.parse(`
           {
             "id": 59,
             "photo": "21",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 269,
@@ -5136,7 +5078,6 @@ export const data = JSON.parse(`
           {
             "id": 60,
             "photo": "22",
-            "folder": "C:/YandexDisk/FW 21-22 для рассылок/Dolce & Gabbana/Общая рассылка/Мужская коллекция",
             "items": [
               {
                 "id": 274,
@@ -5144,7 +5085,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 275,
-                "text": "Джемпер из шерсти"
+                "text": "Джемпер из\u00A0шерсти"
               },
               {
                 "id": 276,
@@ -5152,7 +5093,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 277,
-                "text": "Брюки из шерсти и хлопка"
+                "text": "Брюки из\u00A0шерсти и\u00A0хлопка"
               },
               {
                 "id": 278,
@@ -5177,7 +5118,7 @@ export const data = JSON.parse(`
               },
               {
                 "id": 281,
-                "text": "Куртка из денима"
+                "text": "Куртка из\u00A0денима"
               },
               {
                 "id": 282,
@@ -5199,6 +5140,370 @@ export const data = JSON.parse(`
             "look": "befd26183428bbf22066c3910599d751.jpg",
             "thrumbnail": "9800454db3c950d3797b7ee3e008c4b9.jpg",
             "zoom": "befd26183428bbf22066c3910599d751.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "Valentino",
+    "brandLink": "valentino",
+    "title": "Пре-коллекция Осень 2021",
+    "link": "pre_21m",
+    "logotype": "valentino.svg",
+    "addressList": [
+      {
+        "address": "Третьяковский проезд",
+        "phone": "+7 (495) 933 3208"
+      },
+      {
+        "address": "«Барвиха Luxury\u00A0Village»",
+        "phone": "+7 (495) 225 8891"
+      },
+      {
+        "address": "Кутузовский проспект, 31",
+        "phone": "+7 (495) 933 3034"
+      }
+    ],
+    "sections": [
+      {
+        "section": "Пре-коллекция Осень 2021",
+        "id": 1,
+        "link": "pre_21m",
+        "items": [
+          {
+            "id": 1,
+            "photo": "01",
+            "items": [
+              {
+                "id": 1,
+                "text": "Пиджак из\u00A0шерсти"
+              },
+              {
+                "id": 2,
+                "text": "Худи"
+              },
+              {
+                "id": 3,
+                "text": "Рубашка"
+              },
+              {
+                "id": 4,
+                "text": "Джинсы"
+              },
+              {
+                "id": 5,
+                "text": "Кроссовки"
+              }
+            ],
+            "look": "18c269b87fa3c0b7bf2e1d0dfbe07e9d.jpg",
+            "thrumbnail": "6dd2284e2cf84fd3e9fbd3f1df3e2802.jpg",
+            "zoom": "18c269b87fa3c0b7bf2e1d0dfbe07e9d.jpg"
+          },
+          {
+            "id": 2,
+            "photo": "02",
+            "items": [
+              {
+                "id": 6,
+                "text": "Пиджак из\u00A0шерсти"
+              },
+              {
+                "id": 7,
+                "text": "Худи"
+              },
+              {
+                "id": 8,
+                "text": "Рубашка"
+              },
+              {
+                "id": 9,
+                "text": "Джинсы"
+              }
+            ],
+            "look": "80dd1790a05677defb560e23448d91cf.jpg",
+            "thrumbnail": "3c9f07f075ee8f00dc5129ea1574472a.jpg",
+            "zoom": "80dd1790a05677defb560e23448d91cf.jpg"
+          },
+          {
+            "id": 3,
+            "photo": "03",
+            "items": [
+              {
+                "id": 10,
+                "text": "Пальто из\u00A0шерсти"
+              },
+              {
+                "id": 11,
+                "text": "Худи"
+              },
+              {
+                "id": 12,
+                "text": "Рубашка"
+              },
+              {
+                "id": 13,
+                "text": "Джинсы"
+              },
+              {
+                "id": 14,
+                "text": "Кроссовки"
+              }
+            ],
+            "look": "564b58bb0e0168e4095d25bb3cf9aea4.jpg",
+            "thrumbnail": "39992d244141d54ddb3c331a13f8e51f.jpg",
+            "zoom": "564b58bb0e0168e4095d25bb3cf9aea4.jpg"
+          },
+          {
+            "id": 4,
+            "photo": "04",
+            "items": [
+              {
+                "id": 15,
+                "text": "Куртка-бомбер с\u00A0отделкой из\u00A0денима"
+              },
+              {
+                "id": 16,
+                "text": "Худи"
+              },
+              {
+                "id": 17,
+                "text": "Рубашка"
+              },
+              {
+                "id": 18,
+                "text": "Джинсы"
+              },
+              {
+                "id": 19,
+                "text": "Кеды"
+              }
+            ],
+            "look": "e06c05afe2eb30bf4aaffed8ad7c678c.jpg",
+            "thrumbnail": "5a8725273b3e78c9a3a01678ea917f91.jpg",
+            "zoom": "e06c05afe2eb30bf4aaffed8ad7c678c.jpg"
+          },
+          {
+            "id": 5,
+            "photo": "05",
+            "items": [
+              {
+                "id": 20,
+                "text": "Куртка-бомбер с\u00A0отделкой из\u00A0денима"
+              },
+              {
+                "id": 21,
+                "text": "Худи"
+              },
+              {
+                "id": 22,
+                "text": "Джинсы"
+              }
+            ],
+            "look": "315f8304c8bf16e1b49c000f04910547.jpg",
+            "thrumbnail": "c550e828b53c37a7fba3a42552b473fe.jpg",
+            "zoom": "315f8304c8bf16e1b49c000f04910547.jpg"
+          },
+          {
+            "id": 6,
+            "photo": "06",
+            "items": [
+              {
+                "id": 23,
+                "text": "Пуховик"
+              },
+              {
+                "id": 24,
+                "text": "Рубашка"
+              },
+              {
+                "id": 25,
+                "text": "Джинсы"
+              },
+              {
+                "id": 26,
+                "text": "Кеды"
+              },
+              {
+                "id": 27,
+                "text": "Поясная сумка"
+              }
+            ],
+            "look": "f7bc4990a6c60ae2b7dd8948d752662d.jpg",
+            "thrumbnail": "847f019f8e564a383a5fd056b841e9d0.jpg",
+            "zoom": "f7bc4990a6c60ae2b7dd8948d752662d.jpg"
+          },
+          {
+            "id": 7,
+            "photo": "07",
+            "items": [
+              {
+                "id": 28,
+                "text": "Пуховик"
+              },
+              {
+                "id": 29,
+                "text": "Джинсы"
+              }
+            ],
+            "look": "13ff8e0e2245810bb63608540cd825cf.jpg",
+            "thrumbnail": "6d635f6db7823b6e40d61722f45d2190.jpg",
+            "zoom": "13ff8e0e2245810bb63608540cd825cf.jpg"
+          },
+          {
+            "id": 8,
+            "photo": "08",
+            "items": [
+              {
+                "id": 30,
+                "text": "Худи"
+              },
+              {
+                "id": 31,
+                "text": "Рубашка"
+              },
+              {
+                "id": 32,
+                "text": "Спортивные брюки"
+              },
+              {
+                "id": 33,
+                "text": "Кроссовки"
+              },
+              {
+                "id": 34,
+                "text": "Панама"
+              }
+            ],
+            "look": "4dd67207731ec599abf844694cb184ae.jpg",
+            "thrumbnail": "c16e96c935dbb9c88728f23b6cdf1e8b.jpg",
+            "zoom": "4dd67207731ec599abf844694cb184ae.jpg"
+          },
+          {
+            "id": 9,
+            "photo": "09",
+            "items": [
+              {
+                "id": 35,
+                "text": "Футболка"
+              }
+            ],
+            "look": "838aa89c27513a993cb4184f5efef52f.jpg",
+            "thrumbnail": "4395d66c0bd65cbd2a9070f79816698e.jpg",
+            "zoom": "838aa89c27513a993cb4184f5efef52f.jpg"
+          },
+          {
+            "id": 10,
+            "photo": "10",
+            "items": [
+              {
+                "id": 36,
+                "text": "Куртка"
+              },
+              {
+                "id": 37,
+                "text": "Худи"
+              },
+              {
+                "id": 38,
+                "text": "Рубашка"
+              },
+              {
+                "id": 39,
+                "text": "Джинсы"
+              }
+            ],
+            "look": "da08bdb2e159de89776bfecf2e517503.jpg",
+            "thrumbnail": "93e19398cee10af67e78a22c44a51775.jpg",
+            "zoom": "da08bdb2e159de89776bfecf2e517503.jpg"
+          },
+          {
+            "id": 11,
+            "photo": "11",
+            "items": [
+              {
+                "id": 40,
+                "text": "Куртка"
+              },
+              {
+                "id": 41,
+                "text": "Футболка"
+              },
+              {
+                "id": 42,
+                "text": "Шорты"
+              },
+              {
+                "id": 43,
+                "text": "Кроссовки"
+              }
+            ],
+            "look": "e072ef99f0b11163f00607781344bffe.jpg",
+            "thrumbnail": "c19f4e0ca6eee09b3149ae533aa5cc3b.jpg",
+            "zoom": "e072ef99f0b11163f00607781344bffe.jpg"
+          },
+          {
+            "id": 12,
+            "photo": "12",
+            "items": [
+              {
+                "id": 44,
+                "text": "Куртка"
+              },
+              {
+                "id": 45,
+                "text": "Футболка"
+              }
+            ],
+            "look": "f7375b41d0795335e618a3de72edc791.jpg",
+            "thrumbnail": "b8d99b496dd42a98d891c3c72537627d.jpg",
+            "zoom": "f7375b41d0795335e618a3de72edc791.jpg"
+          },
+          {
+            "id": 13,
+            "photo": "13",
+            "items": [
+              {
+                "id": 46,
+                "text": "Куртка с\u00A0отделкой из\u00A0шерсти"
+              },
+              {
+                "id": 47,
+                "text": "Рубашка"
+              },
+              {
+                "id": 48,
+                "text": "Джинсы"
+              }
+            ],
+            "look": "d88f7f9a6ea8cea3c0f48615dee527bd.jpg",
+            "thrumbnail": "c8db5d7551ec397b3d4479c0f14398e5.jpg",
+            "zoom": "d88f7f9a6ea8cea3c0f48615dee527bd.jpg"
+          },
+          {
+            "id": 14,
+            "photo": "14",
+            "items": [
+              {
+                "id": 49,
+                "text": "Толстовка"
+              },
+              {
+                "id": 50,
+                "text": "Рубашка"
+              },
+              {
+                "id": 51,
+                "text": "Спортивные брюки"
+              },
+              {
+                "id": 52,
+                "text": "Рюкзак"
+              }
+            ],
+            "look": "31cd17e7671d152baadcc6041ae24d39.jpg",
+            "thrumbnail": "13f5e6ff6593ac98f24a737c8a296e99.jpg",
+            "zoom": "31cd17e7671d152baadcc6041ae24d39.jpg"
           }
         ]
       }

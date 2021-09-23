@@ -9,7 +9,15 @@ import { ImageFolder } from '../../const';
 import { catalogPropTypes } from '../../prop-types';
 
 const DesktopCatalog = ({
-  activeSection, activeLook, sectionList, addressList, logotype, validTime, onSlideChange, onSectionChange,
+  activeSection,
+  activeLook,
+  sectionList,
+  addressList,
+  logotype,
+  validTime,
+  onSlideChange,
+  onSectionChange,
+  brandRegExp,
 }) => {
   const section = activeSection;
   const lookIndex = section.items[activeLook] ? activeLook : 0;
@@ -72,7 +80,7 @@ const DesktopCatalog = ({
               onSectionChange={onSectionChange}
             />
 
-            <LookInfo data={texts} slideIndex={lookIndex} />
+            <LookInfo data={texts} slideIndex={lookIndex} brandRegExp={brandRegExp} />
           </div>
         </section>
         <section className="catalog__nav slider-nav">

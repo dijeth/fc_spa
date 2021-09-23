@@ -11,7 +11,15 @@ import Modal from '../modal';
 import { catalogPropTypes } from '../../prop-types';
 
 const MobileCatalog = ({
-  activeSection, activeLook, sectionList, addressList, logotype, validTime, onSlideChange, onSectionChange,
+  activeSection,
+  activeLook,
+  sectionList,
+  addressList,
+  logotype,
+  validTime,
+  onSlideChange,
+  onSectionChange,
+  brandRegExp,
 }) => {
   const [addressShowen, setAddressShowen] = React.useState(false);
   const [sectionsShowen, setSectionsShowen] = React.useState(false);
@@ -81,7 +89,7 @@ const MobileCatalog = ({
               <button type="button" className="look__action" onClick={() => { setAddressShowen(true); }}>Заказать примерку</button>
             </div>
 
-            <LookInfo data={texts} slideIndex={lookIndex} />
+            <LookInfo data={texts} slideIndex={lookIndex} brandRegExp={brandRegExp} />
 
             <div className="look__info">
               <span className="look__current">

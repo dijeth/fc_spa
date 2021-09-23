@@ -1,6 +1,5 @@
+import { MOCK_TIMEOUT } from '../const';
 import { data } from '../mock-data/data';
-
-const MOCK_TIMEOUT = 100;
 
 class CatalogService {
   constructor() {
@@ -20,4 +19,6 @@ class CatalogService {
   }
 }
 
-export { CatalogService };
+const catalogService = new CatalogService();
+
+export { catalogService };

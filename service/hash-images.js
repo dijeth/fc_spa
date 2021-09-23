@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { hash } = require('./hash');
-const { data } = require('../src/mock-data/data-old');
+const { data } = require('../src/mock-data/data');
 
 const ImageType = {
   MAIN: '',

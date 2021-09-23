@@ -5,3 +5,11 @@ export const ImageFolder = {
   LOOK: 'looks',
   ZOOM: 'zoom',
 };
+
+export const ContentType = {
+  EXCLUSIVE: 'exclusive',
+  MODEL: 'model',
+  BRAND: 'brand',
+  BRACKET: 'bracket',
+  TEXT: 'text',
+};

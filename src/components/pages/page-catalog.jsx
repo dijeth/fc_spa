@@ -1,13 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-import { CatalogService } from '../../data-services/catalog-service';
+import { catalogService, brandService } from '../../data-services';
 import Page404 from './page-404';
 import CatalogInnerRouter from '../catalog/catalog-inner-router';
 import PagePreloader from './page-preloader';
 import Transition from './transition';
 
-const catalogService = new CatalogService();
+// const prepareTextItem = (id, text, cost, brandRegExp) => {
+
+// };
+
+// const prepareLookText = (items, brandRegExp) => items.map(({ id, text, cost }) => prepareTextItem(id, text, cost, brandRegExp));
+
+// const prepareCatalogData = (data, brands) => {
+//   const brandRegExp = getBrandRegExp(brands);
+
+//   return {
+//     ...data,
+//     sections: data.sections.map((section) => ({
+//       ...section,
+//       items: section.items.map((look) => ({
+//         ...look,
+//         paragraphs: prepareLookText(look.items, brandRegExp),
+//       })),
+//     })),
+//   };
+// };
 
 const PageCatalog = ({ category, catalog }) => {
   const [data, setData] = React.useState({ sections: [] });
@@ -20,12 +39,19 @@ const PageCatalog = ({ category, catalog }) => {
   React.useEffect(() => {
     setIsLoading(true);
 
-    catalogService
-      .getCatalog(category, catalog)
+    Promise.all([
+      catalogService.getCatalog(category, catalog),
+      brandService.getBrands(),
+    ])
       .then(
-        (result) => {
+        ([catalogData, brands]) => {
           setIsLoading(false);
-          if (result) { setData(result); }
+          if (catalogData) {
+            setData({
+              ...catalogData,
+              allBrands: brands,
+            });
+          }
         },
         (err) => {
           setIsLoading(false);
