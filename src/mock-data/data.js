@@ -1,6 +1,7 @@
 export const data = JSON.parse(`
 [
   {
+    "id": 1,
     "brand": "trunkshow",
     "brandLink": "trunkshow",
     "title": "Новые коллекции Осень 2021",
@@ -3313,6 +3314,7 @@ export const data = JSON.parse(`
     ]
   },
   {
+    "id": 2,
     "brand": "Valentino",
     "brandLink": "valentino",
     "title": "Пре-коллекция Осень 2021",
@@ -3679,6 +3681,7 @@ export const data = JSON.parse(`
     ]
   },
   {
+    "id": 3,
     "brand": "Dolce & Gabbana",
     "brandLink": "dolcegabbana",
     "logotype": "dolcegabbana.svg",
@@ -5146,6 +5149,7 @@ export const data = JSON.parse(`
     ]
   },
   {
+    "id": 4,
     "brand": "Valentino",
     "brandLink": "valentino",
     "title": "Пре-коллекция Осень 2021",

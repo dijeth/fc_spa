@@ -7,27 +7,6 @@ import CatalogInnerRouter from '../catalog/catalog-inner-router';
 import PagePreloader from './page-preloader';
 import Transition from './transition';
 
-// const prepareTextItem = (id, text, cost, brandRegExp) => {
-
-// };
-
-// const prepareLookText = (items, brandRegExp) => items.map(({ id, text, cost }) => prepareTextItem(id, text, cost, brandRegExp));
-
-// const prepareCatalogData = (data, brands) => {
-//   const brandRegExp = getBrandRegExp(brands);
-
-//   return {
-//     ...data,
-//     sections: data.sections.map((section) => ({
-//       ...section,
-//       items: section.items.map((look) => ({
-//         ...look,
-//         paragraphs: prepareLookText(look.items, brandRegExp),
-//       })),
-//     })),
-//   };
-// };
-
 const PageCatalog = ({ category, catalog }) => {
   const [data, setData] = React.useState({ sections: [] });
   const [isLoading, setIsLoading] = React.useState(true);
