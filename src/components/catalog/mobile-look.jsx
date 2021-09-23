@@ -40,15 +40,21 @@ const MobileLook = ({ lookIndex, images, onSlideChange }) => {
 
   return (
     <div className="look__photo-container" style={lookStyle} ref={refLook}>
-      <GallerySlider
-        targetPosition={lookIndex}
-        showenSlidesCount={1}
-        preloadedSideSlidesCount={Math.min(images.length - 1, PRELOADED_SLIDES_COUNT)}
-        className="look__photo"
-        onSlideChange={onSlideChange}
-      >
-        {images.map((it) => <div key={it.id} style={imageStyle}><img src={it.src} alt={it.alt} style={imageStyle} /></div>)}
-      </GallerySlider>
+      {
+        imageSize
+          ? (
+            <GallerySlider
+              targetPosition={lookIndex}
+              showenSlidesCount={1}
+              preloadedSideSlidesCount={Math.min(images.length - 1, PRELOADED_SLIDES_COUNT)}
+              className="look__photo"
+              onSlideChange={onSlideChange}
+            >
+              {images.map((it) => <div key={it.id} style={imageStyle}><img src={it.src} alt={it.alt} style={imageStyle} /></div>)}
+            </GallerySlider>
+          )
+          : <div className="preloader" />
+    }
       {prevLookButton}
       {nextLookButton}
     </div>
