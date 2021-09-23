@@ -32,9 +32,19 @@ const ZoomImage = ({ src, children }) => {
   const [image, setImage] = React.useState();
 
   React.useEffect(() => {
-    refContainer.current.addEventListener('mousedown', () => {
+    refContainer.current.addEventListener('mousedown', (evt) => {
       getImageSize(src).then(({ width, height }) => {
-        setImage({ width, height });
+        const { x, y } = getBackgroundPosition(
+          evt.clientX,
+          evt.clientY,
+          refContainer.current.getBoundingClientRect(),
+          width,
+          height,
+        );
+
+        setImage({
+          width, height, x, y,
+        });
       });
     });
   }, []);
@@ -75,7 +85,18 @@ const ZoomImage = ({ src, children }) => {
     <div className="zoom" ref={refContainer}>
       {
         image
-          ? <div className="zoom__inner" style={{ backgroundImage: `url(${src})`, backgroundSize: `${ZOOM_WIDTH}px ${ZOOM_WIDTH / (image.width / image.height)}px` }} ref={refInner} />
+          ? (
+            <div
+              className="zoom__inner"
+              style={{
+                backgroundImage: `url(${src})`,
+                backgroundSize: `${ZOOM_WIDTH}px ${ZOOM_WIDTH / (image.width / image.height)}px`,
+                backgroundPositionX: `${image.x}px`,
+                backgroundPositionY: `${image.y}px`,
+              }}
+              ref={refInner}
+            />
+          )
           : ''
       }
       {children}
