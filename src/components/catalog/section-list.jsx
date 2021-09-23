@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { getStaticUrl } from '../../utils/common-utils';
 
 const SectionList = ({
@@ -24,6 +25,9 @@ const SectionList = ({
           </button>
         </li>
       ))}
+      <li className="section-list__item section-list__item--all" key={sections.map((it) => it.id).join('-')}>
+        <Link to="/">Все каталоги</Link>
+      </li>
     </ul>
   </>
 );

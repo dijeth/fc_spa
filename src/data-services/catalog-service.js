@@ -31,7 +31,8 @@ class CatalogService {
         title,
         link: getUrl(brandLink, link),
       };
-    }));
+    })
+      .sort((a, b) => (a.brand > b.brand ? 1 : -1)));
   }
 }
 

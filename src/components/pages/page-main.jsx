@@ -26,21 +26,23 @@ const PageMain = () => {
   }
 
   return (
-    <div className="wrapper">
-      <Transition>
-        {
-        data.map((catalog) => (
-          <p key={catalog.id}>
-            <Link to={catalog.link}>
-              <b>{catalog.brand}</b>
-              {' '}
-              {catalog.title}
-            </Link>
-          </p>
-        ))
-      }
-      </Transition>
-    </div>
+    <Transition>
+      <div className="wrapper modal modal--showen">
+        <ul className="section-list">
+          {
+            data.map((catalog) => (
+              <li className="section-list__item" key={catalog.id}>
+                <Link to={catalog.link}>
+                  <b>{catalog.brand}</b>
+                  <br />
+                  {catalog.title}
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </Transition>
   );
 };
 
