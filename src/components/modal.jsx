@@ -4,17 +4,41 @@ import PropTypes from 'prop-types';
 const Modal = ({
   isShowen, onClose, unMountWhenClosed, children,
 }) => {
-  const content = !isShowen && unMountWhenClosed
-    ? ''
-    : (
-      <div className="modal__inner">
-        {children}
-      </div>
-    );
+  const refMain = React.useRef();
+  const [isMounted, setIsMounted] = React.useState();
+
+  React.useEffect(() => {
+    const transitionEndHandler = () => {
+      setIsMounted(false);
+    };
+
+    const transitionStartHandler = () => {
+      setIsMounted(true);
+    };
+
+    if (!isShowen && unMountWhenClosed) {
+      refMain.current.addEventListener('transitionend', transitionEndHandler);
+    }
+
+    if (isShowen && unMountWhenClosed) {
+      refMain.current.addEventListener('transitionstart', transitionStartHandler);
+    }
+
+    return () => {
+      refMain.current.removeEventListener('transitionend', transitionEndHandler);
+      refMain.current.removeEventListener('transitionstart', transitionStartHandler);
+    };
+  }, [isShowen]);
+
+  const content = !unMountWhenClosed || isMounted
+    ? children
+    : '';
 
   return (
-    <div className={`modal ${isShowen ? 'modal--showen' : ''}`}>
-      {content}
+    <div className={`modal ${isShowen ? 'modal--showen' : ''}`} ref={refMain}>
+      <div className="modal__inner">
+        {content}
+      </div>
       {
         onClose
           ? (
