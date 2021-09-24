@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getImage } from '../../utils/common-utils';
+import PagePreloader from '../pages/page-preloader';
+import { PreloaderReason } from '../../const';
 
 const SimpleZoom = ({ src, alt }) => {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -13,7 +15,7 @@ const SimpleZoom = ({ src, alt }) => {
     <div className="simple-zoom">
       {
         isLoading
-          ? <div className="preloader preloader--image" />
+          ? <PagePreloader reason={PreloaderReason.IMAGE} />
           : <img className="simple-zoom__image" src={src} alt={alt} />
       }
     </div>

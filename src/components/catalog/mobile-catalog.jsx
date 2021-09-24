@@ -1,14 +1,15 @@
 import React from 'react';
-import { getStaticUrl } from '../../utils/common-utils';
+import { getImageSize, getStaticUrl } from '../../utils/common-utils';
 import LookInfo from './look-info';
 import SectionList from './section-list';
 import AddressList from './address-list';
-import { ImageFolder } from '../../const';
+import { ImageFolder, PreloaderReason } from '../../const';
 import MobileLook from './mobile-look';
 import MobileThrumbnails from './mobile-thrumbnails';
 import SimpleZoom from './simple-zoom';
 import Modal from '../modal';
 import { catalogPropTypes } from '../../prop-types';
+import PagePreloader from '../pages/page-preloader';
 
 const MobileCatalog = ({
   activeSection,
@@ -26,6 +27,8 @@ const MobileCatalog = ({
   const [navShowen, setNavShowen] = React.useState(false);
   const [zoom, setZoom] = React.useState(false);
 
+  const [imageSize, setImageSize] = React.useState();
+
   const section = activeSection;
   const lookIndex = section.items[activeLook] ? activeLook : 0;
 
@@ -42,6 +45,18 @@ const MobileCatalog = ({
     src: getStaticUrl('img', ImageFolder.THRUMBNAIL, thrumbnail),
     alt: `Look ${i + 1}`,
   }));
+
+  React.useEffect(() => {
+    const { look } = section.items[activeLook];
+    getImageSize(getStaticUrl('img', ImageFolder.LOOK, look))
+      .then((size) => {
+        setImageSize(size);
+      });
+  }, [activeSection]);
+
+  if (!imageSize) {
+    return <PagePreloader reason={PreloaderReason.IMAGE} />;
+  }
 
   return (
     <div className="wrapper">
@@ -83,7 +98,7 @@ const MobileCatalog = ({
 
         <section className="catalog__main">
           <div className="catalog__look look">
-            <MobileLook lookIndex={lookIndex} images={photos} onSlideChange={onSlideChange} />
+            <MobileLook lookIndex={lookIndex} images={photos} imageSize={imageSize} onSlideChange={onSlideChange} />
 
             <div className="look__controls">
               <button type="button" className="look__action" onClick={() => { setAddressShowen(true); }}>Заказать примерку</button>
