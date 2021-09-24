@@ -13,7 +13,7 @@ const SimpleZoom = ({ src, alt }) => {
     <div className="simple-zoom">
       {
         isLoading
-          ? <div className="preloader" />
+          ? <div className="preloader preloader--image" />
           : <img className="simple-zoom__image" src={src} alt={alt} />
       }
     </div>

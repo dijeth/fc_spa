@@ -10,4 +10,16 @@
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
+
+  &--bundle::before {
+    content: "Грузим бандл..."
+  }
+
+  &--data::before {
+    content: "Грузим данные каталога..."
+  }
+
+  &--image::before {
+    content: "Грузим картинку..."
+  }
 }

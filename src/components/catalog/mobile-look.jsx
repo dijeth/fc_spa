@@ -53,7 +53,7 @@ const MobileLook = ({ lookIndex, images, onSlideChange }) => {
               {images.map((it) => <div key={it.id} style={imageStyle}><img src={it.src} alt={it.alt} style={imageStyle} /></div>)}
             </GallerySlider>
           )
-          : <div className="preloader" />
+          : <div className="preloader preloader--image" />
     }
       {prevLookButton}
       {nextLookButton}
