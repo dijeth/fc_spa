@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { catalogService } from '../../data-services';
 import PagePreloader from './page-preloader';
@@ -26,8 +25,12 @@ const PageMain = () => {
   }
 
   return (
-    <div className="wrapper modal modal--showen">
-      <Transition>
+    <Transition>
+      <div className="wrapper modal modal--showen">
+        <h1>Все каталоги</h1>
+        <p>Здесь может быть страница со всеми каталогами, или с каталогами бренда, или с новыми коллекциями.</p>
+        <p>Оформление и наполнение сейчас сделано для тестирования</p>
+        <br />
         <ul className="section-list">
           {
             data.map((catalog) => (
@@ -41,8 +44,8 @@ const PageMain = () => {
             ))
           }
         </ul>
-      </Transition>
-    </div>
+      </div>
+    </Transition>
   );
 };
 
