@@ -46,7 +46,7 @@ const MobileCatalog = ({
   return (
     <div className="wrapper">
       <div className="catalog">
-        <Modal isShowen={zoom} onClose={() => { setZoom(false); }}>
+        <Modal isShowen={zoom} onClose={() => { setZoom(false); }} unMountWhenClosed>
           <SimpleZoom
             src={getStaticUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)}
             alt={`Look ${lookIndex + 1}`}
@@ -62,7 +62,7 @@ const MobileCatalog = ({
             activeSection={section.link}
             sections={sectionList}
             onSectionChange={onSectionChange}
-            logotype="blv.svg"
+            logotype={logotype}
           />
         </Modal>
 

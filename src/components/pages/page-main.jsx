@@ -26,8 +26,8 @@ const PageMain = () => {
   }
 
   return (
-    <Transition>
-      <div className="wrapper modal modal--showen">
+    <div className="wrapper modal modal--showen">
+      <Transition>
         <ul className="section-list">
           {
             data.map((catalog) => (
@@ -41,8 +41,8 @@ const PageMain = () => {
             ))
           }
         </ul>
-      </div>
-    </Transition>
+      </Transition>
+    </div>
   );
 };
 
