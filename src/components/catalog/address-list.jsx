@@ -12,9 +12,9 @@ const AddressList = ({ logotype, addressList }) => (
     <ul className="catalog__address address-list">
       {
         addressList.map((it) => (
-          <li className="address-list__item" key={it.address}>
+          <li className="address-list__item" key={it.text}>
             <a className="address-list__phone" href={`tel:+${it.phone.replace(/\D+/, '')}`}>{it.phone}</a>
-            <span className="address-list__base">{it.address}</span>
+            <span className="address-list__base">{it.text}</span>
           </li>
         ))
       }

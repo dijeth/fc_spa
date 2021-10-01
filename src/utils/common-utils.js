@@ -1,7 +1,7 @@
-import { BASE_ROUTE } from '../const';
+import { CATALOG_IMAGE_URL } from '../const';
 
 export const getUrl = (...path) => `/${path.join('/')}`.replace('//', '/');
-export const getStaticUrl = (...path) => `${BASE_ROUTE}${path.join('/')}`.replace('//', '/');
+export const getStaticUrl = (...path) => `${CATALOG_IMAGE_URL}/${path.join('/')}`;
 
 export const getImage = async (src) => new Promise((resolve) => {
   const image = new Image();

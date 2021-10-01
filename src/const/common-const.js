@@ -1,4 +1,6 @@
 export const BASE_ROUTE = ROOT_ROUTE;
+export const API_URL = API;
+export const CATALOG_IMAGE_URL = IMAGE_URL;
 export const ZOOM_WIDTH = 1000;
 export const DESKTOP_MIN_WIDTH = 888;
 export const NBSP = '\u00a0';

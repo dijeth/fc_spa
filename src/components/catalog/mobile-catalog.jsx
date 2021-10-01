@@ -30,25 +30,25 @@ const MobileCatalog = ({
   const [imageSize, setImageSize] = React.useState();
 
   const section = activeSection;
-  const lookIndex = section.items[activeLook] ? activeLook : 0;
+  const lookIndex = section.looks[activeLook] ? activeLook : 0;
 
-  const texts = section.items.map(({ items, id }) => ({ items, id }));
+  const texts = section.looks.map(({ items, id }) => ({ items, id }));
 
-  const photos = section.items.map(({ id, look }, i) => ({
+  const photos = section.looks.map(({ id, look }, i) => ({
     id,
-    src: getStaticUrl('img', ImageFolder.LOOK, look),
+    src: getStaticUrl(ImageFolder.LOOK, look),
     alt: `Look ${i + 1}`,
   }));
 
-  const thrumbnails = section.items.map(({ thrumbnail, id }, i) => ({
+  const thrumbnails = section.looks.map(({ thrumbnail, id }, i) => ({
     id,
-    src: getStaticUrl('img', ImageFolder.THRUMBNAIL, thrumbnail),
+    src: getStaticUrl(ImageFolder.THRUMBNAIL, thrumbnail),
     alt: `Look ${i + 1}`,
   }));
 
   React.useEffect(() => {
-    const { look } = section.items[activeLook];
-    getImageSize(getStaticUrl('img', ImageFolder.LOOK, look))
+    const { look } = section.looks[activeLook];
+    getImageSize(getStaticUrl(ImageFolder.LOOK, look))
       .then((size) => {
         setImageSize(size);
       });
@@ -63,7 +63,7 @@ const MobileCatalog = ({
       <div className="catalog">
         <Modal isShowen={zoom} onClose={() => { setZoom(false); }} unMountWhenClosed>
           <SimpleZoom
-            src={getStaticUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)}
+            src={getStaticUrl(ImageFolder.ZOOM, section.looks[lookIndex].zoom)}
             alt={`Look ${lookIndex + 1}`}
           />
         </Modal>

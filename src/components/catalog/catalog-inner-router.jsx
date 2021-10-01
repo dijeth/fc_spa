@@ -17,7 +17,7 @@ const CatalogInnerRouter = ({
   data, category, catalog, onRedirect,
 }) => {
   const history = useHistory();
-  const sectionList = data.sections.map(({ id, section: name, link }) => ({ id, name, link }));
+  const sectionList = data.sections;
 
   const getCatalogUrl = (catalogSection, catalogLook) => (data.sections.length > 1
     ? getUrl(category, catalog, catalogSection, catalogLook + 1)
@@ -41,7 +41,7 @@ const CatalogInnerRouter = ({
             const section = getSection(data, sectionLink);
             const lookIndex = look - 1;
 
-            return section && section.items[lookIndex]
+            return section && section.looks[lookIndex]
               ? (
                 <Catalog
                   activeSection={section}
@@ -65,7 +65,7 @@ const CatalogInnerRouter = ({
             const { section: sectionLink } = match.params;
             const section = getSection(data, sectionLink);
 
-            return section && section.items.length
+            return section && section.looks.length
               ? <Redirect to={getCatalogUrl(section.link, 0)} />
               : <Page404 />;
           }}
@@ -76,7 +76,7 @@ const CatalogInnerRouter = ({
           render={() => {
             const section = data.sections[0];
 
-            return section && section.items.length
+            return section && section.looks.length
               ? (
                 <>
                   <Media query={`(max-width: ${DESKTOP_MIN_WIDTH - 1}px)`}>
@@ -111,7 +111,7 @@ const CatalogInnerRouter = ({
           const section = data.sections[0];
           const lookIndex = look - 1;
 
-          return section && section.items[lookIndex]
+          return section && section.looks[lookIndex]
             ? (
               <Catalog
                 activeSection={section}
@@ -134,7 +134,7 @@ const CatalogInnerRouter = ({
         render={() => {
           const section = data.sections[0];
 
-          return section && section.items.length
+          return section && section.looks.length
             ? <Redirect to={getCatalogUrl(section.link, 0)} />
             : <Page404 />;
         }}

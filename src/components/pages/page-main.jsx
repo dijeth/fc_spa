@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { catalogService } from '../../data-services';
 import PagePreloader from './page-preloader';
 import Page404 from './page-404';
 import Transition from './transition';
+import { getData } from '../../data-service';
 
 const PageMain = () => {
   const [data, setData] = React.useState();
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    catalogService.getCatalogs().then((catalogs) => {
+    getData('catalogs').then((catalogs) => {
       setData(catalogs);
       setIsLoading(false);
     });

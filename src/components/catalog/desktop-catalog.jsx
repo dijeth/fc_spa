@@ -20,21 +20,21 @@ const DesktopCatalog = ({
   brandRegExp,
 }) => {
   const section = activeSection;
-  const lookIndex = section.items[activeLook] ? activeLook : 0;
-  const nextLookIndex = lookIndex + 1 <= section.items.length - 1 ? lookIndex + 1 : 0;
-  const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : section.items.length - 1;
+  const lookIndex = section.looks[activeLook] ? activeLook : 0;
+  const nextLookIndex = lookIndex + 1 <= section.looks.length - 1 ? lookIndex + 1 : 0;
+  const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : section.looks.length - 1;
 
-  const texts = section.items.map(({ items, id }) => ({ items, id }));
+  const texts = section.looks.map(({ items, id }) => ({ items, id }));
 
-  const photos = section.items.map(({ id, look }, i) => ({
+  const photos = section.looks.map(({ id, look }, i) => ({
     id,
-    src: getStaticUrl('img', ImageFolder.LOOK, look),
+    src: getStaticUrl(ImageFolder.LOOK, look),
     alt: `Look ${i + 1}`,
   }));
 
-  const thrumbnails = section.items.map(({ thrumbnail, id }, i) => ({
+  const thrumbnails = section.looks.map(({ thrumbnail, id }, i) => ({
     id,
-    src: getStaticUrl('img', ImageFolder.THRUMBNAIL, thrumbnail),
+    src: getStaticUrl(ImageFolder.THRUMBNAIL, thrumbnail),
     alt: `Look ${i + 1}`,
   }));
 
@@ -62,13 +62,13 @@ const DesktopCatalog = ({
             <AddressList logotype={logotype} addressList={addressList} />
           </div>
           <div className="catalog__look look">
-            <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={getStaticUrl('img', ImageFolder.ZOOM, section.items[lookIndex].zoom)} />
+            <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={getStaticUrl(ImageFolder.ZOOM, section.looks[lookIndex].zoom)} />
             <div className="look__info">
               {prevLookButton}
               <span className="look__current">
                 <b>{ lookIndex + 1}</b>
                 /
-                { section.items.length}
+                { section.looks.length}
               </span>
               {nextLookButton}
             </div>

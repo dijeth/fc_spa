@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-import { catalogService, brandService } from '../../data-services';
 import Page404 from './page-404';
 import CatalogInnerRouter from '../catalog/catalog-inner-router';
 import PagePreloader from './page-preloader';
 import Transition from './transition';
+import { getData } from '../../data-service';
 
 const PageCatalog = ({ category, catalog }) => {
   const [data, setData] = React.useState({ sections: [] });
@@ -19,8 +19,8 @@ const PageCatalog = ({ category, catalog }) => {
     setIsLoading(true);
 
     Promise.all([
-      catalogService.getCatalog(category, catalog),
-      brandService.getBrands(),
+      getData(`${category}/${catalog}`),
+      getData('brands'),
     ])
       .then(
         ([catalogData, brands]) => {

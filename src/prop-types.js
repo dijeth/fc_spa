@@ -11,7 +11,7 @@ export const lookInfoPropTypes = PropTypes.arrayOf(
 export const addressListPropTypes = {
   logotype: PropTypes.string,
   addressList: PropTypes.arrayOf(PropTypes.shape({
-    address: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
   })).isRequired,
 };
