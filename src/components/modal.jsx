@@ -8,6 +8,8 @@ const Modal = ({
   const [isMounted, setIsMounted] = React.useState();
 
   React.useEffect(() => {
+    const element = refMain.current;
+
     const transitionEndHandler = () => {
       setIsMounted(false);
     };
@@ -17,16 +19,18 @@ const Modal = ({
     };
 
     if (!isShowen && unMountWhenClosed) {
-      refMain.current.addEventListener('transitionend', transitionEndHandler);
+      element.addEventListener('transitionend', transitionEndHandler);
     }
 
     if (isShowen && unMountWhenClosed) {
-      refMain.current.addEventListener('transitionstart', transitionStartHandler);
+      element.addEventListener('transitionstart', transitionStartHandler);
     }
 
     return () => {
-      refMain.current.removeEventListener('transitionend', transitionEndHandler);
-      refMain.current.removeEventListener('transitionstart', transitionStartHandler);
+      if (unMountWhenClosed) {
+        element.removeEventListener('transitionend', transitionEndHandler);
+        element.removeEventListener('transitionstart', transitionStartHandler);
+      }
     };
   }, [isShowen]);
 
