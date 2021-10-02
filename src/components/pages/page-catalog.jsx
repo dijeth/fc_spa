@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import Page404 from './page-404';
+import Page500 from './page-500';
 import CatalogInnerRouter from '../catalog/catalog-inner-router';
 import PagePreloader from './page-preloader';
 import Transition from './transition';
 import { getData } from '../../data-service';
+import { ErrorMessage } from '../../const';
 
 const PageCatalog = ({ category, catalog }) => {
   const [data, setData] = React.useState({ sections: [] });
@@ -48,7 +50,9 @@ const PageCatalog = ({ category, catalog }) => {
   }
 
   if (error) {
-    return <div>{error.message}</div>;
+    return error.message === ErrorMessage.NOT_FOUND
+      ? <Page404 />
+      : <Page500 />;
   }
 
   if (redirect) {
