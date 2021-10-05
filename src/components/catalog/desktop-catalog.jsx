@@ -1,11 +1,9 @@
 import React from 'react';
-import { getStaticUrl } from '../../utils/common-utils';
 import LookInfo from './look-info';
 import SectionList from './section-list';
 import AddressList from './address-list';
 import Thrumbnails from './thrumbnails';
 import MainPhoto from './main-photo';
-import { ImageFolder } from '../../const';
 import { catalogPropTypes } from '../../prop-types';
 
 const DesktopCatalog = ({
@@ -28,13 +26,13 @@ const DesktopCatalog = ({
 
   const photos = section.looks.map(({ id, look }, i) => ({
     id,
-    src: getStaticUrl(ImageFolder.LOOK, look),
+    src: look,
     alt: `Look ${i + 1}`,
   }));
 
   const thrumbnails = section.looks.map(({ thrumbnail, id }, i) => ({
     id,
-    src: getStaticUrl(ImageFolder.THRUMBNAIL, thrumbnail),
+    src: thrumbnail,
     alt: `Look ${i + 1}`,
   }));
 
@@ -62,7 +60,7 @@ const DesktopCatalog = ({
             <AddressList logotype={logotype} addressList={addressList} />
           </div>
           <div className="catalog__look look">
-            <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={getStaticUrl(ImageFolder.ZOOM, section.looks[lookIndex].zoom)} />
+            <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={section.looks[lookIndex].zoom} />
             <div className="look__info">
               {prevLookButton}
               <span className="look__current">

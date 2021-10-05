@@ -1,9 +1,9 @@
 import React from 'react';
-import { getImageSize, getStaticUrl } from '../../utils/common-utils';
+import { getImageSize } from '../../utils/common-utils';
 import LookInfo from './look-info';
 import SectionList from './section-list';
 import AddressList from './address-list';
-import { ImageFolder, PreloaderReason } from '../../const';
+import { PreloaderReason } from '../../const';
 import MobileLook from './mobile-look';
 import MobileThrumbnails from './mobile-thrumbnails';
 import SimpleZoom from './simple-zoom';
@@ -36,19 +36,19 @@ const MobileCatalog = ({
 
   const photos = section.looks.map(({ id, look }, i) => ({
     id,
-    src: getStaticUrl(ImageFolder.LOOK, look),
+    src: look,
     alt: `Look ${i + 1}`,
   }));
 
   const thrumbnails = section.looks.map(({ thrumbnail, id }, i) => ({
     id,
-    src: getStaticUrl(ImageFolder.THRUMBNAIL, thrumbnail),
+    src: thrumbnail,
     alt: `Look ${i + 1}`,
   }));
 
   React.useEffect(() => {
     const { look } = section.looks[activeLook];
-    getImageSize(getStaticUrl(ImageFolder.LOOK, look))
+    getImageSize(look)
       .then((size) => {
         setImageSize(size);
       });
@@ -63,7 +63,7 @@ const MobileCatalog = ({
       <div className="catalog">
         <Modal isShowen={zoom} onClose={() => { setZoom(false); }} unMountWhenClosed>
           <SimpleZoom
-            src={getStaticUrl(ImageFolder.ZOOM, section.looks[lookIndex].zoom)}
+            src={section.looks[lookIndex].zoom}
             alt={`Look ${lookIndex + 1}`}
           />
         </Modal>
