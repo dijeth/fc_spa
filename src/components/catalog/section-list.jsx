@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { getStaticUrl } from '../../utils/common-utils';
 
 const SectionList = ({
   activeSection, sections, onSectionChange, logotype,
@@ -9,7 +8,7 @@ const SectionList = ({
   <>
     {
       logotype
-        ? <img src={getStaticUrl('img', 'blv.svg')} alt="Логотип" className="catalog__logo" />
+        ? <img src={logotype} alt="Логотип" className="catalog__logo" />
         : ''
     }
 

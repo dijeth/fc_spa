@@ -1,12 +1,11 @@
 import React from 'react';
-import { getStaticUrl } from '../../utils/common-utils';
 import { addressListPropTypes } from '../../prop-types';
 
 const AddressList = ({ logotype, addressList }) => (
   <>
     {
       logotype
-        ? <img src={getStaticUrl('img', logotype)} alt="Логотип" className="catalog__logo" />
+        ? <img src={logotype} alt="Логотип" className="catalog__logo" />
         : ''
     }
     <ul className="catalog__address address-list">
