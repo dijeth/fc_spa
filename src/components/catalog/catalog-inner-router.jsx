@@ -9,7 +9,7 @@ import Media from '../media';
 import Modal from '../modal';
 import SectionList from './section-list';
 import { DESKTOP_MIN_WIDTH } from '../../const';
-import { getBrandRegExp, getUrl } from '../../utils';
+import { getUrl } from '../../utils';
 
 const getSection = (catalog, sectionLink) => catalog.sections.find((it) => it.link === sectionLink);
 
@@ -50,7 +50,6 @@ const CatalogInnerRouter = ({
                   logotype={data.logotype}
                   addressList={data.addressList}
                   validTime={data.validTime}
-                  brandRegExp={getBrandRegExp(data.allBrands)}
                   onSlideChange={changeLookHandlerFactory(section)}
                   onSectionChange={changeSectionHandler}
                 />
@@ -120,7 +119,6 @@ const CatalogInnerRouter = ({
                 logotype={data.logotype}
                 addressList={data.addressList}
                 validTime={data.validTime}
-                brandRegExp={getBrandRegExp(data.allBrands)}
                 onSlideChange={changeLookHandlerFactory(data.sections[0].link)}
                 onSectionChange={changeSectionHandler}
               />

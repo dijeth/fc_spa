@@ -12,7 +12,6 @@ const Catalog = ({
   logotype,
   addressList,
   validTime,
-  brandRegExp,
   onSlideChange,
   onSectionChange,
 }) => (
@@ -25,7 +24,6 @@ const Catalog = ({
         logotype={logotype}
         addressList={addressList}
         validTime={validTime}
-        brandRegExp={brandRegExp}
         onSlideChange={onSlideChange}
         onSectionChange={onSectionChange}
       />
@@ -38,7 +36,6 @@ const Catalog = ({
         logotype={logotype}
         addressList={addressList}
         validTime={validTime}
-        brandRegExp={brandRegExp}
         onSlideChange={onSlideChange}
         onSectionChange={onSectionChange}
       />

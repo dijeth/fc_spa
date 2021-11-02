@@ -12,7 +12,9 @@ const AddressList = ({ logotype, addressList }) => (
       {
         addressList.map((it) => (
           <li className="address-list__item" key={it.text}>
-            <a className="address-list__phone" href={`tel:+${it.phone.replace(/\D+/, '')}`}>{it.phone}</a>
+            <a className="address-list__phone" href={`tel:+${it.phone.replace(/\D+/, '')}`}>
+              {it.phone.replace(/\+7(\d\d\d)(\d\d\d)(\d\d\d\d)/, '+7 ($1) $2 $3')}
+            </a>
             <span className="address-list__base">{it.text}</span>
           </li>
         ))

@@ -20,7 +20,6 @@ const MobileCatalog = ({
   validTime,
   onSlideChange,
   onSectionChange,
-  brandRegExp,
 }) => {
   const [addressShowen, setAddressShowen] = React.useState(false);
   const [sectionsShowen, setSectionsShowen] = React.useState(false);
@@ -104,7 +103,7 @@ const MobileCatalog = ({
               <button type="button" className="look__action" onClick={() => { setAddressShowen(true); }}>Заказать примерку</button>
             </div>
 
-            <LookInfo data={texts} slideIndex={lookIndex} brandRegExp={brandRegExp} />
+            <LookInfo data={texts} slideIndex={lookIndex} />
 
             <div className="look__info">
               <span className="look__current">

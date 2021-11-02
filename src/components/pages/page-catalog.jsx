@@ -20,18 +20,12 @@ const PageCatalog = ({ category, catalog }) => {
   React.useEffect(() => {
     setIsLoading(true);
 
-    Promise.all([
-      getData(`${category}/${catalog}`),
-      getData('brands'),
-    ])
+    getData(`${category}/${catalog}`)
       .then(
-        ([catalogData, brands]) => {
+        (catalogData) => {
           setIsLoading(false);
           if (catalogData) {
-            setData({
-              ...catalogData,
-              allBrands: brands,
-            });
+            setData(catalogData);
           }
         },
         (err) => {

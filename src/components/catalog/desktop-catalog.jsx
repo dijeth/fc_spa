@@ -15,7 +15,6 @@ const DesktopCatalog = ({
   validTime,
   onSlideChange,
   onSectionChange,
-  brandRegExp,
 }) => {
   const section = activeSection;
   const lookIndex = section.looks[activeLook] ? activeLook : 0;
@@ -78,7 +77,7 @@ const DesktopCatalog = ({
               onSectionChange={onSectionChange}
             />
 
-            <LookInfo data={texts} slideIndex={lookIndex} brandRegExp={brandRegExp} />
+            <LookInfo data={texts} slideIndex={lookIndex} />
           </div>
         </section>
         <section className="catalog__nav slider-nav">
