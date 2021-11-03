@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build:dev": "cross-env IMAGE_URL=http://localhost:8000/images API=http://localhost:8000/api ROOT_ROUTE=/ webpack --mode development",
-    "build:testing": "cross-env IMAGE_URL=https://jeth.ru/data/images API=https://jeth.ru/data/api ROOT_ROUTE=/test/catalog/ webpack --mode production",
+    "build:testing": "cross-env IMAGE_URL=https://jeth.ru/images API=https://jeth.ru/api ROOT_ROUTE=/catalog/ webpack --mode production",
     "build:prod": "cross-env IMAGE_URL=https://tretyakovsky.ru/data/images API=https://tretyakovsky.ru/data/api ROOT_ROUTE=/catalog/ webpack --mode production",
     "start": "cross-env IMAGE_URL=http://localhost:8000/images API=http://localhost:8000/api ROOT_ROUTE=/ webpack-dev-server"
   },
