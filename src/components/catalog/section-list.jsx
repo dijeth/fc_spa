@@ -20,7 +20,7 @@ const SectionList = ({
             onClick={() => { onSectionChange(it.link); }}
             className={activeSection === it.link ? 'active' : ''}
           >
-            {it.name}
+            {it.name.replace(/(\S)-(\S)/g, '$1\u2011$2')}
           </button>
         </li>
       ))}

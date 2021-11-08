@@ -28,10 +28,8 @@ const PageMain = () => {
     <Transition>
       <div className="wrapper modal modal--showen">
         <h1>Все каталоги</h1>
-        <p>Здесь может быть страница со всеми каталогами, или с каталогами бренда, или с новыми коллекциями.</p>
-        <p>Оформление и наполнение сейчас сделано для тестирования</p>
         <br />
-        <ul className="section-list">
+        <ul className="section-list" style={{ overflow: 'auto' }}>
           {
             data.map((catalog) => (
               <li className="section-list__item" key={catalog.id}>

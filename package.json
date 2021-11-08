@@ -7,7 +7,11 @@
     "build:dev": "cross-env IMAGE_URL=http://localhost:8000/images API=http://localhost:8000/api ROOT_ROUTE=/ webpack --mode development",
     "build:testing": "cross-env IMAGE_URL=https://jeth.ru/images API=https://jeth.ru/api ROOT_ROUTE=/catalog/ webpack --mode production",
     "build:prod": "cross-env IMAGE_URL=https://tretyakovsky.ru/data/images API=https://tretyakovsky.ru/data/api ROOT_ROUTE=/catalog/ webpack --mode production",
-    "start": "cross-env IMAGE_URL=http://localhost:8000/images API=http://localhost:8000/api ROOT_ROUTE=/ webpack-dev-server"
+    "start": "cross-env IMAGE_URL=http://localhost:8000/images API=http://localhost:8000/api ROOT_ROUTE=/ webpack-dev-server",
+    "upload:tp": "node ..\\..\\..\\AdobeScripting\\testing-webpack\\src-node\\upload\\upload-dir.js tretyakovsky.ru .\\public catalog",
+    "upload:tdm": "node ..\\..\\..\\AdobeScripting\\testing-webpack\\src-node\\upload\\upload-dir.js kutuzovsky31.ru .\\public catalog",
+    "upload:blv": "node ..\\..\\..\\AdobeScripting\\testing-webpack\\src-node\\upload\\upload-dir.js blv.ru .\\public catalog",
+    "upload": "npm run upload:tp && npm run upload:tdm && npm run upload:blv"
   },
   "author": "Dmitry Orlov",
   "license": "ISC",
