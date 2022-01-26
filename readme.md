@@ -13,7 +13,7 @@
 
 ### 2. Установите зависимости и соберите приложение
   npm install\
-  npm run build\
+  npm run build
 
 ### 3. Скопируйте приложение на сервер
   3.1 Скопируйте public/css, public/bundle.js, public/index.html в каталог указанный в п. 1.2\
