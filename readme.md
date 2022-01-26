@@ -34,4 +34,4 @@
 ### 2. Установите зависимости и запустите приложение
   npm install\
   npm run webpack:start\
-  npm run gulp:start\
+  npm run gulp:start
