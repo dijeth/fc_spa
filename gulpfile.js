@@ -66,23 +66,6 @@ const imageMin = (done) => {
   done();
 };
 
-// const webp = (done) => {
-//   src([
-//     'src/img/**/*.{jpg,png}',
-//   ])
-//     .pipe(gulpwebp({ quality: 90 }))
-//     .pipe(dest('public/img'));
-
-//   done();
-// };
-
-const data = (done) => {
-  src('src/data/data.js')
-    .pipe(dest('public/data'));
-
-  done();
-};
-
 const clean = (done) => {
   del('public/css');
   del('public/img');
@@ -93,20 +76,13 @@ const watchAll = () => {
   watch('src/less/**/*.less', series(css));
   watch('src/img/**/*.{jpg,png}', parallel(imageMin));
   watch('src/img/**/*.{svg}', series(copySVG));
-  // watch('src/data/data.js', series(data));
-  // watch(['public/bundle.js', 'public/css/style.min.css', 'public/index.html'], series(addHash));
 };
 
-const copy = parallel(copySVG, copyFonts, imageMin);
-const build = series(clean, css, addHash, parallel(copySVG, copyFonts, imageMin, data));
-const start = series(watchAll);
+const build = series(css, parallel(copySVG, copyFonts, imageMin));
 
 module.exports = {
+  clean,
   build,
-  start,
-  copy,
-  // webp,
-  css,
-  imageMin,
-  addHash,
+  start: watchAll,
+  hash: addHash,
 };

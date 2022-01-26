@@ -13,7 +13,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
-    open: false,
+    open: true,
     port: 1338,
     historyApiFallback: true,
     publicPath: '/',
@@ -40,7 +40,6 @@ module.exports = {
     new webpack.DefinePlugin({
       ROOT_ROUTE: JSON.stringify(root),
       API: JSON.stringify(process.env.API || 'http://localhost:8000/api'),
-      IMAGE_URL: JSON.stringify(process.env.IMAGE_URL || 'http://localhost:8000/images'),
     }),
     new HtmlWebpackPlugin({
       publicPath: root,
