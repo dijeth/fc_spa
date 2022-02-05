@@ -1,6 +1,7 @@
 import { API_URL, ErrorMessage } from './const';
+import { getDomain } from './utils';
 
-const getData = (path) => fetch(`${API_URL}/${path}`)
+const getData = (path) => fetch(`${API_URL}/${path}?host=${getDomain()}`)
   .then((response) => {
     if (response.status >= 500) {
       throw new Error(ErrorMessage.SERVER_ERROR);

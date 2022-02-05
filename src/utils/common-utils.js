@@ -22,18 +22,9 @@ const Domain = {
   BLV: 'blv.ru',
 };
 
-const getDomain = () => {
+export const getDomain = () => {
   const { location: { hostname } } = document;
-
-  if (/^tretyakovsky\.ru/.test(hostname)) {
-    return Domain.TP;
-  }
-
-  if (/^kutuzovsky31\.ru/.test(hostname)) {
-    return Domain.K31;
-  }
-
-  return Domain.BLV;
+  return hostname === 'localhost' ? Domain.BLV : hostname;
 };
 
 const getYandexMetric = (domain) => {
