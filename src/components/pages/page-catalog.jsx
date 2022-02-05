@@ -26,6 +26,7 @@ const PageCatalog = ({ category, catalog }) => {
           setIsLoading(false);
           if (catalogData) {
             setData(catalogData);
+            document.title = catalogData.title || 'Collection';
           }
         },
         (err) => {
