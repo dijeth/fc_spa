@@ -5,14 +5,11 @@
   "private": true,
   "scripts": {
     "build": "npm run gulp:build & npm run webpack:build & gulp hash",
-    "webpack:build": "cross-env API={api_url}/api ROOT_ROUTE={base_route}/ webpack --mode production",
-    "webpack:start": "cross-env API={api_url}/api ROOT_ROUTE=/ webpack-dev-server",
+    "webpack:build": "cross-env API=https://data.tretyakovsky.ru/api ROOT_ROUTE=/catalog/ webpack --mode production",
+    "webpack:start:dev": "cross-env API=http://localhost:8000/api ROOT_ROUTE=/ webpack-dev-server",
+    "webpack:start:prod": "cross-env API=https://data.tretyakovsky.ru/api ROOT_ROUTE=/ webpack-dev-server",
     "gulp:start": "npm run gulp:build & gulp start",
-    "gulp:build": "gulp clean & gulp build",
-    "upload:tp": "node ..\\..\\..\\AdobeScripting\\testing-webpack\\src-node\\upload\\upload-dir.js tretyakovsky.ru .\\public catalog",
-    "upload:tdm": "node ..\\..\\..\\AdobeScripting\\testing-webpack\\src-node\\upload\\upload-dir.js kutuzovsky31.ru .\\public catalog",
-    "upload:blv": "node ..\\..\\..\\AdobeScripting\\testing-webpack\\src-node\\upload\\upload-dir.js blv.ru .\\public catalog",
-    "upload": "npm run upload:tp & npm run upload:tdm & npm run upload:blv"
+    "gulp:build": "gulp clean & gulp build"
   },
   "author": "Dmitry Orlov",
   "license": "ISC",
