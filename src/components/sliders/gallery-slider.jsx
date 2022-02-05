@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const SENSITIVITY = 25;
+
 const getSideSlides = (slidesCount) => {
   const left = Math.floor((slidesCount - 1) / 2);
   const right = slidesCount - 1 - left;
@@ -98,7 +100,11 @@ const GallerySlider = ({
   };
 
   const touchEndHandler = (evt) => {
-    const direction = (touchStart.touch > getTouchPositionInPercent(evt)) ? 1 : -1;
+    let direction = (touchStart.touch > getTouchPositionInPercent(evt)) ? 1 : -1;
+
+    if (Math.abs(touchStart.touch - getTouchPositionInPercent(evt)) < SENSITIVITY) {
+      direction = 0;
+    }
 
     setPositionInPercent(startPositionInPercent);
 
