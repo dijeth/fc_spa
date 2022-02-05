@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import PageNewCollections from './pages/page-new-collections';
 import PageCatalog from './pages/page-catalog';
 import Page404 from './pages/page-404';
-import PageMain from './pages/page-main';
+// import PageMain from './pages/page-main';
 
 const App = () => (
   <Switch>
@@ -15,7 +15,7 @@ const App = () => (
         return <PageCatalog category={category} catalog={catalog} />;
       }}
     />
-    <Route path="/" component={PageMain} />
+    {/* <Route path="/" component={PageMain} /> */}
     <Route path="*" component={Page404} />
   </Switch>
 );
