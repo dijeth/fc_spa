@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SENSITIVITY = 25;
+const SENSITIVITY = 10;
 
 const getSideSlides = (slidesCount) => {
   const left = Math.floor((slidesCount - 1) / 2);
@@ -80,6 +80,7 @@ const GallerySlider = ({
   const [position, setPosition] = React.useState(targetPosition);
   const [positionInPercent, setPositionInPercent] = React.useState(startPositionInPercent);
   const [touchStart, setTouchStart] = React.useState();
+  const [animation, setAnimation] = React.useState(false);
 
   const bounds = getViewBounds(loadedSlidesCount, position);
 
@@ -111,6 +112,8 @@ const GallerySlider = ({
     if (onSlideChange) {
       onSlideChange(correctSlideIndex(position + direction, children.length));
     }
+
+    setAnimation(direction !== 0);
   };
 
   const touchMoveHandler = (evt) => {
@@ -123,6 +126,7 @@ const GallerySlider = ({
     const transitionendHandler = () => {
       element.classList.remove(animationClassName);
       setPosition(targetPosition);
+      setAnimation(false);
     };
 
     element.addEventListener('transitionend', transitionendHandler);
@@ -147,9 +151,9 @@ const GallerySlider = ({
       <div
         className="gallery-slider__track"
         onClick={onSlideClick ? clickHandler : null}
-        onTouchStart={touchStartHandler}
-        onTouchMove={touchMoveHandler}
-        onTouchEnd={touchEndHandler}
+        onTouchStart={!animation ? touchStartHandler : null}
+        onTouchMove={!animation ? touchMoveHandler : null}
+        onTouchEnd={!animation ? touchEndHandler : null}
         aria-hidden="true"
         ref={refTrack}
       >
