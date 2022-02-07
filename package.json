@@ -10,7 +10,7 @@
     "webpack:start:prod": "cross-env API=https://data.tretyakovsky.ru/api ROOT_ROUTE=/ webpack-dev-server",
     "gulp:start": "npm run gulp:build & gulp start",
     "gulp:build": "gulp clean & gulp build",
-    "upload": "node c:\\@work\\Mercury_2018\\@web\\mercury-upload\\src\\upload-map.js -p catalog -dl"
+    "upload": "node c:\\@work\\Mercury_2018\\@web\\mercury-upload\\src\\upload-map.js -p catalog -dl tp::public k31::public blv::public --content"
   },
   "author": "Dmitry Orlov",
   "license": "ISC",
