@@ -5,7 +5,7 @@ import { lookInfoPropTypes } from '../../prop-types';
 import StackSlider from '../sliders/stack-slider';
 
 const renderItemText = (itemData) => itemData.map((it) => (
-  <p key={it.id} dangerouslySetInnerHTML={{ __html: it.text }} />
+  <p key={it.id} dangerouslySetInnerHTML={{ __html: it.html }} />
 ));
 
 const renderItems = (data) => data.map((it) => (
