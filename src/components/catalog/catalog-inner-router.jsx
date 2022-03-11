@@ -50,6 +50,9 @@ const CatalogInnerRouter = ({
                   logotype={data.logotype}
                   addressList={data.addressList}
                   validTime={data.validTime}
+                  isMultibrand={data.isMultibrand}
+                  catalogBrands={data.catalogBrands}
+                  gender={data.gender}
                   onSlideChange={changeLookHandlerFactory(section)}
                   onSectionChange={changeSectionHandler}
                 />

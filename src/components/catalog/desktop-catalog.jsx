@@ -21,7 +21,11 @@ const DesktopCatalog = ({
   const nextLookIndex = lookIndex + 1 <= section.looks.length - 1 ? lookIndex + 1 : 0;
   const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : section.looks.length - 1;
 
-  const texts = section.looks.map(({ items, id }) => ({ items, id }));
+  const texts = section.looks.map(({
+    items, id, brands, gender,
+  }) => ({
+    items, id, brands, gender,
+  }));
 
   const photos = section.looks.map(({ id, look }, i) => ({
     id,

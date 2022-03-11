@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PRELOADED_SLIDES_COUNT } from '../../const/catalog-const';
-import { lookInfoPropTypes } from '../../prop-types';
+import { lookPropTypes } from '../../prop-types';
 import StackSlider from '../sliders/stack-slider';
 
 const renderItemText = (itemData) => itemData.map((it) => (
@@ -23,12 +23,7 @@ const LookInfo = ({ data, slideIndex }) => (
 );
 
 LookInfo.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      items: lookInfoPropTypes.isRequired,
-    }),
-  ).isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape(lookPropTypes)).isRequired,
   slideIndex: PropTypes.number.isRequired,
 };
 

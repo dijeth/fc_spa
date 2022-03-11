@@ -13,3 +13,10 @@ export const ContentType = {
   BRACKET: 'bracket',
   TEXT: 'text',
 };
+
+export const Gender = {
+  WOMAN: 1,
+  MAN: 2,
+  CHILD: 3,
+  UNKNOWN: 0,
+};

@@ -31,7 +31,11 @@ const MobileCatalog = ({
   const section = activeSection;
   const lookIndex = section.looks[activeLook] ? activeLook : 0;
 
-  const texts = section.looks.map(({ items, id }) => ({ items, id }));
+  const texts = section.looks.map(({
+    items, id, brands, gender,
+  }) => ({
+    items, id, brands, gender,
+  }));
 
   const photos = section.looks.map(({ id, look }, i) => ({
     id,
