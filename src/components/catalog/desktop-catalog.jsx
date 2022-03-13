@@ -5,6 +5,8 @@ import AddressList from './address-list';
 import Thrumbnails from './thrumbnails';
 import MainPhoto from './main-photo';
 import { catalogPropTypes } from '../../prop-types';
+import { getBaseAddress, lookBrandsFormatter } from '../../utils';
+import MultiAddressList from './multi-address-list';
 
 const DesktopCatalog = ({
   activeSection,
@@ -13,6 +15,9 @@ const DesktopCatalog = ({
   addressList,
   logotype,
   validTime,
+  gender,
+  isMultibrand,
+  catalogBrands,
   onSlideChange,
   onSectionChange,
 }) => {
@@ -22,9 +27,9 @@ const DesktopCatalog = ({
   const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : section.looks.length - 1;
 
   const texts = section.looks.map(({
-    items, id, brands, gender,
+    items, id, brands,
   }) => ({
-    items, id, brands, gender,
+    items, id, brands,
   }));
 
   const photos = section.looks.map(({ id, look }, i) => ({
@@ -55,12 +60,20 @@ const DesktopCatalog = ({
     )
     : '';
 
+  const multiBrandAddresses = isMultibrand
+    ? section.looks.map((look) => lookBrandsFormatter(look, catalogBrands))
+    : [];
+
   return (
     <div className="wrapper">
       <div className="catalog">
         <section className="catalog__main">
           <div className="catalog__side">
-            <AddressList logotype={logotype} addressList={addressList} />
+            {
+              isMultibrand
+                ? <MultiAddressList slideIndex={lookIndex} data={multiBrandAddresses} />
+                : <AddressList logotype={logotype} addressList={addressList.map((it) => getBaseAddress(it, gender)).filter((it) => !!it)} />
+            }
           </div>
           <div className="catalog__look look">
             <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={section.looks[lookIndex].zoom} />

@@ -10,6 +10,8 @@ import SimpleZoom from './simple-zoom';
 import Modal from '../modal';
 import { catalogPropTypes } from '../../prop-types';
 import PagePreloader from '../pages/page-preloader';
+import { getBaseAddress, lookBrandsFormatter } from '../../utils';
+import { MultiAddress } from './multi-address';
 
 const MobileCatalog = ({
   activeSection,
@@ -18,6 +20,9 @@ const MobileCatalog = ({
   addressList,
   logotype,
   validTime,
+  isMultibrand,
+  catalogBrands,
+  gender,
   onSlideChange,
   onSectionChange,
 }) => {
@@ -32,9 +37,9 @@ const MobileCatalog = ({
   const lookIndex = section.looks[activeLook] ? activeLook : 0;
 
   const texts = section.looks.map(({
-    items, id, brands, gender,
+    items, id, brands,
   }) => ({
-    items, id, brands, gender,
+    items, id, brands,
   }));
 
   const photos = section.looks.map(({ id, look }, i) => ({
@@ -48,6 +53,10 @@ const MobileCatalog = ({
     src: thrumbnail,
     alt: `Look ${i + 1}`,
   }));
+
+  const multiBrandAddresses = isMultibrand
+    ? section.looks.map((look) => lookBrandsFormatter(look, catalogBrands))
+    : [];
 
   React.useEffect(() => {
     const { look } = section.looks[activeLook];
@@ -72,7 +81,13 @@ const MobileCatalog = ({
         </Modal>
 
         <Modal onClose={() => { setAddressShowen(false); }} isShowen={addressShowen}>
-          <AddressList logotype={logotype} addressList={addressList} />
+          {
+            isMultibrand
+              ? (
+                <MultiAddress brands={multiBrandAddresses[lookIndex].brands} />
+              )
+              : <AddressList logotype={logotype} addressList={addressList.map((it) => getBaseAddress(it, gender)).filter((it) => !!it)} />
+          }
         </Modal>
 
         <Modal onClose={() => { setSectionsShowen(false); }} isShowen={sectionsShowen}>

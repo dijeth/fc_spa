@@ -1,5 +1,6 @@
 import React from 'react';
-import { addressListPropTypes } from '../../prop-types';
+import PropTypes from 'prop-types';
+import { singleBrandAddressBlockPropTypes } from '../../prop-types';
 
 const AddressList = ({ logotype, addressList }) => (
   <>
@@ -23,7 +24,10 @@ const AddressList = ({ logotype, addressList }) => (
   </>
 );
 
-AddressList.propTypes = addressListPropTypes;
+AddressList.propTypes = {
+  ...singleBrandAddressBlockPropTypes,
+  logotype: PropTypes.string,
+};
 
 AddressList.defaultProps = {
   logotype: null,
