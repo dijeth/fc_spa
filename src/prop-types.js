@@ -13,7 +13,10 @@ const lookItemPropTypes = {
 export const lookPropTypes = {
   id: PropTypes.number.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape(lookItemPropTypes)),
-  brands: PropTypes.arrayOf(PropTypes.string),
+  brands: PropTypes.arrayOf(PropTypes.shape({
+    brand: PropTypes.string.isRequired,
+    genders: PropTypes.arrayOf(genderPropType).isRequired,
+  })).isRequired,
   gender: genderPropType,
 };
 
@@ -22,24 +25,17 @@ const addressPropTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export const multiBrandAddressBlockPropTypes = {
-  addresses: PropTypes.arrayOf(PropTypes.shape({
+export const multiBrandAddressBlockPropTypes = PropTypes.arrayOf(
+  PropTypes.shape({
     name: PropTypes.string.isRequired,
-    addressList: PropTypes.shape(addressPropTypes).isRequired,
-  })).isRequired,
-};
+    nameHasGender: PropTypes.bool.isRequired,
+    gender: genderPropType.isRequired,
+    addressList: PropTypes.arrayOf(PropTypes.shape(addressPropTypes)).isRequired,
+  }),
+);
 
 export const singleBrandAddressBlockPropTypes = {
-  logotype: PropTypes.string,
-  addressList: PropTypes.shape(addressPropTypes).isRequired,
-};
-
-export const addressListPropTypes = {
-  logotype: PropTypes.string,
-  addressList: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-  })).isRequired,
+  addressList: PropTypes.arrayOf(PropTypes.shape(addressPropTypes)).isRequired,
 };
 
 const baseAddressPropTypes = {
