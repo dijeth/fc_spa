@@ -29,17 +29,17 @@ const flattenByGender = (lookBrands) => lookBrands.reduce((acc, { genders, catal
 
 const formatAddress = (lookBrands) => lookBrands
   .map(({ nameHasGender, gender, catalogBrand: { name, addressList } }) => {
-    const formattedAddressList = addressList
+    const formattedSingleBrandAddressList = addressList
       .map((it) => getBaseAddress(it, gender))
       .filter((it) => !!it);
 
-    return formattedAddressList.length
+    return formattedSingleBrandAddressList.length
       ? {
         name,
         nameHasGender,
         gender,
-        addressList: formattedAddressList,
-        hasDefaultBrand: addressList.length !== formattedAddressList.length,
+        addressList: formattedSingleBrandAddressList,
+        hasDefaultBrand: addressList.length !== formattedSingleBrandAddressList.length,
       }
       : null;
   })

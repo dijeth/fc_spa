@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import { multiBrandAddressBlockPropTypes } from '../../prop-types';
 import StackSlider from '../sliders/stack-slider';
 import { PRELOADED_SLIDES_COUNT } from '../../const';
-import { MultiAddress } from './multi-address';
+import { MultiBrandAddressList } from './multi-brand-address-list';
 
-const MultiAddressList = ({ slideIndex, data }) => (
+const MultiBrandAddressSlider = ({ slideIndex, data }) => (
   <StackSlider slideIndex={slideIndex} preloadedSideSlidesCount={PRELOADED_SLIDES_COUNT}>
     {data.map(({ id, brands }) => (
-      <MultiAddress id={id} brands={brands} key={id} />
+      <MultiBrandAddressList id={id} brands={brands} key={id} />
     ))}
   </StackSlider>
 );
 
-MultiAddressList.propTypes = {
+MultiBrandAddressSlider.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     brands: multiBrandAddressBlockPropTypes.isRequired,
@@ -21,4 +21,4 @@ MultiAddressList.propTypes = {
   slideIndex: PropTypes.number.isRequired,
 };
 
-export default MultiAddressList;
+export default MultiBrandAddressSlider;

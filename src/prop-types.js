@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Gender } from './const';
 
-const genderPropType = PropTypes.oneOf(Object.values(Gender));
+export const genderPropType = PropTypes.oneOf(Object.values(Gender));
 
 const lookItemPropTypes = {
   text: PropTypes.string.isRequired,
@@ -34,9 +34,7 @@ export const multiBrandAddressBlockPropTypes = PropTypes.arrayOf(
   }),
 );
 
-export const singleBrandAddressBlockPropTypes = {
-  addressList: PropTypes.arrayOf(PropTypes.shape(addressPropTypes)).isRequired,
-};
+export const singleBrandAddressBlockPropTypes = PropTypes.arrayOf(PropTypes.shape(addressPropTypes));
 
 const baseAddressPropTypes = {
   ...addressPropTypes,

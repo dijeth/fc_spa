@@ -1,12 +1,12 @@
 import React from 'react';
 import LookInfo from './look-info';
 import SectionList from './section-list';
-import AddressList from './address-list';
+import SingleBrandAddressList from './single-brand-address-list';
 import Thrumbnails from './thrumbnails';
 import MainPhoto from './main-photo';
 import { catalogPropTypes } from '../../prop-types';
 import { getBaseAddress, lookBrandsFormatter } from '../../utils';
-import MultiAddressList from './multi-address-list';
+import MultiBrandAddressSlider from './multi-brand-address-slider';
 
 const DesktopCatalog = ({
   activeSection,
@@ -71,8 +71,8 @@ const DesktopCatalog = ({
           <div className="catalog__side">
             {
               isMultibrand
-                ? <MultiAddressList slideIndex={lookIndex} data={multiBrandAddresses} />
-                : <AddressList logotype={logotype} addressList={addressList.map((it) => getBaseAddress(it, gender)).filter((it) => !!it)} />
+                ? <MultiBrandAddressSlider slideIndex={lookIndex} data={multiBrandAddresses} />
+                : <SingleBrandAddressList logotype={logotype} addressList={addressList.map((it) => getBaseAddress(it, gender)).filter((it) => !!it)} />
             }
           </div>
           <div className="catalog__look look">

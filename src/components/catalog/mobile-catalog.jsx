@@ -2,7 +2,7 @@ import React from 'react';
 import { getImageSize } from '../../utils/common-utils';
 import LookInfo from './look-info';
 import SectionList from './section-list';
-import AddressList from './address-list';
+import SingleBrandAddressList from './single-brand-address-list';
 import { PreloaderReason } from '../../const';
 import MobileLook from './mobile-look';
 import MobileThrumbnails from './mobile-thrumbnails';
@@ -11,7 +11,7 @@ import Modal from '../modal';
 import { catalogPropTypes } from '../../prop-types';
 import PagePreloader from '../pages/page-preloader';
 import { getBaseAddress, lookBrandsFormatter } from '../../utils';
-import { MultiAddress } from './multi-address';
+import { MultiBrandAddressList } from './multi-brand-address-list';
 
 const MobileCatalog = ({
   activeSection,
@@ -84,9 +84,9 @@ const MobileCatalog = ({
           {
             isMultibrand
               ? (
-                <MultiAddress brands={multiBrandAddresses[lookIndex].brands} />
+                <MultiBrandAddressList brands={multiBrandAddresses[lookIndex].brands} />
               )
-              : <AddressList logotype={logotype} addressList={addressList.map((it) => getBaseAddress(it, gender)).filter((it) => !!it)} />
+              : <SingleBrandAddressList logotype={logotype} addressList={addressList.map((it) => getBaseAddress(it, gender)).filter((it) => !!it)} />
           }
         </Modal>
 
