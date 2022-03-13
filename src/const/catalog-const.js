@@ -20,3 +20,29 @@ export const Gender = {
   CHILD: 3,
   UNKNOWN: 0,
 };
+
+export const PhoneGender = {
+  [Gender.WOMAN]: 'phoneWoman',
+  [Gender.MAN]: 'phoneMan',
+  [Gender.CHILD]: 'phoneChild',
+  [Gender.UNKNOWN]: 'phone',
+};
+
+export const GenderName = {
+  [Gender.WOMAN]: 'женщины',
+  [Gender.MAN]: 'мужчины',
+  [Gender.CHILD]: 'дети',
+  [Gender.UNKNOWN]: 'общий',
+};
+
+export const DEFAULT_ADDRESS = {
+  name: '',
+  nameHasGender: false,
+  gender: Gender.UNKNOWN,
+  addressList: [
+    {
+      text: 'Отдел обслуживания клиентов',
+      phone: '+74952258889',
+    },
+  ],
+};

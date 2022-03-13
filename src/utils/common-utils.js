@@ -1,3 +1,5 @@
+import { Gender, PhoneGender } from '../const';
+
 export const getUrl = (...path) => `/${path.join('/')}`.replace('//', '/');
 
 export const getImage = async (src) => new Promise((resolve) => {
@@ -58,3 +60,24 @@ export const insertMetrics = () => {
   document.head.insertAdjacentHTML('beforeend', getGoogleAnalitic(getDomain()));
   document.body.insertAdjacentHTML('beforeend', getYandexMetric(getDomain()));
 };
+
+export const getBaseAddress = (fullBaseAddress, gender) => {
+  const phone = fullBaseAddress[PhoneGender[gender || Gender.UNKNOWN]];
+
+  return phone
+    ? {
+      text: fullBaseAddress.text,
+      phone,
+    }
+    : null;
+};
+
+export const unique = (array, isSame = null) => {
+  const callback = isSame || ((a, b) => a === b);
+
+  return array.reduce((acc, cur) => (acc.findIndex((it) => callback(it, cur)) >= 0
+    ? acc
+    : [...acc, cur]), []);
+};
+
+export const pluck = (arrayOfObject, propertyName) => arrayOfObject.map((it) => it[propertyName]);
