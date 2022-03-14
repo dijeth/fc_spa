@@ -2,7 +2,6 @@ import React from 'react';
 import { getImageSize } from '../../utils/common-utils';
 import LookInfo from './look-info';
 import SectionList from './section-list';
-import SingleBrandAddressList from './single-brand-address-list';
 import { PreloaderReason } from '../../const';
 import MobileLook from './mobile-look';
 import MobileThrumbnails from './mobile-thrumbnails';
@@ -10,19 +9,17 @@ import SimpleZoom from './simple-zoom';
 import Modal from '../modal';
 import { catalogPropTypes } from '../../prop-types';
 import PagePreloader from '../pages/page-preloader';
-import { getBaseAddress, lookBrandsFormatter } from '../../utils';
-import { MultiBrandAddressList } from './multi-brand-address-list';
+import { lookBrandsFormatter } from '../../utils';
+import { LookAddressList } from './look-address-list';
 
 const MobileCatalog = ({
   activeSection,
   activeLook,
   sectionList,
-  addressList,
   logotype,
   validTime,
   isMultibrand,
   catalogBrands,
-  gender,
   onSlideChange,
   onSectionChange,
 }) => {
@@ -54,9 +51,9 @@ const MobileCatalog = ({
     alt: `Look ${i + 1}`,
   }));
 
-  const multiBrandAddresses = isMultibrand
-    ? section.looks.map((look) => lookBrandsFormatter(look, catalogBrands))
-    : [];
+  const looksAddressData = section.looks.map((look) => lookBrandsFormatter(look, catalogBrands));
+
+  const renderLogotype = (logo) => <img src={logo} alt="Логотип" className="catalog__logo" />;
 
   React.useEffect(() => {
     const { look } = section.looks[activeLook];
@@ -81,13 +78,10 @@ const MobileCatalog = ({
         </Modal>
 
         <Modal onClose={() => { setAddressShowen(false); }} isShowen={addressShowen}>
-          {
-            isMultibrand
-              ? (
-                <MultiBrandAddressList brands={multiBrandAddresses[lookIndex].brands} />
-              )
-              : <SingleBrandAddressList logotype={logotype} addressList={addressList.map((it) => getBaseAddress(it, gender)).filter((it) => !!it)} />
-          }
+          <>
+            {isMultibrand ? '' : renderLogotype(logotype)}
+            <LookAddressList brands={looksAddressData[lookIndex].brands} isMultibrand={isMultibrand} />
+          </>
         </Modal>
 
         <Modal onClose={() => { setSectionsShowen(false); }} isShowen={sectionsShowen}>

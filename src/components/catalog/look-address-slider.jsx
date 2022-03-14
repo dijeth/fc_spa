@@ -1,24 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { multiBrandAddressBlockPropTypes } from '../../prop-types';
+import { brandAddressDataPropTypes } from '../../prop-types';
 import StackSlider from '../sliders/stack-slider';
 import { PRELOADED_SLIDES_COUNT } from '../../const';
-import { MultiBrandAddressList } from './multi-brand-address-list';
+import { LookAddressList } from './look-address-list';
 
-const MultiBrandAddressSlider = ({ slideIndex, data }) => (
+const LookAddressSlider = ({ slideIndex, data, isMultibrand }) => (
   <StackSlider slideIndex={slideIndex} preloadedSideSlidesCount={PRELOADED_SLIDES_COUNT}>
     {data.map(({ id, brands }) => (
-      <MultiBrandAddressList id={id} brands={brands} key={id} />
+      <LookAddressList brands={brands} key={id} isMultibrand={isMultibrand} />
     ))}
   </StackSlider>
 );
 
-MultiBrandAddressSlider.propTypes = {
+LookAddressSlider.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
-    brands: multiBrandAddressBlockPropTypes.isRequired,
+    brands: PropTypes.arrayOf(brandAddressDataPropTypes).isRequired,
   })).isRequired,
   slideIndex: PropTypes.number.isRequired,
+  isMultibrand: PropTypes.bool.isRequired,
 };
 
-export default MultiBrandAddressSlider;
+export { LookAddressSlider };

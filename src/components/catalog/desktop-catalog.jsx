@@ -1,21 +1,18 @@
 import React from 'react';
 import LookInfo from './look-info';
 import SectionList from './section-list';
-import SingleBrandAddressList from './single-brand-address-list';
 import Thrumbnails from './thrumbnails';
 import MainPhoto from './main-photo';
 import { catalogPropTypes } from '../../prop-types';
-import { getBaseAddress, lookBrandsFormatter } from '../../utils';
-import MultiBrandAddressSlider from './multi-brand-address-slider';
+import { lookBrandsFormatter } from '../../utils';
+import { LookAddressSlider } from './look-address-slider';
 
 const DesktopCatalog = ({
   activeSection,
   activeLook,
   sectionList,
-  addressList,
   logotype,
   validTime,
-  gender,
   isMultibrand,
   catalogBrands,
   onSlideChange,
@@ -60,20 +57,17 @@ const DesktopCatalog = ({
     )
     : '';
 
-  const multiBrandAddresses = isMultibrand
-    ? section.looks.map((look) => lookBrandsFormatter(look, catalogBrands))
-    : [];
+  const looksAddressData = section.looks.map((look) => lookBrandsFormatter(look, catalogBrands));
+
+  const renderLogotype = (logo) => <img src={logo} alt="Логотип" className="catalog__logo" />;
 
   return (
     <div className="wrapper">
       <div className="catalog">
         <section className="catalog__main">
           <div className="catalog__side">
-            {
-              isMultibrand
-                ? <MultiBrandAddressSlider slideIndex={lookIndex} data={multiBrandAddresses} />
-                : <SingleBrandAddressList logotype={logotype} addressList={addressList.map((it) => getBaseAddress(it, gender)).filter((it) => !!it)} />
-            }
+            {isMultibrand ? '' : renderLogotype(logotype)}
+            <LookAddressSlider slideIndex={lookIndex} data={looksAddressData} isMultibrand={isMultibrand} />
           </div>
           <div className="catalog__look look">
             <MainPhoto slideIndex={lookIndex} images={photos} zoomImageSrc={section.looks[lookIndex].zoom} />

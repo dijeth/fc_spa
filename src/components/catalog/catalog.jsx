@@ -14,7 +14,6 @@ const Catalog = ({
   validTime,
   isMultibrand,
   catalogBrands,
-  gender,
   onSlideChange,
   onSectionChange,
 }) => (
@@ -29,7 +28,6 @@ const Catalog = ({
         validTime={validTime}
         isMultibrand={isMultibrand}
         catalogBrands={catalogBrands}
-        gender={gender}
         onSlideChange={onSlideChange}
         onSectionChange={onSectionChange}
       />
@@ -44,7 +42,6 @@ const Catalog = ({
         validTime={validTime}
         isMultibrand={isMultibrand}
         catalogBrands={catalogBrands}
-        gender={gender}
         onSlideChange={onSlideChange}
         onSectionChange={onSectionChange}
       />

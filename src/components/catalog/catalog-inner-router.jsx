@@ -52,7 +52,6 @@ const CatalogInnerRouter = ({
                   validTime={data.validTime}
                   isMultibrand={data.isMultibrand}
                   catalogBrands={data.catalogBrands}
-                  gender={data.gender}
                   onSlideChange={changeLookHandlerFactory(section)}
                   onSectionChange={changeSectionHandler}
                 />
@@ -124,7 +123,6 @@ const CatalogInnerRouter = ({
                 validTime={data.validTime}
                 isMultibrand={data.isMultibrand}
                 catalogBrands={data.catalogBrands}
-                gender={data.gender}
                 onSlideChange={changeLookHandlerFactory(data.sections[0].link)}
                 onSectionChange={changeSectionHandler}
               />
