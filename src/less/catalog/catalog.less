@@ -1,5 +1,5 @@
 .catalog {
-  margin-top: 2rem;
+  padding-top: 70px;
 }
 
 .catalog__main {
@@ -74,36 +74,10 @@
   font-size     : 0.6rem;
 }
 
-.catalog__control {
-  .button-reset();
-
-  position           : fixed;
-  width              : 30px;
-  height             : 30px;
-  background-color   : rgba(255, 255, 255, 0.5);
-  background-position: center;
-  background-size    : contain;
-  background-repeat  : no-repeat;
-  z-index            : 500;
-  right              : 15px;
-
-  &--menu {
-    top             : 15px;
-    background-image: url("../img/icons/menu.svg");
-  }
-
-  &--nav {
-    top             : 15px + 45px;
-    background-image: url("../img/icons/nav.svg");
-  }
-
-  &--zoom {
-    top             : 15px + 45px + 45px;
-    background-image: url("../img/icons/zoom.svg");
-  }
-
-  &--active-zoom {
-    top             : 15px + 45px + 45px;
-    background-image: url("../img/icons/zoom-invers.svg");
-  }
+.catalog__controls {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1100;
 }

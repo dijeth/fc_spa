@@ -23,12 +23,19 @@ const MobileCatalog = ({
   onSlideChange,
   onSectionChange,
 }) => {
-  const [addressShowen, setAddressShowen] = React.useState(false);
   const [sectionsShowen, setSectionsShowen] = React.useState(false);
   const [navShowen, setNavShowen] = React.useState(false);
   const [zoom, setZoom] = React.useState(false);
+  const [addressShowen, setAddressShowen] = React.useState(false);
 
   const [imageSize, setImageSize] = React.useState();
+
+  const closeAllModal = () => {
+    setSectionsShowen(false);
+    setNavShowen(false);
+    setZoom(false);
+    setAddressShowen(false);
+  };
 
   const section = activeSection;
   const lookIndex = section.looks[activeLook] ? activeLook : 0;
@@ -68,53 +75,84 @@ const MobileCatalog = ({
   }
 
   return (
-    <div className="wrapper">
-      <div className="catalog">
-        <Modal isShowen={zoom} onClose={() => { setZoom(false); }} unMountWhenClosed>
-          <SimpleZoom
-            src={section.looks[lookIndex].zoom}
-            alt={`Look ${lookIndex + 1}`}
-          />
-        </Modal>
+    <div className="catalog">
+      <Modal isShowen={zoom} onClose={() => { setZoom(false); }} unMountWhenClosed>
+        <SimpleZoom
+          src={section.looks[lookIndex].zoom}
+          alt={`Look ${lookIndex + 1}`}
+        />
+      </Modal>
 
-        <Modal onClose={() => { setAddressShowen(false); }} isShowen={addressShowen}>
-          <>
-            {isMultibrand ? '' : renderLogotype(logotype)}
-            <LookAddressList brands={looksAddressData[lookIndex].brands} isMultibrand={isMultibrand} />
-          </>
-        </Modal>
+      <Modal onClose={() => { setAddressShowen(false); }} isShowen={addressShowen}>
+        <>
+          {isMultibrand ? '' : renderLogotype(logotype)}
+          <LookAddressList brands={looksAddressData[lookIndex].brands} isMultibrand={isMultibrand} />
+        </>
+      </Modal>
 
-        <Modal onClose={() => { setSectionsShowen(false); }} isShowen={sectionsShowen}>
-          <SectionList
-            activeSection={section.link}
-            sections={sectionList}
-            onSectionChange={onSectionChange}
-            logotype={logotype}
-          />
-        </Modal>
+      <Modal onClose={() => { setSectionsShowen(false); }} isShowen={sectionsShowen}>
+        <SectionList
+          activeSection={section.link}
+          sections={sectionList}
+          onSectionChange={onSectionChange}
+          logotype={logotype}
+        />
+      </Modal>
 
-        <Modal isShowen={navShowen} onClose={() => { setNavShowen(false); }}>
-          <MobileThrumbnails
-            images={thrumbnails}
-            activeImage={lookIndex}
-            onActiveImageChange={(index) => {
-              onSlideChange(index);
-              setNavShowen(false);
-            }}
-          />
-        </Modal>
+      <Modal isShowen={navShowen} onClose={() => { setNavShowen(false); }}>
+        <MobileThrumbnails
+          images={thrumbnails}
+          activeImage={lookIndex}
+          onActiveImageChange={(index) => {
+            onSlideChange(index);
+            setNavShowen(false);
+          }}
+        />
+      </Modal>
 
-        <button className="catalog__control catalog__control--menu" type="button" onClick={() => { setSectionsShowen(true); }} aria-label="Меню" />
-        <button className="catalog__control catalog__control--nav" type="button" onClick={() => { setNavShowen(true); }} aria-label="Показать миниатюры" />
-        <button className="catalog__control catalog__control--zoom" type="button" onClick={() => { setZoom(true); }} aria-label="Зум" />
+      <div className="catalog__controls controls">
+        <button
+          className={`control control--menu ${sectionsShowen ? 'control--active' : ''}`}
+          type="button"
+          onClick={() => {
+            closeAllModal();
+            setSectionsShowen(!sectionsShowen);
+          }}
+          aria-label="Меню"
+        />
+        <button
+          className={`control control--nav ${navShowen ? 'control--active' : ''}`}
+          type="button"
+          onClick={() => {
+            closeAllModal();
+            setNavShowen(!navShowen);
+          }}
+          aria-label="Показать миниатюры"
+        />
+        <button
+          className={`control control--zoom ${zoom ? 'control--active' : ''}`}
+          type="button"
+          onClick={() => {
+            closeAllModal();
+            setZoom(!zoom);
+          }}
+          aria-label="Зум"
+        />
+        <button
+          className={`control control--call ${addressShowen ? 'control--active' : ''}`}
+          type="button"
+          onClick={() => {
+            closeAllModal();
+            setAddressShowen(!addressShowen);
+          }}
+          aria-label="Заказать примерку"
+        />
+      </div>
 
+      <div className="wrapper">
         <section className="catalog__main">
           <div className="catalog__look look">
             <MobileLook lookIndex={lookIndex} images={photos} imageSize={imageSize} onSlideChange={onSlideChange} />
-
-            <div className="look__controls">
-              <button type="button" className="look__action" onClick={() => { setAddressShowen(true); }}>Заказать примерку</button>
-            </div>
 
             <LookInfo data={texts} slideIndex={lookIndex} />
 

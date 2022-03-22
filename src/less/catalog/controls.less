@@ -1,0 +1,41 @@
+.controls {
+  .wrapper();
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: @color;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control {
+  .button-reset();
+
+  width              : 27px;
+  height             : 27px;
+  background-color   : transparent;
+  background-position: center;
+  background-size    : contain;
+  background-repeat  : no-repeat;
+
+  &--menu {
+    background-image: url("../img/icons/menu.svg");
+  }
+
+  &--nav {
+    background-image: url("../img/icons/nav.svg");
+  }
+
+  &--zoom {
+    background-image: url("../img/icons/zoom.svg");
+  }
+
+  &--call {
+    background-image: url("../img/icons/call.svg");
+  }
+
+  &--active {
+    opacity: 0.5;
+  }
+}
