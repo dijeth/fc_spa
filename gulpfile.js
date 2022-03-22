@@ -75,7 +75,7 @@ const clean = (done) => {
 const watchAll = () => {
   watch('src/less/**/*.less', series(css));
   watch('src/img/**/*.{jpg,png}', parallel(imageMin));
-  watch('src/img/**/*.{svg}', series(copySVG));
+  watch('src/img/**/*.svg', series(copySVG));
 };
 
 const build = series(css, parallel(copySVG, copyFonts, imageMin));
