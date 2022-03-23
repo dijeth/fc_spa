@@ -47,7 +47,7 @@ const Modal = ({
         onClose
           ? (
             <button type="button" className="modal__close" aria-label="Закрыть" onClick={onClose}>
-              <span className="button-close" />
+              Закрыть
             </button>
           )
           : ''

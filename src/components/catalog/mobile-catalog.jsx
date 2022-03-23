@@ -62,6 +62,31 @@ const MobileCatalog = ({
 
   const renderLogotype = (logo) => <img src={logo} alt="Логотип" className="catalog__logo" />;
 
+  const nextLookIndex = lookIndex + 1 <= photos.length - 1 ? lookIndex + 1 : 0;
+  const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : photos.length - 1;
+
+  const prevLookButton = prevLookIndex !== null
+    ? (
+      <button
+        type="button"
+        className="look__mobile-nav look__mobile-nav--prev"
+        onClick={() => { onSlideChange(prevLookIndex); }}
+        aria-label={`Look ${prevLookIndex + 1}`}
+      />
+    )
+    : '';
+
+  const nextLookButton = nextLookIndex !== null
+    ? (
+      <button
+        type="button"
+        className="look__mobile-nav look__mobile-nav--next"
+        onClick={() => { onSlideChange(nextLookIndex); }}
+        aria-label={`Look ${nextLookIndex + 1}`}
+      />
+    )
+    : '';
+
   React.useEffect(() => {
     const { look } = section.looks[activeLook];
     getImageSize(look)
@@ -153,6 +178,25 @@ const MobileCatalog = ({
         <section className="catalog__main">
           <div className="catalog__look look">
             <MobileLook lookIndex={lookIndex} images={photos} imageSize={imageSize} onSlideChange={onSlideChange} />
+
+            <div className="look__controls">
+
+              {prevLookButton}
+
+              <button
+                type="button"
+                className="look__action"
+                onClick={() => {
+                  closeAllModal();
+                  setAddressShowen(!addressShowen);
+                }}
+              >
+                Заказать примерку
+              </button>
+
+              {nextLookButton}
+
+            </div>
 
             <LookInfo data={texts} slideIndex={lookIndex} />
 

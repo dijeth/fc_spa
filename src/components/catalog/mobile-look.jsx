@@ -9,21 +9,6 @@ const MobileLook = ({
   const refLook = React.useRef();
   const [size, setSize] = React.useState();
 
-  const nextLookIndex = lookIndex + 1 <= images.length - 1 ? lookIndex + 1 : 0;
-  const prevLookIndex = lookIndex - 1 >= 0 ? lookIndex - 1 : images.length - 1;
-
-  const prevLookButton = prevLookIndex !== null
-    ? (
-      <button type="button" className="look__mobile-nav look__mobile-nav--prev" onClick={() => { onSlideChange(prevLookIndex); }} aria-label={`Look ${prevLookIndex + 1}`} />
-    )
-    : '';
-
-  const nextLookButton = nextLookIndex !== null
-    ? (
-      <button type="button" className="look__mobile-nav look__mobile-nav--next" onClick={() => { onSlideChange(nextLookIndex); }} aria-label={`Look ${nextLookIndex + 1}`} />
-    )
-    : '';
-
   React.useEffect(() => {
     const lookWidth = refLook.current.getBoundingClientRect().width;
     const imageHeight = lookWidth / (imageSize.width / imageSize.height);
@@ -48,9 +33,6 @@ const MobileLook = ({
       >
         {images.map((it) => <div key={it.id} style={imageStyle}><img src={it.src} alt={it.alt} style={imageStyle} /></div>)}
       </GallerySlider>
-
-      {prevLookButton}
-      {nextLookButton}
     </div>
   );
 };

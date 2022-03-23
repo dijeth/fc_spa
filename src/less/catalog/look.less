@@ -20,24 +20,22 @@
 .look__mobile-nav {
   .button-reset();
 
-  position: absolute;
-  top     : 0;
-  bottom  : 0;
   width   : 30px;
 
   background-color   : #fff;
   background-size    : contain;
-  background-position: center;
   background-repeat  : no-repeat;
 
   &--prev {
-    left            : -30px;
+    background-position: center left;
     background-image: url("../img/icons/arrow-left.svg");
+    margin-left: -20px;
   }
 
   &--next {
-    right           : -30px;
+    background-position: center right;
     background-image: url("../img/icons/arrow-right.svg");
+    margin-right: -20px;
   }
 }
 
@@ -101,7 +99,8 @@
 }
 
 .look__controls {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .look__photo-container {
