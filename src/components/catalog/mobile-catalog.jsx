@@ -120,7 +120,7 @@ const MobileCatalog = ({
           activeSection={section.link}
           sections={sectionList}
           onSectionChange={onSectionChange}
-          logotype={logotype}
+          logotype={!isMultibrand ? logotype : null}
         />
       </Modal>
 
