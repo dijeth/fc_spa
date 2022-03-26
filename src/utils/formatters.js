@@ -50,12 +50,12 @@ export const lookBrandsFormatter = (look, catalogBrands) => {
   let hasDefaultBrand = false;
 
   const lookBrands = extractBrands(brands, catalogBrands);
-  hasDefaultBrand = hasDefaultBrand || lookBrands.length !== brands.length;
+  hasDefaultBrand = hasDefaultBrand || (lookBrands.length !== brands.length);
 
   const lookBrandsWithGender = flattenByGender(lookBrands);
 
   const lookBrandsWithPhone = formatAddress(lookBrandsWithGender);
-  hasDefaultBrand = hasDefaultBrand || lookBrandsWithGender.length !== lookBrandsWithPhone.length;
+  hasDefaultBrand = hasDefaultBrand || (lookBrandsWithGender.length !== lookBrandsWithPhone.length);
   hasDefaultBrand = hasDefaultBrand || lookBrandsWithPhone.find((it) => it.hasDefaultBrand);
 
   return {
