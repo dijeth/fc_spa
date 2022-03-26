@@ -39,9 +39,10 @@ const css = (done) => {
   done();
 };
 
-const copySVG = (done) => {
+const copyImage = (done) => {
   src([
     'src/img/**/*.svg',
+    'src/img/**/*.gif',
   ]).pipe(dest('public/img'));
   done();
 };
@@ -75,10 +76,10 @@ const clean = (done) => {
 const watchAll = () => {
   watch('src/less/**/*.less', series(css));
   watch('src/img/**/*.{jpg,png}', parallel(imageMin));
-  watch('src/img/**/*.svg', series(copySVG));
+  watch('src/img/**/*.{svg,gif}', series(copyImage));
 };
 
-const build = series(css, parallel(copySVG, copyFonts, imageMin));
+const build = series(css, parallel(copyImage, copyFonts, imageMin));
 
 module.exports = {
   clean,
