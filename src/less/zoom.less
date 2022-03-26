@@ -1,19 +1,40 @@
 .zoom {
   position: relative;
-  cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48' style='enable-background:new 0 0 48 48;' xml:space='preserve'%3e%3cstyle type='text/css'%3e .st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:%23000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;%7D .st1%7Bfill:none;stroke:%23000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;%7D .st2%7Bfill:none;stroke:%23000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;%7D%0A%3c/style%3e%3cg%3e%3ccircle class='st0' cx='17.8' cy='17.8' r='12'/%3e%3cline class='st1' x1='17.8' y1='12.8' x2='17.8' y2='22.8'/%3e%3cline class='st1' x1='12.8' y1='17.8' x2='22.8' y2='17.8'/%3e%3cline class='st2' x1='31.3' y1='31.3' x2='42.3' y2='42.3'/%3e%3c/g%3e%3c/svg%3e") 16 16, pointer;
+  cursor  : url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48' style='enable-background:new 0 0 48 48;' xml:space='preserve'%3e%3cstyle type='text/css'%3e .st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:%23000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;%7D .st1%7Bfill:none;stroke:%23000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;%7D .st2%7Bfill:none;stroke:%23000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;%7D%0A%3c/style%3e%3cg%3e%3ccircle class='st0' cx='17.8' cy='17.8' r='12'/%3e%3cline class='st1' x1='17.8' y1='12.8' x2='17.8' y2='22.8'/%3e%3cline class='st1' x1='12.8' y1='17.8' x2='22.8' y2='17.8'/%3e%3cline class='st2' x1='31.3' y1='31.3' x2='42.3' y2='42.3'/%3e%3c/g%3e%3c/svg%3e") 16 16, pointer;
+
+  &::after {
+    content: "";
+    opacity: 0;
+    z-index            : 110;
+    transition-property: opacity;
+    transition-duration: 100ms;
+    transition-delay: 500ms;
+  }
+
+  &--active::after {
+    content            : "";
+    position           : absolute;
+    left               : 0;
+    right              : 0;
+    bottom             : 0;
+    top                : 0;
+    background-color   : white;
+    background-position: center;
+    background-image   : url("../img/icons/preloader.gif");
+    background-repeat  : no-repeat;
+    opacity: 0.5;
+  }
 
   &__inner {
     position: absolute;
 
-    left: 0;
-    right: 0;
-    top: 0;
+    left  : 0;
+    right : 0;
+    top   : 0;
     bottom: 0;
 
-    // background-image: url("../img/preloader.gif");
-    // background-color: #fff;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat  : no-repeat;
 
     z-index: 100;
   }

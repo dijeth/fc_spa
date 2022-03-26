@@ -30,9 +30,12 @@ const ZoomImage = ({ src, children }) => {
   const refContainer = React.useRef();
   const refInner = React.useRef();
   const [image, setImage] = React.useState();
+  const [active, setActive] = React.useState(false);
 
   React.useEffect(() => {
     refContainer.current.addEventListener('mousedown', (evt) => {
+      setActive(true);
+
       getImageSize(src).then(({ width, height }) => {
         const { x, y } = getBackgroundPosition(
           evt.clientX,
@@ -45,6 +48,7 @@ const ZoomImage = ({ src, children }) => {
         setImage({
           width, height, x, y,
         });
+        setActive(false);
       });
     });
   }, []);
@@ -66,6 +70,7 @@ const ZoomImage = ({ src, children }) => {
         element.style.backgroundColor = '#fff';
         element.style.backgroundPositionX = `${x}px`;
         element.style.backgroundPositionY = `${y}px`;
+        setActive(!image);
       };
 
       const mouseLeaveHandler = () => {
@@ -73,6 +78,7 @@ const ZoomImage = ({ src, children }) => {
         element.removeEventListener('mouseleave', mouseLeaveHandler);
         element.removeEventListener('mouseup', mouseLeaveHandler);
         setImage(null);
+        setActive(false);
       };
 
       element.addEventListener('mousemove', mouseMoveHandler);
@@ -82,7 +88,7 @@ const ZoomImage = ({ src, children }) => {
   }, [image]);
 
   return (
-    <div className="zoom" ref={refContainer}>
+    <div className={`zoom ${active ? 'zoom--active' : ''}`} ref={refContainer}>
       {
         image
           ? (
