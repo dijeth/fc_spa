@@ -33,7 +33,7 @@ const ZoomImage = ({ src, children }) => {
   const [active, setActive] = React.useState(false);
 
   React.useEffect(() => {
-    refContainer.current.addEventListener('mousedown', (evt) => {
+    const mouseEnterHandler = (evt) => {
       setActive(true);
 
       getImageSize(src).then(({ width, height }) => {
@@ -46,45 +46,55 @@ const ZoomImage = ({ src, children }) => {
         );
 
         setImage({
-          width, height, x, y,
+          width,
+          height,
+          x,
+          y,
         });
+
         setActive(false);
       });
-    });
-  }, []);
+    };
+
+    refContainer.current.addEventListener('mouseenter', mouseEnterHandler);
+
+    return () => {
+      refContainer.current.removeEventListener('mouseenter', mouseEnterHandler);
+    };
+  }, [src]);
 
   React.useEffect(() => {
-    if (refInner.current) {
-      const element = refInner.current;
-      const rect = element.getBoundingClientRect();
-
-      const mouseMoveHandler = (evt) => {
-        const { x, y } = getBackgroundPosition(
-          evt.clientX,
-          evt.clientY,
-          rect,
-          image.width,
-          image.height,
-        );
-
-        element.style.backgroundColor = '#fff';
-        element.style.backgroundPositionX = `${x}px`;
-        element.style.backgroundPositionY = `${y}px`;
-        setActive(!image);
-      };
-
-      const mouseLeaveHandler = () => {
-        element.removeEventListener('mousemove', mouseMoveHandler);
-        element.removeEventListener('mouseleave', mouseLeaveHandler);
-        element.removeEventListener('mouseup', mouseLeaveHandler);
-        setImage(null);
-        setActive(false);
-      };
-
-      element.addEventListener('mousemove', mouseMoveHandler);
-      element.addEventListener('mouseleave', mouseLeaveHandler);
-      element.addEventListener('mouseup', mouseLeaveHandler);
+    const element = refInner.current;
+    if (!element) {
+      return;
     }
+
+    const rect = element.getBoundingClientRect();
+
+    const mouseMoveHandler = (evt) => {
+      const { x, y } = getBackgroundPosition(
+        evt.clientX,
+        evt.clientY,
+        rect,
+        image.width,
+        image.height,
+      );
+
+      element.style.backgroundColor = '#fff';
+      element.style.backgroundPositionX = `${x}px`;
+      element.style.backgroundPositionY = `${y}px`;
+      setActive(!image);
+    };
+
+    const mouseLeaveHandler = () => {
+      element.removeEventListener('mousemove', mouseMoveHandler);
+      element.removeEventListener('mouseleave', mouseLeaveHandler);
+      setImage(null);
+      setActive(false);
+    };
+
+    element.addEventListener('mousemove', mouseMoveHandler);
+    element.addEventListener('mouseleave', mouseLeaveHandler);
   }, [image]);
 
   return (
