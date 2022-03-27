@@ -29,18 +29,29 @@ const getBackgroundPosition = (clientX, clientY, containerRect, imageW, imageH) 
 const ZoomImage = ({ src, children }) => {
   const refContainer = React.useRef();
   const refInner = React.useRef();
-  const [image, setImage] = React.useState();
-  const [active, setActive] = React.useState(false);
+  const [image, setImage] = React.useState(null);
+  const [enter, setEnter] = React.useState(false);
 
   React.useEffect(() => {
+    const zoomElement = refContainer.current;
+
+    const mouseLeaveHandler = () => {
+      setImage(null);
+      setEnter(false);
+
+      zoomElement.removeEventListener('mouseleave', mouseLeaveHandler);
+    };
+
     const mouseEnterHandler = (evt) => {
-      setActive(true);
+      zoomElement.addEventListener('mouseleave', mouseLeaveHandler);
+
+      setEnter(true);
 
       getImageSize(src).then(({ width, height }) => {
         const { x, y } = getBackgroundPosition(
           evt.clientX,
           evt.clientY,
-          refContainer.current.getBoundingClientRect(),
+          zoomElement.getBoundingClientRect(),
           width,
           height,
         );
@@ -51,56 +62,48 @@ const ZoomImage = ({ src, children }) => {
           x,
           y,
         });
-
-        setActive(false);
       });
     };
 
-    refContainer.current.addEventListener('mouseenter', mouseEnterHandler);
+    zoomElement.addEventListener('mouseenter', mouseEnterHandler);
 
     return () => {
-      refContainer.current.removeEventListener('mouseenter', mouseEnterHandler);
+      zoomElement.removeEventListener('mouseenter', mouseEnterHandler);
     };
   }, [src]);
 
   React.useEffect(() => {
-    const element = refInner.current;
-    if (!element) {
-      return;
-    }
+    const zoomInnerElement = refInner.current;
 
-    const rect = element.getBoundingClientRect();
+    if (!zoomInnerElement) {
+      return () => null;
+    }
 
     const mouseMoveHandler = (evt) => {
       const { x, y } = getBackgroundPosition(
         evt.clientX,
         evt.clientY,
-        rect,
+        zoomInnerElement.getBoundingClientRect(),
         image.width,
         image.height,
       );
 
-      element.style.backgroundColor = '#fff';
-      element.style.backgroundPositionX = `${x}px`;
-      element.style.backgroundPositionY = `${y}px`;
-      setActive(!image);
+      zoomInnerElement.style.backgroundColor = '#fff';
+      zoomInnerElement.style.backgroundPositionX = `${x}px`;
+      zoomInnerElement.style.backgroundPositionY = `${y}px`;
     };
 
-    const mouseLeaveHandler = () => {
-      element.removeEventListener('mousemove', mouseMoveHandler);
-      element.removeEventListener('mouseleave', mouseLeaveHandler);
-      setImage(null);
-      setActive(false);
-    };
+    zoomInnerElement.addEventListener('mousemove', mouseMoveHandler);
 
-    element.addEventListener('mousemove', mouseMoveHandler);
-    element.addEventListener('mouseleave', mouseLeaveHandler);
+    return () => {
+      zoomInnerElement.removeEventListener('mousemove', mouseMoveHandler);
+    };
   }, [image]);
 
   return (
-    <div className={`zoom ${active ? 'zoom--active' : ''}`} ref={refContainer}>
+    <div className={`zoom ${(enter && !image) ? 'zoom--enter' : ''}`} ref={refContainer}>
       {
-        image
+        (image && enter)
           ? (
             <div
               className="zoom__inner"
