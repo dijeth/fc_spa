@@ -5,12 +5,15 @@
   "private": true,
   "scripts": {
     "build": "npm run gulp:build & npm run webpack:build & gulp hash",
+    "build:test": "npm run gulp:build & npm run webpack:build:test & gulp hash",
     "webpack:build": "cross-env API=https://data.tretyakovsky.ru/api ROOT_ROUTE=/catalog/ webpack --mode production",
+    "webpack:build:test": "cross-env API=https://data.tretyakovsky.ru/api ROOT_ROUTE=/test_fc/ webpack --mode production",
     "webpack:start:dev": "cross-env API=http://localhost:8000/api ROOT_ROUTE=/ webpack-dev-server",
     "webpack:start:prod": "cross-env API=https://data.tretyakovsky.ru/api ROOT_ROUTE=/ webpack-dev-server",
     "gulp:start": "npm run gulp:build & gulp start",
     "gulp:build": "gulp clean & gulp build",
-    "upload": "node c:\\@work\\Mercury_2018\\@web\\mercury-upload\\src\\upload-map.js -p catalog -dl tp::public k31::public blv::public --content"
+    "upload": "node c:\\@work\\Mercury_2018\\@web\\mercury-upload\\src\\upload-map.js -p catalog -dl tp::public k31::public blv::public --content",
+    "upload:test": "npm run build:test & node c:\\@work\\Mercury_2018\\@web\\mercury-upload\\src\\upload-map.js -p test_fc -dl blv::public --content"
   },
   "author": "Dmitry Orlov",
   "license": "ISC",
