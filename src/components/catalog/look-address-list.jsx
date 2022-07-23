@@ -25,21 +25,23 @@ const renderBrandName = (name, nameHasGender, gender, isMultibrand, isLookHasMan
 
 const LookAddressList = function LookAddressList({ brands, isMultibrand }) {
   return (
-    <ul className="catalog__address-list">
-      {brands.map(({
-        name, addressList, nameHasGender, gender,
-      }) => (
-        <li key={`${name}-${gender}`}>
-          {renderBrandName(name, nameHasGender, gender, isMultibrand, brands.length > 1)}
-          <PhoneList
-            name={name}
-            nameHasGender={nameHasGender}
-            gender={gender}
-            addressList={addressList}
-          />
-        </li>
-      ))}
-    </ul>
+    <div className="catalog__address-wrap">
+      <ul className="catalog__address-list">
+        {brands.map(({
+          name, addressList, nameHasGender, gender,
+        }) => (
+          <li key={`${name}-${gender}`}>
+            {renderBrandName(name, nameHasGender, gender, isMultibrand, brands.length > 1)}
+            <PhoneList
+              name={name}
+              nameHasGender={nameHasGender}
+              gender={gender}
+              addressList={addressList}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

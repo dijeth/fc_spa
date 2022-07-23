@@ -1,6 +1,10 @@
 .look-info {
   text-align: center;
-  overflow  : hidden;
+
+  @media screen and (min-width: @tablet) {
+    overflow  : auto;
+    max-height: 50vh;
+  }
 
   p {
     margin-top   : 0;
