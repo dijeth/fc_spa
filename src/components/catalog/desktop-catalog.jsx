@@ -6,6 +6,7 @@ import MainPhoto from './main-photo';
 import { catalogPropTypes } from '../../prop-types';
 import { lookBrandsFormatter } from '../../utils';
 import { LookAddressSlider } from './look-address-slider';
+import { KeyCode } from '../../const';
 
 const DesktopCatalog = ({
   activeSection,
@@ -60,6 +61,27 @@ const DesktopCatalog = ({
   const looksAddressData = section.looks.map((look) => lookBrandsFormatter(look, catalogBrands));
 
   const renderLogotype = (logo) => <img src={logo} alt="Логотип" className="catalog__logo" />;
+
+  React.useEffect(() => {
+    const clickKeyDownHandler = (evt) => {
+      switch (evt.keyCode) {
+        case KeyCode.LEFT:
+          onSlideChange(prevLookIndex);
+          break;
+        case KeyCode.RIGHT:
+          onSlideChange(nextLookIndex);
+          break;
+
+        // no default
+      }
+    };
+
+    document.addEventListener('keydown', clickKeyDownHandler);
+
+    return () => {
+      document.removeEventListener('keydown', clickKeyDownHandler);
+    };
+  }, [prevLookButton, nextLookButton]);
 
   return (
     <div className="wrapper">

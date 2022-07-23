@@ -15,3 +15,8 @@ export const ErrorMessage = {
   NOT_FOUND: 'not_found',
   SERVER_ERROR: 'server_error',
 };
+
+export const KeyCode = {
+  LEFT: 37,
+  RIGHT: 39,
+};
